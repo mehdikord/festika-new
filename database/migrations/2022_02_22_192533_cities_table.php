@@ -15,7 +15,11 @@ class CitiesTable extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('province_id')->nullable();
+            $table->string('name')->nullable();
+            $table->softDeletes();
             $table->timestamps();
+            $table->foreign('province_id')->references('id')->on('provinces')->onUpdate('cascade')->onDelete('set null');
         });
     }
 

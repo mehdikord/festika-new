@@ -194,6 +194,10 @@ body,h1,h2,h3,h4,h5,h6,button,p,div,td,a,li,ul{
 {
     font-size: 12px!important;
 }
+.font-13
+{
+    font-size: 13px!important;
+}
 .text-line-25{
     line-height: 25px!important;
 }

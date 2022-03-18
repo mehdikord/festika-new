@@ -9,8 +9,6 @@
 
     <link rel="stylesheet" href="{{ asset('template/css/bootstrap.rtl.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('template/fonts/remixicon.css') }}">
-
     <link rel="stylesheet" href="{{ asset('template/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('template/css/owl.theme.default.min.css') }}">
 
@@ -26,6 +24,8 @@
 
     <link rel="stylesheet" href="{{ asset('fonts/css/font.css') }}">
 
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
     <title>فستیکا - ایجاد جشنواره آنلاین</title>
 
     <link rel="icon" type="image/png" href="{{ asset('template/images/favicon.png') }}">
@@ -33,12 +33,12 @@
 
 <body>
 
-<div class="preloader">
-    <div class="spinner">
-        <div class="dot1"></div>
-        <div class="dot2"></div>
-    </div>
-</div>
+{{--<div class="preloader">--}}
+{{--    <div class="spinner">--}}
+{{--        <div class="dot1"></div>--}}
+{{--        <div class="dot2"></div>--}}
+{{--    </div>--}}
+{{--</div>--}}
 
 <div id="app">
     <div class="navbar-area">
@@ -57,9 +57,9 @@
         <div class="desktop-nav desktop-nav-one nav-area">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md navbar-light ">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="template/images/logo.png" alt="Logo">
-                    </a>
+                    <router-link :to="{name : 'front_index'}" class="navbar-brand">
+                        <img src="{{ asset('festika.svg') }}" width="80" >
+                    </router-link>
                     <div class="nav-widget-form">
                         <form class="search-form">
                             <input type="search" class="form-control" placeholder="جستجو جشنواره ... ">
@@ -71,9 +71,9 @@
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <router-link :to="{name:'front_index'}"class="nav-link" :class="{'active' : this.$route.name === 'front_index'}">
                                     صفحه اصلی
-                                </a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link ">
@@ -88,11 +88,18 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="activity.html" class="nav-link">
+                                <a href="" class="nav-link">
                                     فروشگاه هدایا
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <router-link :to="{name:'front_contact'}"class="nav-link" :class="{'active' : this.$route.name === 'front_contact'}">
+                                    ارتباط با ما
+                                </router-link>
+
+                            </li>
+                            <li class="nav-item">
+
                                 <a href="#" class="nav-link">
                                     راهنما فستیکا
 
@@ -236,8 +243,30 @@
                         </ul>
                         <div class="others-options">
                             <ul class="optional-item-list">
-                                <li><a >ورود به حساب</a></li>
-                                <li><a  class="active"><i class="fas fa-user-plus"></i> ثبت نام</a></li>
+                                <li v-if="!this.UserAuthCheck()">
+                                <router-link :to="{name:'front_login'}"  :class="{'active' : this.$route.name === 'front_login'}">
+                                    <i class="fas fa-sign-in-alt"></i> ورود به حساب
+                                </router-link>
+                                </li>
+                                <li v-else>
+                                <router-link :to="{name:'front_index'}" :class="{'active' : this.$route.name === 'front_login'}" >
+                                    <i class="fas fa-user"></i> پنل کاربری
+                                </router-link>
+                                </li>
+                                <li v-if="!this.UserAuthCheck()">
+                                <router-link :to="{name : 'front_register'}"  :class="{'active' : this.$route.name === 'front_register'}">
+                                    <i class="fas fa-user-plus"></i> ثبت نام
+                                </router-link>
+                                </li>
+                                <li v-else-if="this.UserAuthGet().role && this.UserAuthGet().role < 4">
+                                    <a  href="/manage/dashboard"><i class="fas fa-cog"></i> پنل مدیریت </a>
+                                </li>
+                                <li v-else>
+                                <router-link :to="{name : 'front_register'}" >
+                                     خروج از حساب
+                                </router-link>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
@@ -302,7 +331,7 @@
                     <div class="footer-widget">
                         <div class="footer-logo">
                             <a href="index.html">
-                                <img src="template/images/footer-logo.png" alt="Footer Logo">
+                                <img src="{{ asset('festika.svg') }}" width="100" alt="Footer Logo">
                             </a>
                         </div>
                         <p>عضویت در خبرنامه فستیکا</p>
