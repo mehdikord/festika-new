@@ -148,3 +148,15 @@ Fades Css
 .line-height-10{
     line-height: 30px!important;
 }
+.text-right{
+    text-align: right!important;
+}
+@media only screen and (max-width: 600px) {
+    .content-body {
+        margin-left: 0!important;
+        margin-right: 0!important;
+    }
+}
+.float-left{
+    float: left !important;
+}

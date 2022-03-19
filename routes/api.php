@@ -47,6 +47,7 @@ Route::group(['prefix'=>'panel','middleware'=>['check_auth']],static function ()
     Route::get('me',[\App\Http\Controllers\Api\Auth\AuthController::class,'get_me']);
 
 
+
 });
 Route::group(['prefix'=>'manage','middleware'=>['check_manager']],static function(){
 

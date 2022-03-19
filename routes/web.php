@@ -25,9 +25,16 @@ Route::get('test',function (){
        ]);
    }
 });
+
+Route::get('panel/{any}',static function(){
+    return view('dashboard');
+})->where('any','(.*)');
+
+
 Route::get('manage/{any}',static function(){
     return view('manage');
 })->where('any','(.*)');
+
 
 
 Route::get('/{any}',static function () {

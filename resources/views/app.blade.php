@@ -28,7 +28,7 @@
 
     <title>فستیکا - ایجاد جشنواره آنلاین</title>
 
-    <link rel="icon" type="image/png" href="{{ asset('template/images/favicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('festika.svg') }}">
 </head>
 
 <body>

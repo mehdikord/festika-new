@@ -120,7 +120,7 @@ class AuthController extends Controller
 
     public function get_me()
     {
-        return response()->json(User::where('api_token',\request()->header('Authorization'))->first());
+        return response()->json(User::where('api_token',\request()->header('Authorization'))->with('province')->with('city')->first());
     }
 
 }
