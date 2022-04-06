@@ -4,19 +4,19 @@
             <div class="row align-items-center">
                 <div class="col-lg-8">
                     <div class="section-title">
-                        <h2 class="text-aviny font-50 text-light">حواست باشه این جایزه هارو از دست ندی !</h2>
+                        <h2 class="text-aviny font-50 text-light"><span><img src="template/images/svg/default-logo.png" width="70" alt=""></span> حواست باشه این جایزه هارو از دست ندی !</h2>
                         <h1 class="text-light text-aviny font-35">جشنواره های درحال اتمام فستیکا</h1>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="author-btn text-end">
-                        <a href="authors.html" class="default-btn border-radius-5">مشاهده همه جشنواره ها</a>
+                        <router-link :to="{name : 'front_festivals'}" class="default-btn border-radius-5">مشاهده همه جشنواره ها</router-link>
                     </div>
                 </div>
             </div>
             <div class="row pt-45 justify-content-center">
                 <div v-for="(item,index) in items" :key="index" class="col-md-3">
-                    <festival-expire-item :title="item.title" :category="item.category.name" :subtitle="item.subtitle" :logo="item.logo" :banner="item.banner"></festival-expire-item>
+                    <festival-expire-item :slug="item.slug" :title="item.title" :category="item.category.name" :subtitle="item.subtitle" :logo="item.logo" :banner="item.banner"></festival-expire-item>
                 </div>
 
             </div>

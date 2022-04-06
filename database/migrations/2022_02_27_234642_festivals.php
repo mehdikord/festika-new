@@ -34,8 +34,8 @@ class Festivals extends Migration
             $table->string('period')->nullable();
             $table->string('start_at')->nullable();
             $table->string('expire_at')->nullable();
-            $table->string('files_count')->nullable();
-            $table->string('disk_usage')->nullable();
+            $table->string('files_count')->nullable()->default(0);
+            $table->string('disk_usage')->nullable()->default(0);
             $table->boolean('is_active')->default(1);
             $table->boolean('accepted')->default(0);
             $table->boolean('force_close')->default(0);

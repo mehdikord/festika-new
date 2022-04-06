@@ -67,7 +67,6 @@ class UserController extends Controller
         }
         $photo_url = $user->profile;
         if ($request->filled('profile') && $request->profile != $photo_url){
-
             $photo_name = 'public/images/users/'.Str::random(12).'.'.'jpg';
             $photo = base64_to_jpeg($request->profile,$photo_name);
             $photo_url = asset(Storage::url($photo_name));

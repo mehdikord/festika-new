@@ -18,8 +18,17 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('front')->group(static function(){
 
     Route::prefix('festivals')->group(function (){
+        Route::get('all',[\App\Http\Controllers\Api\Front\FestivalController::class,'all']);
         Route::get('specials',[\App\Http\Controllers\Api\Front\FestivalController::class,'specials']);
+        Route::get('categories',[\App\Http\Controllers\Api\Front\FestivalController::class,'categories']);
         Route::get('expiring',[\App\Http\Controllers\Api\Front\FestivalController::class,'expiring']);
+        Route::get('show/{slug}',[\App\Http\Controllers\Api\Front\FestivalController::class,'show']);
+        Route::get('get/formats/{slug}',[\App\Http\Controllers\Api\Front\FestivalController::class,'get_formats']);
+        Route::get('get/forms/{slug}',[\App\Http\Controllers\Api\Front\FestivalController::class,'get_forms']);
+    });
+    Route::prefix('users')->group(function (){
+        Route::get('top',[\App\Http\Controllers\Api\Front\UserController::class,'top']);
+
     });
 
     Route::post('contact/message/send',[\App\Http\Controllers\Api\Front\ContactController::class,'store']);
@@ -44,7 +53,18 @@ Route::prefix('helpers')->group(static function (){
 });
 
 Route::group(['prefix'=>'panel','middleware'=>['check_auth']],static function (){
+    Route::post('submit/form/festival/{slug}',[\App\Http\Controllers\Api\Panel\FestivalController::class,'submit_form']);
+
     Route::get('me',[\App\Http\Controllers\Api\Auth\AuthController::class,'get_me']);
+    Route::post('me/update',[\App\Http\Controllers\Api\Panel\ProfileController::class,'edit']);
+    Route::prefix('festivals')->group(function (){
+        Route::get('',[\App\Http\Controllers\Api\Panel\FestivalController::class,'get_all']);
+        Route::post('new/store',[\App\Http\Controllers\Api\Panel\FestivalController::class,'store']);
+        Route::get('files/{festival}',[\App\Http\Controllers\Api\Panel\FestivalController::class,'files']);
+        Route::get('show/{festival}',[\App\Http\Controllers\Api\Panel\FestivalController::class,'show']);
+        Route::get('downloader/files/single/{file}',[\App\Http\Controllers\Api\Panel\FestivalController::class,'download_single']);
+        Route::get('activation/{festival}',[\App\Http\Controllers\Api\Panel\FestivalController::class,'activation']);
+    });
 
 
 
@@ -82,13 +102,15 @@ Route::group(['prefix'=>'manage','middleware'=>['check_manager']],static functio
             Route::post('edit/{category}',[\App\Http\Controllers\Api\Manage\FestivalController::class,'categories_edit']);
             Route::get('delete/{category}',[\App\Http\Controllers\Api\Manage\FestivalController::class,'categories_delete']);
             Route::get('{category}',[\App\Http\Controllers\Api\Manage\FestivalController::class,'categories_single']);
-
         });
         Route::get('',[\App\Http\Controllers\Api\Manage\FestivalController::class,'festivals']);
         Route::get('expire',[\App\Http\Controllers\Api\Manage\FestivalController::class,'festivals_expire']);
         Route::post('store',[\App\Http\Controllers\Api\Manage\FestivalController::class,'festivals_store']);
+        Route::get('waiting',[\App\Http\Controllers\Api\Manage\FestivalController::class,'waiting']);
+        Route::get('waiting-count',[\App\Http\Controllers\Api\Manage\FestivalController::class,'waiting_count']);
         Route::post('edit/{category}',[\App\Http\Controllers\Api\Manage\FestivalController::class,'festivals_edit']);
         Route::get('delete/{category}',[\App\Http\Controllers\Api\Manage\FestivalController::class,'festivals_delete']);
+        Route::get('accept/{festival}',[\App\Http\Controllers\Api\Manage\FestivalController::class,'festivals_accept']);
         Route::get('{festival}',[\App\Http\Controllers\Api\Manage\FestivalController::class,'festivals_single']);
 
     });

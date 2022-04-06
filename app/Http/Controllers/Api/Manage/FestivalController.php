@@ -83,7 +83,7 @@ class FestivalController extends Controller
             'formats'=>'required|array',
             'period'=>'required|numeric',
             'disk'=>'required|numeric|min:1',
-            'quantity'=>'required|numeric|min:100',
+            'quantity'=>'nullable|numeric|min:100',
             'start_at'=>'required',
             'is_special'=>'boolean',
             'commenting'=>'boolean'
@@ -167,14 +167,35 @@ class FestivalController extends Controller
         return response()->json('دسته بندی باموفقیت ویرایش شد');
 
     }
-    public function festivals_delete(Festival_Category $category)
+    public function festivals_delete(Festival $festival)
     {
-        $category->delete();
-        return response()->json('دسته بندی باموفقیت حذف شد');
+
+        $festival->delete();
+        return response()->json('جشنواره مورد نظر باموفقیت حذف شد');
+
 
     }
 
     public function festivals_single(Festival_Category $category){
 
+
+    }
+
+    public function waiting_count()
+    {
+        return response()->json(Festival::where('accepted',0)->count());
+
+    }
+
+    public function waiting()
+    {
+        return response()->json(Festival::where('accepted',false)->with('user')->with('category')->get());
+
+    }
+
+    public function festivals_accept(Festival $festival)
+    {
+        $festival->update(['accepted'=>1]);
+        return response()->json('جشنواره مورد نظر باموفقیت تایید شد');
     }
 }

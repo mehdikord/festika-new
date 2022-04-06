@@ -124,3 +124,9 @@ function get_festival_file_format($extension):string
     }
     return $result;
 }
+
+//get file extension
+function get_file_extension($file){
+    $explode = explode('.',$file);
+    return end($explode);
+}

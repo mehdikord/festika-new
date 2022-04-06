@@ -73,7 +73,7 @@
                             <i class="fas fa-gifts"></i>
 
                             <span data-key="t-apps">جشنواره ها</span>
-                            <span class="badge rounded-pill bg-red3  float-end text-bold-3 font-13">7</span>
+                            <span v-if="waiting_festivals >  0" class="badge rounded-pill bg-red3  float-end text-bold-3 font-13">{{ waiting_festivals}}</span>
 
                         </a>
                         <ul class="sub-menu" aria-expanded="false">
@@ -85,9 +85,9 @@
                             </li>
                             <hr>
                             <li>
-                                <router-link :to="{name : 'manage_festival_create'}">
+                                <router-link :to="{name : 'manage_festivals_waiting'}">
                                     <span data-key="t-calendar">در انتظار تائید</span>
-                                    <span class="badge rounded-pill bg-orange3  float-end text-bold-3 font-13">7</span>
+                                    <span v-if="waiting_festivals > 0" class="badge rounded-pill bg-orange3  float-end text-bold-3 font-13">{{waiting_festivals}}</span>
                                 </router-link>
                             </li>
                             <hr>
@@ -119,7 +119,20 @@
 
 <script>
 export default {
-    name: "Manage_Menu"
+    name: "Manage_Menu",
+    data(){
+        return {
+            waiting_festivals : 0,
+        }
+    },
+    created() {
+        axios.get('/api/manage/festivals/waiting-count').then(response=>{
+            this.waiting_festivals = response.data;
+        }).catch(e=>{
+            SweetAlert.SweetServerErrorMessage();
+        })
+
+    }
 }
 </script>
 

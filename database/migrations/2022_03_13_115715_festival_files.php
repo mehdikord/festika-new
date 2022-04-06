@@ -19,7 +19,12 @@ class FestivalFiles extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('file')->nullable();
             $table->string('code')->nullable();
+            $table->string('type')->nullable();
+            $table->string('size')->nullable();
             $table->timestamps();
+            $table->foreign('festival_id')->references('id')->on('festivals')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+
         });
     }
 

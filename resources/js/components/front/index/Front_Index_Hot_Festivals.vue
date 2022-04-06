@@ -8,15 +8,13 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
-                    <div class="author-btn text-end">
-
-                    </div>
+                    <div class="author-btn text-end"></div>
                 </div>
             </div>
             <div class="row pt-45 justify-content-center">
 
                 <div v-for="(item,index) in items" :key="index" class="col-md-3">
-                    <front-index-festival-item1 class="app-fade-in" :title="item.title" :category="item.category.name" :subtitle="item.subtitle" :logo="item.logo" :banner="item.banner"> </front-index-festival-item1>
+                    <front-index-festival-item1 class="app-fade-in" :slug="item.slug" :title="item.title" :category="item.category.name" :subtitle="item.subtitle" :logo="item.logo" :banner="item.banner"> </front-index-festival-item1>
                 </div>
 
             </div>

@@ -11,6 +11,7 @@ class Festival extends Model
     protected $table='festivals';
     protected $guarded=[];
 
+
     public function category()
     {
         return $this->belongsTo(Festival_Category::class,'festival_category_id');
@@ -19,6 +20,21 @@ class Festival extends Model
     public function user()
     {
         return $this->belongsTo(User::class,'user_id');
+    }
+
+    public function files()
+    {
+        return $this->hasMany(Festival_File::class,'festival_id');
+    }
+
+    public function sponsors()
+    {
+        return $this->hasMany(Festival_Sponsor::class,'festival_id');
+    }
+
+    public function invoices()
+    {
+        return $this->hasMany(Invoice::class,'festival_id');
     }
 
 }

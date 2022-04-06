@@ -148,6 +148,7 @@ export default {
             })
 
         },
+
         CodeFromSubmit(){
             this.errors={};
 
@@ -156,9 +157,14 @@ export default {
                     localStorage.removeItem('pre_login_user');
                     Auth.AuthLoginUser(JSON.stringify(response.data.user),response.data.access_token);
                     SweetAlert.SweetToastMessage('باموفقیت وارد حسابتان شدید');
-                    setTimeout(() => {
-                        window.open('/','_self');
-                    }, 1500)
+                    if (AppStorage.AppStorageGetItem('festival_visit')){
+                        this.$router.push({name : 'front_festivals_show',params : {slug : AppStorage.AppStorageGetItem('festival_visit')}})
+                    }else {
+                        setTimeout(() => {
+                            window.open('/','_self');
+                        }, 1500)
+                    }
+
                 }else{
                     SweetAlert.SweetServerErrorMessage();
                 }

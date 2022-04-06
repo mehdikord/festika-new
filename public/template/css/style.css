@@ -9,7 +9,7 @@ This files table contents are outlined below>>>>>
 
 *******************************************
 *******************************************
-** - Default CSS Style 
+** - Default CSS Style
 ** - Section Title Style
 ** - Navbar Area Style
 ** - Main Banner Area CSS Style
@@ -252,7 +252,7 @@ Default Btn CSS
 }
 
 /*================================
-Section Title Style 
+Section Title Style
 ===================================*/
 .section-title span {
   font-size: 15px;
@@ -1030,7 +1030,7 @@ Navbar Area
 Navbar Area End
 ===================================*/
 /*=================================
-Main Banner Area 
+Main Banner Area
 ====================================*/
 .banner-area {
   background-color: #0A1831;
@@ -1757,7 +1757,9 @@ Inner Banner Area
 .inner-bg12 {
   background-image: url(../images/inner-banner/inner-banner12.jpg);
 }
-
+.inner-bg-festivals {
+    background-image: url(../images/svg/festival-header-bg.jpg);
+}
 .inner-bg13 {
   background-image: url(../images/inner-banner/inner-banner13.jpg);
 }
@@ -1933,7 +1935,7 @@ Inner Banner Area
 }
 
 /*=================================
-Trending Area 
+Trending Area
 ====================================*/
 .trending-slider {
   position: relative;
@@ -2877,15 +2879,15 @@ Item Details Area
 .item-details-in-content {
   padding: 25px 30px 22px;
   background-color: #E5E5E5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  /*display: -webkit-box;*/
+  /*display: -ms-flexbox;*/
+  /*display: flex;*/
+  /*-webkit-box-align: center;*/
+  /*    -ms-flex-align: center;*/
+  /*        align-items: center;*/
+  /*-webkit-box-pack: justify;*/
+  /*    -ms-flex-pack: justify;*/
+  /*        justify-content: space-between;*/
   border-radius: 15px;
   margin-bottom: 20px;
 }
@@ -3412,6 +3414,7 @@ Top Seller Area
 
 .top-sellers-item .top-sellers-img a img {
   border-radius: 5px;
+    width: 70px;
 }
 
 .top-sellers-item .top-sellers-img i {
@@ -4492,12 +4495,13 @@ Featured Area
   top: 20px;
   right: 20px;
   display: inline-block;
-  padding: 8px 22px 6px;
-  font-size: 16px;
-  color: var(--bodyColor);
-  background-color: #E5E5E5;
-  border: 1px solid var(--whiteColor);
-  border-radius: 15px;
+  /*padding: 6px 6px;*/
+  /*font-size: 16px;*/
+  /*color: var(--bod
+  yColor);*/
+  /*background-color: #E5E5E5;*/
+  /*border: 2px solid #ff5435;*/
+  /*border-radius: 50% !important;*/
   margin-bottom: 0;
   -webkit-transition: var(--transition);
   transition: var(--transition);
@@ -4606,8 +4610,8 @@ Featured Area
 .featured-card .content .featured-user-option img {
   border-radius: 50%;
   margin-right: 10px;
-  width: 30px !important;
-  height: 30px !important;
+  width: 40px !important;
+  height: 40px !important;
   border: 2px solid var(--whiteColor);
 }
 
@@ -4632,7 +4636,7 @@ Featured Area
 
 .featured-card:hover .featured-card-img p {
   color: var(--whiteColor);
-  background-color: var(--pinkColor);
+  /*background-color: var(--pinkColor);*/
 }
 
 .featured-card:hover .featured-card-img p i {
@@ -7385,7 +7389,7 @@ Footer Area
 }
 
 /*=================================
-Go Top Area 
+Go Top Area
 ====================================*/
 .go-top {
   position: fixed;

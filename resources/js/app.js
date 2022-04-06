@@ -3,6 +3,11 @@ import router from "./routes/front-router";
 import SweetAlert from "./helpers/SweetAlert";
 import AppStorage from "./helpers/AppStorage";
 import Auth from "./helpers/Auth";
+import Helper from "./helpers/Helper";
+import Swal from "sweetalert2";
+
+import Front_Include_Menu from "./components/front/includes/Front_Include_Menu";
+import moment from "moment-jalaali";
 
 require('./bootstrap');
 
@@ -12,6 +17,8 @@ Vue.use(VueRouter);
 window.SweetAlert = SweetAlert
 window.AppStorage = AppStorage
 window.Auth = Auth
+window.Swal = Swal
+window.Helper = Helper
 
 axios.defaults.headers.common['Authorization'] =  Auth.AuthGetToken();
 axios.interceptors.response.use(function (response) {
@@ -45,7 +52,28 @@ Vue.mixin({
     },
 
 })
+
+//Filters
+Vue.filter('filter_date', function (value,format) { return moment(value).format(format='jYYYY/jM/jD')  })
+Vue.filter('filter_size', function (value,format='m') {
+    let result=0;
+    if (format === 'k'){
+        result = value/1024;
+    }else if (format === 'm'){
+        result = value/1024/1024;
+    }else if (format === 'g'){
+        result = value/1024/1024/1024;
+    }else {
+        result = value/1024;
+    }
+    return Math.round( result * 10 ) / 10
+})
+
 const app = new Vue({
     el: '#app',
+    components :{
+      "front-include-menu" : Front_Include_Menu,
+
+    },
     router : router,
 });

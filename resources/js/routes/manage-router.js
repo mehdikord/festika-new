@@ -12,6 +12,7 @@ import Manage_Festivals_Categories_Edit from "../components/manage/festivals/Man
 import Manage_Festival_Create from "../components/manage/festivals/Manage_Festival_Create";
 import Manage_Festivals from "../components/manage/festivals/Manage_Festivals";
 import Manage_Festivals_Expire from "../components/manage/festivals/Manage_Festivals_Expire";
+import Manage_Festivals_Waiting from "../components/manage/festivals/Manage_Festivals_Waiting";
 
 const routes = [
     {
@@ -84,6 +85,11 @@ const routes = [
         path : '/manage/festivals/expire',
         name : 'manage_festivals_expire',
         component : Manage_Festivals_Expire,
+    },
+    {
+        path : '/manage/festivals/waiting',
+        name : 'manage_festivals_waiting',
+        component : Manage_Festivals_Waiting,
     },
 
 

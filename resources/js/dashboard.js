@@ -13,6 +13,8 @@ import Swal from "sweetalert2";
 import vSelect from 'vue-select'
 import VuePersianDatetimePicker from 'vue-persian-datetime-picker';
 import moment from "moment-jalaali";
+import Panel_Menu_Profile from "./components/dashboard/Panel_Menu_Profile";
+import Panel_Menu_Notif from "./components/dashboard/Panel_Menu_Notif";
 
 require('./bootstrap');
 
@@ -61,10 +63,28 @@ Vue.mixin({
 Vue.component('v-select', vSelect);
 Vue.component('date-picker', VuePersianDatetimePicker);
 
+//Filters
+Vue.filter('filter_date', function (value,format) { return moment(value).format(format='jYYYY/jM/jD')  })
+Vue.filter('filter_size', function (value,format='m') {
+    let result=0;
+    if (format === 'k'){
+        result = value/1024;
+    }else if (format === 'm'){
+        result = value/1024/1024;
+    }else if (format === 'g'){
+        result = value/1024/1024/1024;
+    }else {
+        result = value/1024;
+    }
+    return Math.round( result * 10 ) / 10
+})
+
 const app = new Vue({
     el: '#app',
     router : dashboardRouter,
     components :{
         'panel-menu' : Panel_Menu,
+        'panel-menu-profile' : Panel_Menu_Profile,
+        'panel-menu-notif' : Panel_Menu_Notif,
     }
 });
