@@ -91,7 +91,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <router-link :to="{name:'front_contact'}" class="nav-link" :class="{'active' : this.$route.name === 'front_contact'}">
+                        <router-link :to="{name:'front_terms'}" class="nav-link" :class="{'active' : this.$route.name === 'front_terms'}">
                             قوانین و مقررات
                         </router-link>
                     </li>

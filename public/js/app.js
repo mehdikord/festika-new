@@ -2740,6 +2740,109 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/Front_Terms.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/Front_Terms.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Front_Terms"
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/festivalss/Front_Festival_Item_Main.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/festivalss/Front_Festival_Item_Main.vue?vue&type=script&lang=js& ***!
@@ -4319,13 +4422,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_front_Front_Index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/front/Front_Index */ "./resources/js/components/front/Front_Index.vue");
 /* harmony import */ var _components_front_Front_Register__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/front/Front_Register */ "./resources/js/components/front/Front_Register.vue");
 /* harmony import */ var _components_front_Front_Login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/front/Front_Login */ "./resources/js/components/front/Front_Login.vue");
 /* harmony import */ var _components_front_Front_Contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/front/Front_Contact */ "./resources/js/components/front/Front_Contact.vue");
 /* harmony import */ var _components_front_festivalss_Front_Festivals__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/front/festivalss/Front_Festivals */ "./resources/js/components/front/festivalss/Front_Festivals.vue");
 /* harmony import */ var _components_front_festivalss_Front_Festival_Show__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/front/festivalss/Front_Festival_Show */ "./resources/js/components/front/festivalss/Front_Festival_Show.vue");
+/* harmony import */ var _components_front_Front_Terms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/front/Front_Terms */ "./resources/js/components/front/Front_Terms.vue");
+
 
 
 
@@ -4350,6 +4455,10 @@ var routes = [{
   name: 'front_contact',
   component: _components_front_Front_Contact__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, {
+  path: '/terms',
+  name: 'front_terms',
+  component: _components_front_Front_Terms__WEBPACK_IMPORTED_MODULE_6__["default"]
+}, {
   path: '/festivals',
   name: 'front_festivals',
   component: _components_front_festivalss_Front_Festivals__WEBPACK_IMPORTED_MODULE_4__["default"]
@@ -4358,7 +4467,7 @@ var routes = [{
   name: 'front_festivals_show',
   component: _components_front_festivalss_Front_Festival_Show__WEBPACK_IMPORTED_MODULE_5__["default"]
 }];
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_6__["default"]({
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_7__["default"]({
   routes: routes,
   mode: 'history'
 });
@@ -48564,6 +48673,45 @@ component.options.__file = "resources/js/components/front/Front_Register.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/front/Front_Terms.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/front/Front_Terms.vue ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Front_Terms_vue_vue_type_template_id_2c0ea490_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Front_Terms.vue?vue&type=template&id=2c0ea490&scoped=true& */ "./resources/js/components/front/Front_Terms.vue?vue&type=template&id=2c0ea490&scoped=true&");
+/* harmony import */ var _Front_Terms_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Front_Terms.vue?vue&type=script&lang=js& */ "./resources/js/components/front/Front_Terms.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Front_Terms_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Front_Terms_vue_vue_type_template_id_2c0ea490_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Front_Terms_vue_vue_type_template_id_2c0ea490_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "2c0ea490",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/front/Front_Terms.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/front/festivalss/Front_Festival_Item_Main.vue":
 /*!*******************************************************************************!*\
   !*** ./resources/js/components/front/festivalss/Front_Festival_Item_Main.vue ***!
@@ -49180,6 +49328,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/front/Front_Terms.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/front/Front_Terms.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Terms_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Front_Terms.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/Front_Terms.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Terms_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/front/festivalss/Front_Festival_Item_Main.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************!*\
   !*** ./resources/js/components/front/festivalss/Front_Festival_Item_Main.vue?vue&type=script&lang=js& ***!
@@ -49507,6 +49671,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Register_vue_vue_type_template_id_7613c22a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Register_vue_vue_type_template_id_7613c22a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Front_Register.vue?vue&type=template&id=7613c22a&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/Front_Register.vue?vue&type=template&id=7613c22a&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/front/Front_Terms.vue?vue&type=template&id=2c0ea490&scoped=true&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/components/front/Front_Terms.vue?vue&type=template&id=2c0ea490&scoped=true& ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Terms_vue_vue_type_template_id_2c0ea490_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Terms_vue_vue_type_template_id_2c0ea490_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Terms_vue_vue_type_template_id_2c0ea490_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Front_Terms.vue?vue&type=template&id=2c0ea490&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/Front_Terms.vue?vue&type=template&id=2c0ea490&scoped=true&");
 
 
 /***/ }),
@@ -51026,6 +51207,174 @@ var staticRenderFns = [
           _vm._v(
             "\n                                            تغییر شماره موبایل\n                                        "
           ),
+        ]),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/Front_Terms.vue?vue&type=template&id=2c0ea490&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/Front_Terms.vue?vue&type=template&id=2c0ea490&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "inner-banner inner-bg12" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "inner-title" }, [
+          _c("h1", { staticClass: "text-aviny text-light font-50" }, [
+            _vm._v("قوانین و مقررات"),
+          ]),
+          _vm._v(" "),
+          _c("ul", [
+            _c(
+              "li",
+              [
+                _c("router-link", { attrs: { to: { name: "front_index" } } }, [
+                  _vm._v(
+                    "\n                            صفحه اصلی\n                        "
+                  ),
+                ]),
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("li", [_vm._v("قوانین")]),
+          ]),
+          _vm._v(" "),
+          _vm._m(0),
+        ]),
+      ]),
+    ]),
+    _vm._v(" "),
+    _vm._m(1),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "inner-shape" }, [
+      _c("img", {
+        attrs: {
+          src: "template/images/inner-banner/inner-shape1.png",
+          alt: "Images",
+        },
+      }),
+      _vm._v(" "),
+      _c("img", {
+        attrs: {
+          src: "template/images/inner-banner/inner-shape2.png",
+          alt: "Images",
+        },
+      }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "terms-conditions-area pt-100 pb-70" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "section-title text-center" }, [
+          _c("h1", { staticClass: "m-auto text-yekanbakh font-35" }, [
+            _vm._v("قوانین و مقررات فستیکا"),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row pt-45" }, [
+          _c("div", { staticClass: "col-lg-12" }, [
+            _c("div", { staticClass: "terms-conditions-img" }, [
+              _c("img", {
+                attrs: {
+                  src: "template/images/terms-condition-img.jpg",
+                  alt: "Images",
+                },
+              }),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "single-content" }, [
+              _c("p", { staticClass: "font-16 text-dark mb-3" }, [
+                _vm._v(
+                  "\n                            ضمن  سپاس و خوش آمد به شما بزرگوار، برای اینکه تجربه خوبی  رو با هم در فستیکا داشته باشیم لازم است که قوانین و مقررات زیر رو کامل مطالعه و رعایت نمایید.\n                        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("h5", { staticClass: "mb-4 text-danger" }, [
+                _vm._v("برگزار کننده جشنواره :"),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "font-15 text-justify" }, [
+                _vm._v(
+                  "\n                            ایجاد کننده و برگزارکننده جشنواره موظف است کلیه‌ی قوانین و ضوابط بین‌المللی و کشور جمهوری اسلامی ایران برای انتشار مطالب در اینترنت را در هنگام آماده سازی محتوای صفحه  جشنواره رعایت نماید و مسئولیت محتوای تولید شده در هر جشنواره بر عهده‌ی مدیر ،ایجاد کننده و برگزارکننده‌ی جشنواره است و  فستیکا هیچگونه مسئولیتی بابت  موارد مختلف جشنواره ندارد.\n                            "
+                ),
+                _c("br"),
+                _vm._v(
+                  "\n                            مدیر ،ایجاد کننده و برگزارکننده‌ی جشنواره جهت پشتیبانی از جشنواره خود بایستی شماره تلفنی را در اختیار فستیکا قرار دهد تا کاربرانی  که در جشنواره شما  ثبت نام کرده‌اند در صورت نیاز به راهنمایی و یا بروز مشکل و یا داشتن سوالاتی در   مورد جشنواره بتوانند با شما تماس بگیرند. شماره تماسی که به عنوان پشتیبان جشنواره در اختیار کاربران قرار می‌دهید باید در دسترس باشد و به همه تماس های کاربران پاسخگو باشد در غیر این صورت فستیکا مجاز به اعمال محدودیت‌هایی برای مدیر یا برگزارکنندگان جشنواره ذکر شده براساس صلاحدید خود می باشد.\n                            "
+                ),
+                _c("br"),
+                _vm._v(
+                  "\n                            چنانچه پشتیبانی  جشنواره  توسط خودتان انجام می شود به هیچ وجه اجازه ندارید شماره تماس فستیکا را به عنوان پشتیبان در اختیار شرکت کنندگان در جشنواره خود قرار دهید. در صورت بروز مشکل یا نیاز به دریافت راهنمایی فقط پشتیبان جشنواره  می تواند با فستیکا (شماره تماس پشتیبانی برگزارکننده ) تماس بگیرد.\n                            در زمان تعریف رشته های جشنواره ،نسبت به اعلام ثبت نام، زمان داوری و اعلام نتایج جشنواره در فستیکا دقت کافی داشته باشید.\n                            "
+                ),
+                _c("br"),
+                _vm._v(
+                  '\n                            مدیر،ایجاد کننده و برگزارکننده  جشنواره در فستیکا می‌تواند 72 ساعت بعد از اعلام نتیج جشنواره با مراجعه به "پنل مدیریت جشنواره" بخش " امور مالی جشنواره " فاکتور  پرداختی‌های جشنواره خود را دریافت کند، این فاکتور به صورت خودکار و براساس اطلاعات حساب مندرج مدیر جشنواره در پنل کاربری او ساخته  و قرارداده می‌شود\n                            اگر جشنواره شما بنا به دلایلی همچون بیماری، قطعی برق و اینترنت و حوادث غیرمترقبه در روز مقرر و زمان تعیین شده برگزار نشد، شما موظف به تعیین تاریخ و زمان جدید برای برگزاری جشنواره هستید\n                            '
+                ),
+                _c("br"),
+                _vm._v(
+                  "\n                            مدیر،ایجاد کننده و برگزارکننده  ،بعد از ایجاد جشنواره حداکثر دوباراجازه جا به جایی زمان  برگزاری جشنواره خود را دارد و موظف است که خود به تمامی شرکت کننده‌ها حداقل 24 ساعت قبل از شروع جشنواره اطلاع رسانی  نماید، در صورت تخطی در اطلاع رسانی  فستیکا مجاز است براساس صلاح دید خود  حساب  مدیر،ایجاد کننده و برگزارکننده  جشنواره را دچار محدودیت‌هایی کند.\n                            "
+                ),
+                _c("br"),
+                _vm._v(
+                  "\n                            برگزارکننده ی جشنواره حق ندارد تا از اطلاعات شرکت کنندگان در جشنواره اش که در اختیار دارد، سوءاستفاده نماید.\n                            استفاده از امکانات  فستیکا فقط به منظور دست‌یابی به اهداف ذکر شده در موضوع همکاری با فستیکا می باشد.\n                            کلیه‌ی محتوای ارسالی به فستیکا، شامل متن، عکس، قیمت‌ها و شرایط، فیلم و غیره ابتدا توسط مسئولین فستیکا بررسی شده و پذیرش یا رد درخواست ایجاد رویداد، حداکثر طی مدت 24 ساعت کاری انجام می‌شود.\n                            "
+                ),
+                _c("br"),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "font-15 text-justify" }, [
+                _vm._v(
+                  "\n                            فستیکا در انتشار و یا عدم انتشار محتوای ارائه‌ شده جشنواره ها کاملاً مختار است.\n                            فستیکا می‌تواند پیش از انتشار محتوا تغییراتی در آن اعمال کند به این شرط که چنین اصلاحاتی ناقض حقوق برگزار‌کننده نبوده و تغییری عمده‌ و اساسی در ارکان جشنواره ایجاد نکند\n                            در صورت بروز هرگونه تغییراساسی در جشنواره ، برگزارکننده موظف است بلافاصله پس از آگاهی از آن‌ها، چنین تغییراتی را در صفحه‌ی جشنواره اعمال کرده و مراتب را به صورت کتبی (از طریق ایمیل) و تلفنی به اطلاع فستیکا رسانده و به شرکت کنندگان آن جشنواره\n                            نیز اطلاع رسانی کند.\n                        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
+              _c("h5", { staticClass: "mb-4 text-danger" }, [
+                _vm._v(" شرکت کننده در جشنواره :"),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "font-15 text-justify" }, [
+                _vm._v(
+                  "\n                            جشنواره هایی  که در وب‌سایت فستیکا ایجاد شده توسط افراد،ادارات،نهادها و موسسات دیگر برگزار می‌شود که در صفحه مربوط به توضیحات جشنواره در بخش «برگزارکننده جشنواره» مشخصات برگزارکننده نوشته می‌شودو کلیه حقوق مادی و معنوی این جشنواره ها برای برگزارکننده محفوظ بوده و در این نوع وبینارها فستیکا فقط به عنوان پلتفرم معرفی، اطلاع رسانی، اجرا و برگزاری جشنواره ایفای نقش کرده و هیچگونه ادعا و تاییدی بر محتوای جشنواره ها فوق ندارد و فستیکا همچون ماهیت پلتفرم‌های محتوایی دیگر در قبال محتوا و مطالبی که در صفحه منتشر می‌شود هیچ گونه مسئولیتی ندارد.\n                            "
+                ),
+                _c("br"),
+                _vm._v(
+                  "\n                            اطلاعات شرکت کنندگان همچون آدرس ایمیل و شماره موبایل در اختیار برگزارکننده قرار می گیرد،چنانچه برگزارکننده جشنواره   با دسترسی به اطلاعات  شما اقدام به ارسال پیام‌های غیرمرتبط کند، حتما این مورد را از طریق بخش گزارش تخلف یا تیکت‌های سایت با ما در میان بگذارید تا در اولین فرصت با برگزارکننده مربوطه برخورد شود.\n                            "
+                ),
+                _c("br"),
+                _vm._v(
+                  "\n                            شروع جشنواره، یک ایمیل  به ایمیلی که در زمان ثبت نام وارد کرده اید ارسال می شود. حتما این ایمیل را مطالعه نمایید تا برای ورود به جشنواره با مشکلی مواجه نشوید.\n                            افراد،مسئول حفاظت از کد رهگیری خود پس از ثبت نام در جشنواره خود هستند و در صورتی که  کد رهگیری خود را در اختیار شخص دیگری بگذارند مسئولیت ناشی از این عمل به عهده‌ی آن‌ها است.\n                            مسئولیت صحت، دقت و کامل بودن اطلاعات داده شده به فستیکا بر عهده‌ي کاربر است.\n                            فستیکا برای حل مشکلات احتمالی مربوط به  پلتفرم خود تمام تلاش خود را می‌کند اما در مورد مشکلات خارج از کنترل مسئولیتی ندارد.\n                            از آن‌جایی که پرداخت ما بر اساس سیستم درگاه الکترونیکی بانک‌های معتبر کشور تنظیم شده است، فستیکا مسئول مشکلات احتمالی پرداخت بانک‌ها نخواهد بود.\n                            در خصوص مسئولیت ها و تعهداتی که برگزارکننده‌ی جشنواره می‌دهد که خارج از اختیار فستیکا می‌باشد، همانند صدور گواهی شرکت در جشنواره،هدایا و جوایز، و ...  فستیکا هیچ‌گونه مسئولیتی ندارد و می‌بایستی مستقیماً از برگزارکننده‌ی جشنواره  پیگیری شود.\n                        "
+                ),
+              ]),
+            ]),
+          ]),
         ]),
       ]),
     ])
@@ -52586,8 +52935,8 @@ var render = function () {
                     "router-link",
                     {
                       staticClass: "nav-link",
-                      class: { active: this.$route.name === "front_contact" },
-                      attrs: { to: { name: "front_contact" } },
+                      class: { active: this.$route.name === "front_terms" },
+                      attrs: { to: { name: "front_terms" } },
                     },
                     [
                       _vm._v(
