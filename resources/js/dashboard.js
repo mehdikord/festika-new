@@ -5,7 +5,7 @@
  */
 import VueRouter from "vue-router";
 import dashboardRouter from "./routes/dashboard-router";
-import Panel_Menu from "./components/dashboard/Panel_Menu";
+import Panel_Menu from "./components/panel/Panel_Menu";
 import Auth from "./helpers/Auth";
 import SweetAlert from "./helpers/SweetAlert";
 import AppStorage from "./helpers/AppStorage";
@@ -13,8 +13,7 @@ import Swal from "sweetalert2";
 import vSelect from 'vue-select'
 import VuePersianDatetimePicker from 'vue-persian-datetime-picker';
 import moment from "moment-jalaali";
-import Panel_Menu_Profile from "./components/dashboard/Panel_Menu_Profile";
-import Panel_Menu_Notif from "./components/dashboard/Panel_Menu_Notif";
+import Panel_Header from "./components/panel/Panel_Header";
 
 require('./bootstrap');
 
@@ -83,8 +82,7 @@ const app = new Vue({
     el: '#app',
     router : dashboardRouter,
     components :{
-        'panel-menu' : Panel_Menu,
-        'panel-menu-profile' : Panel_Menu_Profile,
-        'panel-menu-notif' : Panel_Menu_Notif,
+        'manage_menu' : Panel_Menu,
+        'manage_header' : Panel_Header,
     }
 });

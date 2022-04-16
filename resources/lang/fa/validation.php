@@ -191,6 +191,10 @@ return [
         'sponsor_image'         => 'لوگو حامی',
         'sponsor_name'         => 'نام حامی',
         'code'         => 'کد',
+        'festival_category_id' => 'دسته بندی جشنواره',
+        'formats' => 'نوع فایل ها',
+        'start_at' => 'تاریخ شروع',
+
 
 
     ],

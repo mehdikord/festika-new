@@ -52870,7 +52870,7 @@ var render = function () {
             "page-title-box d-sm-flex align-items-center justify-content-between app-fade-in",
         },
         [
-          _c("h4", { staticClass: "mb-sm-0 font-size-18" }, [
+          _c("h4", { staticClass: "mb-sm-0 font-size-16" }, [
             _vm._v("\n                " + _vm._s(_vm.title) + "\n            "),
           ]),
           _vm._v(" "),

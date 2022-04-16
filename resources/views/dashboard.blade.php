@@ -1,92 +1,111 @@
-<!DOCTYPE html>
-<html lang="en" dir="rtl">
+<!doctype html>
+<html lang="en" style="direction: rtl;">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!---- Website Information ---->
+
+    <meta charset="utf-8" />
     <title>پنل کاربری فستیکا</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{{ asset('management/images/favicon.ico') }}">
 
-
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('festika.svg') }}">
-    <link rel="stylesheet" href="{{ asset('dashboard/css/style.css') }}">
+    <!-- plugin css -->
+    <link href="{{ asset('management/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css') }}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
 
+    <!-- preloader css -->
+    <link rel="stylesheet" href="{{ asset('management/css/preloader.min.css') }}" type="text/css" />
+
+    <!-- Bootstrap Css -->
+    <link href="{{ asset('management/css/bootstrap-rtl.min.css') }}" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    {{--    <link href="{{ asset('management/css/icons.min.css') }}" rel="stylesheet" type="text/css" />--}}
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+
+
+    <!-- App Css-->
+    <link href="{{ asset('management/css/app-rtl.min.css') }}" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="{{ asset('fonts/css/font.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+
 </head>
 
-<body class="@@dashboard">
+<body data-layout-mode="light" data-topbar="light" data-sidebar="light">
 
-{{--<div id="preloader"><i>.</i><i>.</i><i>.</i></div>--}}
+<!-- <body data-layout="horizontal"> -->
 
-<div id="main-wrapper">
-    <div id="app">
-        <div class="header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xxl-12">
-                        <div class="header-content">
-                            <div class="header-left">
-                                <div class="brand-logo"><a class="mini-logo" href="dashboard/">
-                                        <img src="{{ asset('festika.svg') }}" alt="" width="40"></a></div>
-                                <div class="search">
-                                    <form action="#">
-                                        <span><i class="fas fa-search"></i></span>
-                                        <input type="text" placeholder="جستجو در پنل کاربری">
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="header-right">
-                                <!-- <div class="theme-switch"><i class="ri-sun-line"></i></div> -->
+<!-- Begin page -->
 
-                                <div class="dark-light-toggle theme-switch" onclick="themeToggle()">
-                                    <span class="dark"><i class="fas fa-moon"></i></span>
-                                    <span class="light"><i class="fas fa-sun"></i></span>
-                                </div>
+<div id="app">
 
+    <div id="layout-wrapper">
 
-                                <panel-menu-notif></panel-menu-notif>
-                                <panel-menu-profile></panel-menu-profile>
+        <header id="page-topbar">
+            <manage_header></manage_header>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <manage_menu></manage_menu>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <router-view></router-view>
+
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Festika
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-none d-sm-block">
+                                Design & Develop by Mehdi Kord
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </footer>
         </div>
-        <div class="sidebar">
-            <div class="brand-logo">
-                <a class="full-logo" href="">
-                    <img src="{{ asset('festika.svg') }}" alt="" width="60">
-                </a>
-            </div>
-            <panel-menu></panel-menu>
-        </div>
+        <!-- end main content-->
 
-        <div class="content-body">
-            <div class="container">
-                <router-view></router-view>
-            </div>
-        </div>
     </div>
 
-
-
 </div>
+<!-- END layout-wrapper -->
 
 
+<!-- JAVASCRIPT -->
+<script src="{{ asset('management/libs/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('management/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('management/libs/metismenu/metisMenu.min.js') }}"></script>
+<script src="{{ asset('management/libs/simplebar/simplebar.min.js') }}"></script>
+<script src="{{ asset('management/libs/node-waves/waves.min.js') }}"></script>
+<script src="{{ asset('management/libs/feather-icons/feather.min.js') }}"></script>
 
-<script src="{{ asset('dashboard/vendor/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- pace js -->
+<script src="{{ asset('management/libs/pace-js/pace.min.js') }}"></script>
+{{--<script src="https://cdn.tiny.cloud/1/pt855e3h7yxtda2zr97ldurjwwrotxv1gmy7afdhxegvcpu9/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>--}}
+
+
 <script src="https://kit.fontawesome.com/bead5d45e7.js" crossorigin="anonymous"></script>
 
-<script src="{{ asset('dashboard/js/scripts.js') }}"></script>
-
-<script src="{{ asset('js/dashboard.js') }}"></script>
+<script src="{{ asset('management/js/app.js') }}"></script>
+<script src="{{ asset('js/dashboard.js') }}" defer></script>
 
 </body>
 

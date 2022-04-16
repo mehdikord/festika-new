@@ -23,7 +23,8 @@
 
                         <div class="top-sellers-img">
                             <router-link to="">
-                                <img src="/template/images/top-sellers/top-sellers1.jpg" alt="Images">
+                                <img v-if="item.profile !== null" :src="item.profile" alt="Images">
+                                <img v-else src="/template/images/svg/user-default.png" alt="Images">
                             </router-link>
                             <i class="fas fa-star"></i>
                         </div>

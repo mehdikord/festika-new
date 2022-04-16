@@ -41,7 +41,7 @@
                                 <label class="form-label">لینک جشنواره</label>
                                 <input v-model="form.slug" type="text" class="form-control" :class="{'is-invalid' : this.ValidationErrors(errors,'slug').length}">
                                 <div class="mt-2  font-14" dir="ltr">
-                                    https://festika.ir/<span class="text-danger">{{form.slug}}</span>
+                                    https://festika.ir/festivals/show/<span class="text-danger">{{form.slug}}</span>
                                 </div>
                                 <div class="text-danger mt-2" v-for="(error,index) in this.ValidationErrors(errors,'slug')" :key="index">
                                     {{ error }}

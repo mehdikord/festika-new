@@ -7,7 +7,7 @@
                         <span></span>
                         <h1 class="text-aviny font-60">فستیکا</h1>
                         <h1 class="mt-4 text-aviny font-40">
-                            اولین پلتفرم ایجاد و برگزاری جشنواره مجازی آنلاین
+                            اولین پلتفرم ایجاد جشنواره های آنلاین
                         </h1>
                         <div class="banner-btn mt-4">
                             <button href="" class="default-btn border-radius-5 btn-lg font-20">الان جشنوارتو آنلاین برگزار کن !</button>

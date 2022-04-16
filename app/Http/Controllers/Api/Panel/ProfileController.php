@@ -36,6 +36,7 @@ class ProfileController extends Controller
             'province_id'=>$request->province_id,
             'city_id'=>$request->city_id,
             'gender'=>$request->gender,
+            'bio'=>$request->bio,
             'profile'=>$photo_url,
         ]);
         return response()->json('اطلاعات حساب کاربری شما باموفقیت ویرایش شد');

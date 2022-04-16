@@ -1,5 +1,5 @@
 <template>
-    <div class="author-area-two author-area-bg3 pt-100 pb-70">
+    <div v-if="items.length > 0" class="author-area-two author-area-bg3 pt-100 pb-70">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 col-md-8">

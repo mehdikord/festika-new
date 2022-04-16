@@ -15,7 +15,7 @@
                 {{subtitle}}
             </p>
             <div class="text-center ">
-                <span class="badge bg-orange3 p-3 text-light font-16"> 3 روز تا پایان</span>
+                <router-link :to="{name:'front_festivals_show',params:{slug : slug}}" class="badge bg-orange3 p-3 text-light font-16">شرکت در جشنواره</router-link>
             </div>
         </div>
     </div>

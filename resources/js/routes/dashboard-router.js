@@ -1,10 +1,11 @@
 import VueRouter from "vue-router";
 import Panel_Dashboard from "../components/dashboard/Panel_Dashboard";
-import Panel_Profile from "../components/dashboard/Panel_Profile";
-import Panel_Festivals_New from "../components/dashboard/festivals/Panel_Festivals_New";
-import Panel_Festivals from "../components/dashboard/festivals/Panel_Festivals";
-import Panel_Festivals_Files from "../components/dashboard/festivals/Panel_Festivals_Files";
+
 import Panel_Festivals_Manage from "../components/dashboard/festivals/Panel_Festivals_Manage";
+import Panel_Festival_New from "../components/panel/festivals/Panel_Festival_New";
+import Panel_Festival_All from "../components/panel/festivals/Panel_Festival_All";
+import Panel_Profile from "../components/panel/profile/Panel_Profile";
+import Panel_Festival_Files from "../components/panel/festivals/Panel_Festival_Files";
 
 const routes = [
     //dashboard
@@ -20,12 +21,12 @@ const routes = [
     },
     {
         path : '/panel/festivals',
-        component : Panel_Festivals,
+        component : Panel_Festival_All,
         name : 'panel_festivals',
     },
     {
         path : '/panel/festivals/files/:slug',
-        component : Panel_Festivals_Files,
+        component : Panel_Festival_Files,
         name : 'panel_festivals_files',
     },
     {
@@ -35,7 +36,7 @@ const routes = [
     },
     {
         path : '/panel/festivals/new',
-        component : Panel_Festivals_New,
+        component : Panel_Festival_New,
         name : 'panel_festivals_new',
     },
 

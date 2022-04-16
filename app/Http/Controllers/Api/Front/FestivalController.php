@@ -13,6 +13,7 @@ class FestivalController extends Controller
     public function specials(): \Illuminate\Http\JsonResponse
     {
         $data = Festival::query();
+         $data->whereDate('start_at','<',Carbon::now());
         $data->where('is_active',true)->where('force_close',false)->where('accepted',true)->whereDate('expire_at','>',Carbon::now());
         $data->where('is_special',true);
         return response()->json($data->with('category')->get());
@@ -20,8 +21,13 @@ class FestivalController extends Controller
 
     public function expiring()
     {
-        return response()->json(Festival::with('category')->where('is_active',true)->where('force_close',false)->where('accepted',true)->get());
-
+        $data = Festival::query();
+        $data->whereDate('start_at','<=',Carbon::now());
+        $data->where('is_active',true)->where('force_close',false)->where('accepted',true)->whereDate('expire_at','>',Carbon::now());
+        $now= Carbon::now();
+        $now->addDays(3);
+        $data->whereDate('expire_at','<=',$now);
+        return response()->json($data->with('category')->with('user')->orderByDesc('id')->get());
     }
 
     public function categories()
@@ -33,6 +39,7 @@ class FestivalController extends Controller
     public function all()
     {
         $data = Festival::query();
+        $data->whereDate('start_at','<=',Carbon::now());
         $data->where('is_active',true)->where('force_close',false)->where('accepted',true)->whereDate('expire_at','>',Carbon::now());
         return response()->json($data->with('category')->with('user')->orderByDesc('id')->get());
     }

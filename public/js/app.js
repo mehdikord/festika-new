@@ -3967,6 +3967,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Front_Index_Top_Users",
   created: function created() {
@@ -52650,24 +52651,32 @@ var render = function () {
           _vm._v("\n            " + _vm._s(_vm.subtitle) + "\n        "),
         ]),
         _vm._v(" "),
-        _vm._m(0),
+        _c(
+          "div",
+          { staticClass: "text-center " },
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "badge bg-orange3 p-3 text-light font-16",
+                attrs: {
+                  to: {
+                    name: "front_festivals_show",
+                    params: { slug: _vm.slug },
+                  },
+                },
+              },
+              [_vm._v("شرکت در جشنواره")]
+            ),
+          ],
+          1
+        ),
       ]),
     ],
     1
   )
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-center " }, [
-      _c("span", { staticClass: "badge bg-orange3 p-3 text-light font-16" }, [
-        _vm._v(" 3 روز تا پایان"),
-      ]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -53354,43 +53363,45 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "author-area-two author-area-bg3 pt-100 pb-70" },
-    [
-      _c("div", { staticClass: "container" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "row pt-45 justify-content-center" },
-          _vm._l(_vm.items, function (item, index) {
-            return _c(
+  return _vm.items.length > 0
+    ? _c(
+        "div",
+        { staticClass: "author-area-two author-area-bg3 pt-100 pb-70" },
+        [
+          _c("div", { staticClass: "container" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
               "div",
-              { key: index, staticClass: "col-md-3" },
-              [
-                _c("front-index-festival-item1", {
-                  staticClass: "app-fade-in",
-                  attrs: {
-                    slug: item.slug,
-                    title: item.title,
-                    category: item.category.name,
-                    subtitle: item.subtitle,
-                    logo: item.logo,
-                    banner: item.banner,
-                  },
-                }),
-              ],
-              1
-            )
-          }),
-          0
-        ),
-      ]),
-      _vm._v(" "),
-      _vm._m(1),
-    ]
-  )
+              { staticClass: "row pt-45 justify-content-center" },
+              _vm._l(_vm.items, function (item, index) {
+                return _c(
+                  "div",
+                  { key: index, staticClass: "col-md-3" },
+                  [
+                    _c("front-index-festival-item1", {
+                      staticClass: "app-fade-in",
+                      attrs: {
+                        slug: item.slug,
+                        title: item.title,
+                        category: item.category.name,
+                        subtitle: item.subtitle,
+                        logo: item.logo,
+                        banner: item.banner,
+                      },
+                    }),
+                  ],
+                  1
+                )
+              }),
+              0
+            ),
+          ]),
+          _vm._v(" "),
+          _vm._m(1),
+        ]
+      )
+    : _vm._e()
 }
 var staticRenderFns = [
   function () {
@@ -53467,7 +53478,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("h1", { staticClass: "mt-4 text-aviny font-40" }, [
                 _vm._v(
-                  "\n                        اولین پلتفرم ایجاد و برگزاری جشنواره مجازی آنلاین\n                    "
+                  "\n                        اولین پلتفرم ایجاد جشنواره های آنلاین\n                    "
                 ),
               ]),
               _vm._v(" "),
@@ -53557,12 +53568,16 @@ var render = function () {
                 { staticClass: "top-sellers-img" },
                 [
                   _c("router-link", { attrs: { to: "" } }, [
-                    _c("img", {
-                      attrs: {
-                        src: "/template/images/top-sellers/top-sellers1.jpg",
-                        alt: "Images",
-                      },
-                    }),
+                    item.profile !== null
+                      ? _c("img", {
+                          attrs: { src: item.profile, alt: "Images" },
+                        })
+                      : _c("img", {
+                          attrs: {
+                            src: "/template/images/svg/user-default.png",
+                            alt: "Images",
+                          },
+                        }),
                   ]),
                   _vm._v(" "),
                   _c("i", { staticClass: "fas fa-star" }),

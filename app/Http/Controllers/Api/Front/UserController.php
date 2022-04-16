@@ -12,7 +12,7 @@ class UserController extends Controller
     {
         return response()->json(User::where('is_active',true)->whereHas('festivals')->with('festivals',function ($q){
             $q->select(['id','user_id']);
-        })->take(8)->select(['id','name'])->get()->sortBy(function ($festival){
+        })->take(8)->select(['id','name','profile'])->get()->sortBy(function ($festival){
            return $festival->festivals->count();
         }));
 
