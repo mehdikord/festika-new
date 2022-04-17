@@ -2054,239 +2054,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/Panel_Dashboard.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/Panel_Dashboard.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "Panel_Dashboard"
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../helpers/SweetAlert */ "./resources/js/helpers/SweetAlert.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "Panel_Festivals_Manage",
-  created: function created() {
-    this.GetFestival();
-  },
-  data: function data() {
-    return {
-      festival: null
-    };
-  },
-  methods: {
-    GetFestival: function GetFestival() {
-      var _this = this;
-
-      axios.get('/api/panel/festivals/show/' + this.$route.params.slug).then(function (response) {
-        _this.festival = response.data;
-        _this.loading = false;
-      })["catch"](function (e) {
-        _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_0__["default"].SweetServerErrorMessage();
-      });
-    }
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/manage/Manage_Loading.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/manage/Manage_Loading.vue?vue&type=script&lang=js& ***!
@@ -2570,6 +2337,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Manage_Menu"
 });
@@ -2607,6 +2375,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Manage_Title",
   props: ['title']
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/dashboard/Panel_Dashboard.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/dashboard/Panel_Dashboard.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Panel_Dashboard"
 });
 
 /***/ }),
@@ -2857,7 +2646,7 @@ __webpack_require__.r(__webpack_exports__);
         var FILE = window.URL.createObjectURL(new Blob([res.data]));
         var docUrl = document.createElement('a');
         docUrl.href = FILE;
-        docUrl.setAttribute('download', file.code);
+        docUrl.setAttribute('download', file.code + '.' + file.extension);
         document.body.appendChild(docUrl);
         docUrl.click();
       });
@@ -2869,6 +2658,240 @@ __webpack_require__.r(__webpack_exports__);
 
       return this.festival.files.filter(function (file) {
         return file.user.name !== null && file.user.name.match(_this2.search) || file.code !== null && file.code.match(_this2.search);
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _manage_Manage_Title__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../manage/Manage_Title */ "./resources/js/components/manage/Manage_Title.vue");
+/* harmony import */ var _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../helpers/SweetAlert */ "./resources/js/helpers/SweetAlert.js");
+/* harmony import */ var moment_jalaali__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment-jalaali */ "./node_modules/moment-jalaali/index.js");
+/* harmony import */ var moment_jalaali__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment_jalaali__WEBPACK_IMPORTED_MODULE_2__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Panel_Festival_Manage",
+  components: {
+    'manage_title': _manage_Manage_Title__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  created: function created() {
+    this.GetFestival();
+  },
+  data: function data() {
+    return {
+      festival: null
+    };
+  },
+  methods: {
+    GetFestival: function GetFestival() {
+      var _this = this;
+
+      axios.get('/api/panel/festivals/show/' + this.$route.params.slug).then(function (response) {
+        _this.festival = response.data;
+        _this.loading = false;
+      })["catch"](function (e) {
+        _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetServerErrorMessage();
+      });
+    },
+    GetDiffDays: function GetDiffDays(start, end) {
+      var a = moment_jalaali__WEBPACK_IMPORTED_MODULE_2___default()(moment_jalaali__WEBPACK_IMPORTED_MODULE_2___default()(start).format('Y,MM,DD'));
+      var b = moment_jalaali__WEBPACK_IMPORTED_MODULE_2___default()(moment_jalaali__WEBPACK_IMPORTED_MODULE_2___default()(end).format("Y,MM,DD"));
+      return b.diff(a, 'days');
+    },
+    SetInactive: function SetInactive(id) {
+      var _this2 = this;
+
+      Swal.fire({
+        title: 'آیا مطمئن هستید',
+        text: "آیا مطمئن هستید جشنواره مورد نظر غیرفعال شود ؟",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#26a852',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'خیر',
+        confirmButtonText: 'غیرفعال شود!'
+      }).then(function (result) {
+        if (result.isConfirmed) {
+          axios.get('/api/panel/festivals/activation/' + id).then(function (response) {
+            _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetToastMessage(response.data);
+            _this2.festival.is_active = 0;
+          })["catch"](function (e) {
+            _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetServerErrorMessage();
+          });
+        }
+      });
+    },
+    SetActive: function SetActive(id) {
+      var _this3 = this;
+
+      Swal.fire({
+        title: 'آیا مطمئن هستید',
+        text: "آیا مطمئن هستید جشنواره مورد نظر فعال شود ؟",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#26a852',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'خیر',
+        confirmButtonText: 'فعال شود!'
+      }).then(function (result) {
+        if (result.isConfirmed) {
+          axios.get('/api/panel/festivals/activation/' + id).then(function (response) {
+            _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetToastMessage(response.data);
+            _this3.festival.is_active = 1;
+          })["catch"](function (e) {
+            _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetServerErrorMessage();
+          });
+        }
       });
     }
   }
@@ -3476,6 +3499,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Panel_Festival_include_Item",
   props: ['festival']
@@ -4019,12 +4043,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var _components_dashboard_Panel_Dashboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/dashboard/Panel_Dashboard */ "./resources/js/components/dashboard/Panel_Dashboard.vue");
-/* harmony import */ var _components_dashboard_festivals_Panel_Festivals_Manage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/dashboard/festivals/Panel_Festivals_Manage */ "./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue");
-/* harmony import */ var _components_panel_festivals_Panel_Festival_New__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/panel/festivals/Panel_Festival_New */ "./resources/js/components/panel/festivals/Panel_Festival_New.vue");
-/* harmony import */ var _components_panel_festivals_Panel_Festival_All__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/panel/festivals/Panel_Festival_All */ "./resources/js/components/panel/festivals/Panel_Festival_All.vue");
-/* harmony import */ var _components_panel_profile_Panel_Profile__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/panel/profile/Panel_Profile */ "./resources/js/components/panel/profile/Panel_Profile.vue");
-/* harmony import */ var _components_panel_festivals_Panel_Festival_Files__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/panel/festivals/Panel_Festival_Files */ "./resources/js/components/panel/festivals/Panel_Festival_Files.vue");
+/* harmony import */ var _components_panel_festivals_Panel_Festival_New__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/panel/festivals/Panel_Festival_New */ "./resources/js/components/panel/festivals/Panel_Festival_New.vue");
+/* harmony import */ var _components_panel_festivals_Panel_Festival_All__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/panel/festivals/Panel_Festival_All */ "./resources/js/components/panel/festivals/Panel_Festival_All.vue");
+/* harmony import */ var _components_panel_profile_Panel_Profile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/panel/profile/Panel_Profile */ "./resources/js/components/panel/profile/Panel_Profile.vue");
+/* harmony import */ var _components_panel_festivals_Panel_Festival_Files__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/panel/festivals/Panel_Festival_Files */ "./resources/js/components/panel/festivals/Panel_Festival_Files.vue");
+/* harmony import */ var _components_panel_festivals_Panel_Festival_Manage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/panel/festivals/Panel_Festival_Manage */ "./resources/js/components/panel/festivals/Panel_Festival_Manage.vue");
+/* harmony import */ var _components_panel_dashboard_Panel_Dashboard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/panel/dashboard/Panel_Dashboard */ "./resources/js/components/panel/dashboard/Panel_Dashboard.vue");
 
 
 
@@ -4035,27 +4059,27 @@ __webpack_require__.r(__webpack_exports__);
 var routes = [//dashboard
 {
   path: '/panel/dashboard',
-  component: _components_dashboard_Panel_Dashboard__WEBPACK_IMPORTED_MODULE_0__["default"],
+  component: _components_panel_dashboard_Panel_Dashboard__WEBPACK_IMPORTED_MODULE_5__["default"],
   name: 'panel_index'
 }, {
   path: '/panel/profile',
-  component: _components_panel_profile_Panel_Profile__WEBPACK_IMPORTED_MODULE_4__["default"],
+  component: _components_panel_profile_Panel_Profile__WEBPACK_IMPORTED_MODULE_2__["default"],
   name: 'panel_profile'
 }, {
   path: '/panel/festivals',
-  component: _components_panel_festivals_Panel_Festival_All__WEBPACK_IMPORTED_MODULE_3__["default"],
+  component: _components_panel_festivals_Panel_Festival_All__WEBPACK_IMPORTED_MODULE_1__["default"],
   name: 'panel_festivals'
 }, {
   path: '/panel/festivals/files/:slug',
-  component: _components_panel_festivals_Panel_Festival_Files__WEBPACK_IMPORTED_MODULE_5__["default"],
+  component: _components_panel_festivals_Panel_Festival_Files__WEBPACK_IMPORTED_MODULE_3__["default"],
   name: 'panel_festivals_files'
 }, {
   path: '/panel/festivals/manage/:slug',
-  component: _components_dashboard_festivals_Panel_Festivals_Manage__WEBPACK_IMPORTED_MODULE_1__["default"],
+  component: _components_panel_festivals_Panel_Festival_Manage__WEBPACK_IMPORTED_MODULE_4__["default"],
   name: 'panel_festivals_manage'
 }, {
   path: '/panel/festivals/new',
-  component: _components_panel_festivals_Panel_Festival_New__WEBPACK_IMPORTED_MODULE_2__["default"],
+  component: _components_panel_festivals_Panel_Festival_New__WEBPACK_IMPORTED_MODULE_0__["default"],
   name: 'panel_festivals_new'
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_6__["default"]({
@@ -4063,30 +4087,6 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_6__["default"]({
   mode: 'history'
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=style&index=0&id=4866f31e&scoped=true&lang=css&":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=style&index=0&id=4866f31e&scoped=true&lang=css& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.img-logo[data-v-4866f31e]{\n    width: 80px!important;\n    height: 80px!important;\n    border-radius: 50%!important;\n    border : 2px solid rgba(255, 84, 53, 0.76);\n}\n.ml-2[data-v-4866f31e]{\n    margin-left: 10px!important;\n}\n.ml-3[data-v-4866f31e]{\n    margin-left:15px !important;\n}\n.mr-2[data-v-4866f31e]{\n    margin-right: 10px!important;\n}\n.mr-3[data-v-4866f31e]{\n    margin-right:15px !important;\n}\n", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
 
 /***/ }),
 
@@ -4108,6 +4108,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\n.user-profile[data-v-733f5b75]{\n    width: 40px;\n    margin-left: 10px!important;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=style&index=0&id=29bf5f52&scoped=true&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=style&index=0&id=29bf5f52&scoped=true&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.img-logo[data-v-29bf5f52]{\n    width: 80px!important;\n    height: 80px!important;\n    border-radius: 50%!important;\n    border : 2px solid rgba(255, 84, 53, 0.76);\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -44316,36 +44340,6 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=style&index=0&id=4866f31e&scoped=true&lang=css&":
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=style&index=0&id=4866f31e&scoped=true&lang=css& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festivals_Manage_vue_vue_type_style_index_0_id_4866f31e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Festivals_Manage.vue?vue&type=style&index=0&id=4866f31e&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=style&index=0&id=4866f31e&scoped=true&lang=css&");
-
-            
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festivals_Manage_vue_vue_type_style_index_0_id_4866f31e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festivals_Manage_vue_vue_type_style_index_0_id_4866f31e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
-
-/***/ }),
-
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Files.vue?vue&type=style&index=0&id=733f5b75&scoped=true&lang=css&":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Files.vue?vue&type=style&index=0&id=733f5b75&scoped=true&lang=css& ***!
@@ -44373,6 +44367,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Files_vue_vue_type_style_index_0_id_733f5b75_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=style&index=0&id=29bf5f52&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=style&index=0&id=29bf5f52&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Manage_vue_vue_type_style_index_0_id_29bf5f52_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Festival_Manage.vue?vue&type=style&index=0&id=29bf5f52&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=style&index=0&id=29bf5f52&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Manage_vue_vue_type_style_index_0_id_29bf5f52_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Manage_vue_vue_type_style_index_0_id_29bf5f52_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -48108,86 +48132,6 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 
 /***/ }),
 
-/***/ "./resources/js/components/dashboard/Panel_Dashboard.vue":
-/*!***************************************************************!*\
-  !*** ./resources/js/components/dashboard/Panel_Dashboard.vue ***!
-  \***************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _Panel_Dashboard_vue_vue_type_template_id_146f31a3_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Panel_Dashboard.vue?vue&type=template&id=146f31a3&scoped=true& */ "./resources/js/components/dashboard/Panel_Dashboard.vue?vue&type=template&id=146f31a3&scoped=true&");
-/* harmony import */ var _Panel_Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Panel_Dashboard.vue?vue&type=script&lang=js& */ "./resources/js/components/dashboard/Panel_Dashboard.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Panel_Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Panel_Dashboard_vue_vue_type_template_id_146f31a3_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _Panel_Dashboard_vue_vue_type_template_id_146f31a3_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  "146f31a3",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/dashboard/Panel_Dashboard.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue":
-/*!********************************************************************************!*\
-  !*** ./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue ***!
-  \********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _Panel_Festivals_Manage_vue_vue_type_template_id_4866f31e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Panel_Festivals_Manage.vue?vue&type=template&id=4866f31e&scoped=true& */ "./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=template&id=4866f31e&scoped=true&");
-/* harmony import */ var _Panel_Festivals_Manage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Panel_Festivals_Manage.vue?vue&type=script&lang=js& */ "./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=script&lang=js&");
-/* harmony import */ var _Panel_Festivals_Manage_vue_vue_type_style_index_0_id_4866f31e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Panel_Festivals_Manage.vue?vue&type=style&index=0&id=4866f31e&scoped=true&lang=css& */ "./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=style&index=0&id=4866f31e&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-;
-
-
-/* normalize component */
-
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
-  _Panel_Festivals_Manage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Panel_Festivals_Manage_vue_vue_type_template_id_4866f31e_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _Panel_Festivals_Manage_vue_vue_type_template_id_4866f31e_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  "4866f31e",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
 /***/ "./resources/js/components/manage/Manage_Loading.vue":
 /*!***********************************************************!*\
   !*** ./resources/js/components/manage/Manage_Loading.vue ***!
@@ -48422,6 +48366,45 @@ component.options.__file = "resources/js/components/panel/Panel_Title.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/panel/dashboard/Panel_Dashboard.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/panel/dashboard/Panel_Dashboard.vue ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Panel_Dashboard_vue_vue_type_template_id_638eadd0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Panel_Dashboard.vue?vue&type=template&id=638eadd0&scoped=true& */ "./resources/js/components/panel/dashboard/Panel_Dashboard.vue?vue&type=template&id=638eadd0&scoped=true&");
+/* harmony import */ var _Panel_Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Panel_Dashboard.vue?vue&type=script&lang=js& */ "./resources/js/components/panel/dashboard/Panel_Dashboard.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Panel_Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Panel_Dashboard_vue_vue_type_template_id_638eadd0_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Panel_Dashboard_vue_vue_type_template_id_638eadd0_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "638eadd0",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/panel/dashboard/Panel_Dashboard.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/panel/festivals/Panel_Festival_All.vue":
 /*!************************************************************************!*\
   !*** ./resources/js/components/panel/festivals/Panel_Festival_All.vue ***!
@@ -48498,6 +48481,47 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/panel/festivals/Panel_Festival_Files.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/panel/festivals/Panel_Festival_Manage.vue":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/panel/festivals/Panel_Festival_Manage.vue ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Panel_Festival_Manage_vue_vue_type_template_id_29bf5f52_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Panel_Festival_Manage.vue?vue&type=template&id=29bf5f52&scoped=true& */ "./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=template&id=29bf5f52&scoped=true&");
+/* harmony import */ var _Panel_Festival_Manage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Panel_Festival_Manage.vue?vue&type=script&lang=js& */ "./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Panel_Festival_Manage_vue_vue_type_style_index_0_id_29bf5f52_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Panel_Festival_Manage.vue?vue&type=style&index=0&id=29bf5f52&scoped=true&lang=css& */ "./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=style&index=0&id=29bf5f52&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Panel_Festival_Manage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Panel_Festival_Manage_vue_vue_type_template_id_29bf5f52_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Panel_Festival_Manage_vue_vue_type_template_id_29bf5f52_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "29bf5f52",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/panel/festivals/Panel_Festival_Manage.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -48621,38 +48645,6 @@ component.options.__file = "resources/js/components/panel/profile/Panel_Profile.
 
 /***/ }),
 
-/***/ "./resources/js/components/dashboard/Panel_Dashboard.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************!*\
-  !*** ./resources/js/components/dashboard/Panel_Dashboard.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Dashboard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/Panel_Dashboard.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************!*\
-  !*** ./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festivals_Manage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Festivals_Manage.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festivals_Manage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
 /***/ "./resources/js/components/manage/Manage_Loading.vue?vue&type=script&lang=js&":
 /*!************************************************************************************!*\
   !*** ./resources/js/components/manage/Manage_Loading.vue?vue&type=script&lang=js& ***!
@@ -48749,6 +48741,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/panel/dashboard/Panel_Dashboard.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/panel/dashboard/Panel_Dashboard.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Dashboard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/dashboard/Panel_Dashboard.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/panel/festivals/Panel_Festival_All.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************!*\
   !*** ./resources/js/components/panel/festivals/Panel_Festival_All.vue?vue&type=script&lang=js& ***!
@@ -48778,6 +48786,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Files_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Festival_Files.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Files.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Files_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Manage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Festival_Manage.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Manage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -48829,19 +48853,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=style&index=0&id=4866f31e&scoped=true&lang=css&":
-/*!*****************************************************************************************************************************************!*\
-  !*** ./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=style&index=0&id=4866f31e&scoped=true&lang=css& ***!
-  \*****************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festivals_Manage_vue_vue_type_style_index_0_id_4866f31e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Festivals_Manage.vue?vue&type=style&index=0&id=4866f31e&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=style&index=0&id=4866f31e&scoped=true&lang=css&");
-
-
-/***/ }),
-
 /***/ "./resources/js/components/panel/festivals/Panel_Festival_Files.vue?vue&type=style&index=0&id=733f5b75&scoped=true&lang=css&":
 /*!***********************************************************************************************************************************!*\
   !*** ./resources/js/components/panel/festivals/Panel_Festival_Files.vue?vue&type=style&index=0&id=733f5b75&scoped=true&lang=css& ***!
@@ -48855,6 +48866,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=style&index=0&id=29bf5f52&scoped=true&lang=css&":
+/*!************************************************************************************************************************************!*\
+  !*** ./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=style&index=0&id=29bf5f52&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Manage_vue_vue_type_style_index_0_id_29bf5f52_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Festival_Manage.vue?vue&type=style&index=0&id=29bf5f52&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=style&index=0&id=29bf5f52&scoped=true&lang=css&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/panel/festivals/includes/Panel_Festival_include_Item.vue?vue&type=style&index=0&id=ed3ff0c8&scoped=true&lang=css&":
 /*!***************************************************************************************************************************************************!*\
   !*** ./resources/js/components/panel/festivals/includes/Panel_Festival_include_Item.vue?vue&type=style&index=0&id=ed3ff0c8&scoped=true&lang=css& ***!
@@ -48864,40 +48888,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_include_Item_vue_vue_type_style_index_0_id_ed3ff0c8_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader/dist/cjs.js!../../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Festival_include_Item.vue?vue&type=style&index=0&id=ed3ff0c8&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/includes/Panel_Festival_include_Item.vue?vue&type=style&index=0&id=ed3ff0c8&scoped=true&lang=css&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/dashboard/Panel_Dashboard.vue?vue&type=template&id=146f31a3&scoped=true&":
-/*!**********************************************************************************************************!*\
-  !*** ./resources/js/components/dashboard/Panel_Dashboard.vue?vue&type=template&id=146f31a3&scoped=true& ***!
-  \**********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Dashboard_vue_vue_type_template_id_146f31a3_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Dashboard_vue_vue_type_template_id_146f31a3_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Dashboard_vue_vue_type_template_id_146f31a3_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Dashboard.vue?vue&type=template&id=146f31a3&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/Panel_Dashboard.vue?vue&type=template&id=146f31a3&scoped=true&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=template&id=4866f31e&scoped=true&":
-/*!***************************************************************************************************************************!*\
-  !*** ./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=template&id=4866f31e&scoped=true& ***!
-  \***************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festivals_Manage_vue_vue_type_template_id_4866f31e_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festivals_Manage_vue_vue_type_template_id_4866f31e_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festivals_Manage_vue_vue_type_template_id_4866f31e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Festivals_Manage.vue?vue&type=template&id=4866f31e&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=template&id=4866f31e&scoped=true&");
 
 
 /***/ }),
@@ -49004,6 +48994,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/panel/dashboard/Panel_Dashboard.vue?vue&type=template&id=638eadd0&scoped=true&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/components/panel/dashboard/Panel_Dashboard.vue?vue&type=template&id=638eadd0&scoped=true& ***!
+  \****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Dashboard_vue_vue_type_template_id_638eadd0_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Dashboard_vue_vue_type_template_id_638eadd0_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Dashboard_vue_vue_type_template_id_638eadd0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Dashboard.vue?vue&type=template&id=638eadd0&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/dashboard/Panel_Dashboard.vue?vue&type=template&id=638eadd0&scoped=true&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/panel/festivals/Panel_Festival_All.vue?vue&type=template&id=548db71f&scoped=true&":
 /*!*******************************************************************************************************************!*\
   !*** ./resources/js/components/panel/festivals/Panel_Festival_All.vue?vue&type=template&id=548db71f&scoped=true& ***!
@@ -49034,6 +49041,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Files_vue_vue_type_template_id_733f5b75_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Files_vue_vue_type_template_id_733f5b75_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Festival_Files.vue?vue&type=template&id=733f5b75&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Files.vue?vue&type=template&id=733f5b75&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=template&id=29bf5f52&scoped=true&":
+/*!**********************************************************************************************************************!*\
+  !*** ./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=template&id=29bf5f52&scoped=true& ***!
+  \**********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Manage_vue_vue_type_template_id_29bf5f52_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Manage_vue_vue_type_template_id_29bf5f52_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Manage_vue_vue_type_template_id_29bf5f52_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Festival_Manage.vue?vue&type=template&id=29bf5f52&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=template&id=29bf5f52&scoped=true&");
 
 
 /***/ }),
@@ -49085,700 +49109,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Profile_vue_vue_type_template_id_b143b5fc_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Profile_vue_vue_type_template_id_b143b5fc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Profile.vue?vue&type=template&id=b143b5fc&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/profile/Panel_Profile.vue?vue&type=template&id=b143b5fc&scoped=true&");
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/Panel_Dashboard.vue?vue&type=template&id=146f31a3&scoped=true&":
-/*!*************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/Panel_Dashboard.vue?vue&type=template&id=146f31a3&scoped=true& ***!
-  \*************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-6" }, [
-        _c("div", { staticClass: "card top-bid" }, [
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "row " }, [
-              _c("div", { staticClass: "col-md-6" }, [
-                _c("img", {
-                  staticClass: "img-fluid rounded",
-                  attrs: {
-                    src: "/dashboard/images/panel-launching.svg",
-                    width: "80%",
-                    alt: "...",
-                  },
-                }),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-md-6" }, [
-                _c("h1", { staticClass: "mt-5 text-aviny text-danger" }, [
-                  _vm._v(
-                    "\n                            هنوز جشنوارتو نساختی ؟\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("h3", { staticClass: "text-aviny mt-3" }, [
-                  _vm._v(
-                    "\n                            همین الان جشنوارتو درست کن !\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "mt-5" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn btn-success w-100",
-                      attrs: { href: "" },
-                    },
-                    [
-                      _c("i", { staticClass: "fas fa-plus" }),
-                      _vm._v(" ایجاد جشنواره جدید"),
-                    ]
-                  ),
-                ]),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=template&id=4866f31e&scoped=true&":
-/*!******************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/festivals/Panel_Festivals_Manage.vue?vue&type=template&id=4866f31e&scoped=true& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "card" }, [
-      _c(
-        "div",
-        { staticClass: "card-header" },
-        [
-          _c("div", { staticClass: "card-title" }, [
-            _vm._v("\n                مدیریت جشنواره : "),
-            _vm.festival !== null
-              ? _c("span", { staticClass: "text-bold-3 font-15 text-danger" }, [
-                  _vm._v(_vm._s(_vm.festival.title)),
-                ])
-              : _vm._e(),
-          ]),
-          _vm._v(" "),
-          _c(
-            "router-link",
-            {
-              staticClass: "float-end btn btn-secondary",
-              attrs: { to: { name: "panel_festivals" } },
-            },
-            [
-              _vm._v("\n                بازگشت "),
-              _c("i", { staticClass: "fas fa-backward" }),
-            ]
-          ),
-        ],
-        1
-      ),
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "mt-4 row" }, [
-      _vm.festival !== null && _vm.festival.force_close === 1
-        ? _c("div", { staticClass: "col-12 mt-2 mb-2 app-fade-in" }, [
-            _vm._m(0),
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-6" }, [
-        _c("div", { staticClass: "card top-bid app-fade-in" }, [
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "row " }, [
-              _c("div", { staticClass: "col-md-6" }, [
-                _vm.festival !== null && _vm.festival.banner !== null
-                  ? _c("img", {
-                      staticClass: "img-fluid rounded",
-                      attrs: {
-                        width: "100%",
-                        src: _vm.festival.banner,
-                        alt: "",
-                      },
-                    })
-                  : _c("img", {
-                      staticClass: "img-fluid rounded",
-                      attrs: {
-                        width: "100%",
-                        src: "/template/images/svg/festika-banner.jpg",
-                        alt: "",
-                      },
-                    }),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-md-6" }, [
-                _c("div", [
-                  _vm.festival !== null && _vm.festival.logo !== null
-                    ? _c("img", {
-                        staticClass: "img-logo",
-                        attrs: { src: _vm.festival.logo, alt: "" },
-                      })
-                    : _c("img", {
-                        staticClass: "img-logo",
-                        attrs: {
-                          src: "/template/images/svg/default-logo.png",
-                          alt: "",
-                        },
-                      }),
-                  _vm._v(" "),
-                  _vm.festival !== null
-                    ? _c(
-                        "span",
-                        { staticClass: "font-17 text-danger text-bold-2" },
-                        [_vm._v(_vm._s(_vm.festival.title))]
-                      )
-                    : _vm._e(),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "mt-3" }, [
-                  _c("span", { staticClass: "font-14" }, [
-                    _vm._v("دسته بندی : "),
-                  ]),
-                  _vm.festival !== null
-                    ? _c(
-                        "span",
-                        { staticClass: "font-15 text-bold-2 text-danger" },
-                        [_vm._v(_vm._s(_vm.festival.category.name))]
-                      )
-                    : _vm._e(),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "mt-3" }, [
-                  _c("span", { staticClass: "font-14" }, [
-                    _vm._v("تاریخ شروع : "),
-                  ]),
-                  _vm.festival !== null
-                    ? _c(
-                        "span",
-                        { staticClass: "font-15 text-bold-2 text-danger" },
-                        [
-                          _vm._v(
-                            _vm._s(_vm._f("filter_date")(_vm.festival.start_at))
-                          ),
-                        ]
-                      )
-                    : _vm._e(),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "mt-3" }, [
-                  _c("span", { staticClass: "font-14" }, [
-                    _vm._v("تاریخ اتمام : "),
-                  ]),
-                  _vm.festival !== null
-                    ? _c(
-                        "span",
-                        { staticClass: "font-15 text-bold-2 text-danger" },
-                        [
-                          _vm._v(
-                            _vm._s(
-                              _vm._f("filter_date")(_vm.festival.expire_at)
-                            ) +
-                              " - (" +
-                              _vm._s(_vm.festival.period) +
-                              ") روزه"
-                          ),
-                        ]
-                      )
-                    : _vm._e(),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "mt-3" }, [
-                  _c("span", { staticClass: "font-14" }, [_vm._v("وضعیت : ")]),
-                  _vm._v(" "),
-                  _vm.festival !== null && _vm.festival.force_close === 1
-                    ? _c("span", { staticClass: "badge bg-red3 font-13 p-2" }, [
-                        _c("i", { staticClass: "fas fa-exclamation-triangle" }),
-                        _vm._v(" مسدود توسط مدیریت"),
-                      ])
-                    : _vm.festival !== null && _vm.festival.accepted === 0
-                    ? _c(
-                        "span",
-                        { staticClass: "badge bg-yellow3 font-13 p-2" },
-                        [
-                          _c("i", { staticClass: "fas fa-spinner fa-spin" }),
-                          _vm._v(" در انتظار تایید"),
-                        ]
-                      )
-                    : _vm.festival !== null && _vm.festival.is_active === 1
-                    ? _c(
-                        "span",
-                        { staticClass: "badge bg-green3 font-13 p-2" },
-                        [
-                          _c("i", { staticClass: "fas fa-check" }),
-                          _vm._v(" درحال برگزاری"),
-                        ]
-                      )
-                    : _vm.festival !== null && _vm.festival.is_active === 0
-                    ? _c("span", { staticClass: "badge bg-red3 font-13 p-2" }, [
-                        _c("i", { staticClass: "fas fa-times" }),
-                        _vm._v(" غیرفعال شده"),
-                      ])
-                    : _vm._e(),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-12 mt-5 row" }, [
-                _c(
-                  "div",
-                  { staticClass: "col p-1" },
-                  [
-                    _vm.festival !== null
-                      ? _c(
-                          "router-link",
-                          {
-                            staticClass:
-                              "btn btn-primary btn-sm manage-btn font-13 w-100",
-                            attrs: { to: "" },
-                          },
-                          [
-                            _c("i", { staticClass: "fas fa-edit" }),
-                            _vm._v(
-                              " ویرایش جشنواره\n                                "
-                            ),
-                          ]
-                        )
-                      : _vm._e(),
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "col p-1" },
-                  [
-                    _vm.festival !== null
-                      ? _c(
-                          "router-link",
-                          {
-                            staticClass:
-                              "btn bg-teal3 btn-sm manage-btn font-13 w-100",
-                            attrs: {
-                              to: {
-                                name: "panel_festivals_files",
-                                params: { slug: _vm.festival.slug },
-                              },
-                            },
-                          },
-                          [
-                            _c("i", { staticClass: "fas fa-users" }),
-                            _vm._v(
-                              " آثار ارسالی\n                                "
-                            ),
-                          ]
-                        )
-                      : _vm._e(),
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "col p-1" }, [
-                  _vm.festival !== null && _vm.festival.is_active === 1
-                    ? _c(
-                        "button",
-                        {
-                          staticClass:
-                            "btn btn-danger btn-sm manage-btn font-13 w-100",
-                          attrs: { disabled: _vm.festival.force_close === 1 },
-                          on: {
-                            click: function ($event) {
-                              return _vm.ItemInactive(_vm.festival.id)
-                            },
-                          },
-                        },
-                        [
-                          _c("i", { staticClass: "fas fa-times" }),
-                          _vm._v(
-                            " غیرفعال سازی\n                                "
-                          ),
-                        ]
-                      )
-                    : _vm.festival !== null && _vm.festival.is_active === 0
-                    ? _c(
-                        "button",
-                        {
-                          staticClass:
-                            "btn btn-success btn-sm manage-btn font-13 w-100",
-                          attrs: { disabled: _vm.festival.force_close === 1 },
-                          on: {
-                            click: function ($event) {
-                              return _vm.ItemActive(_vm.festival.id)
-                            },
-                          },
-                        },
-                        [
-                          _c("i", { staticClass: "fas fa-check" }),
-                          _vm._v(
-                            " فعال سازی\n                                "
-                          ),
-                        ]
-                      )
-                    : _vm._e(),
-                ]),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-6" }, [
-        _c("div", { staticClass: "card top-bid app-fade-in" }, [
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "font-18" }, [_vm._v("منابع جشنواره")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "mt-3" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-12" }, [
-                  _c("div", { staticClass: "stat-widget shadow" }, [
-                    _vm._m(1),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "mt-3 row text-center" }, [
-                      _c("div", { staticClass: "col" }, [
-                        _c("span", { staticClass: "text-bold-3" }, [
-                          _vm._v("کل : "),
-                        ]),
-                        _vm.festival !== null
-                          ? _c(
-                              "span",
-                              {
-                                staticClass: "text-bold-3 text-danger font-16",
-                                attrs: { dir: "ltr" },
-                              },
-                              [_vm._v(_vm._s(_vm.festival.disk) + " GB")]
-                            )
-                          : _vm._e(),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col" }, [
-                        _c("span", { staticClass: "text-bold-3" }, [
-                          _vm._v("مصرفی : "),
-                        ]),
-                        _vm.festival !== null
-                          ? _c(
-                              "span",
-                              {
-                                staticClass: "text-bold-3 text-danger font-16",
-                                attrs: { dir: "ltr" },
-                              },
-                              [
-                                _vm._v(
-                                  _vm._s(
-                                    _vm._f("filter_size")(
-                                      _vm.festival.disk_usage,
-                                      "g"
-                                    )
-                                  ) + " GB"
-                                ),
-                              ]
-                            )
-                          : _vm._e(),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col" }, [
-                        _c("span", { staticClass: "text-bold-3" }, [
-                          _vm._v("مانده : "),
-                        ]),
-                        _vm.festival !== null
-                          ? _c(
-                              "span",
-                              {
-                                staticClass: "text-bold-3 text-danger font-16",
-                                attrs: { dir: "ltr" },
-                              },
-                              [
-                                _vm._v(
-                                  _vm._s(
-                                    _vm._f("filter_size")(
-                                      _vm.festival.disk * 1024 * 1024 * 1024 -
-                                        _vm.festival.disk_usage,
-                                      "g"
-                                    )
-                                  ) + " GB"
-                                ),
-                              ]
-                            )
-                          : _vm._e(),
-                      ]),
-                    ]),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-12" }, [
-                  _c("div", { staticClass: "stat-widget shadow" }, [
-                    _vm._m(2),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "mt-3 row text-center" }, [
-                      _c("div", { staticClass: "col" }, [
-                        _c("span", { staticClass: "text-bold-3" }, [
-                          _vm._v("کل : "),
-                        ]),
-                        _vm.festival !== null && _vm.festival.quantity !== null
-                          ? _c(
-                              "span",
-                              {
-                                staticClass: "text-bold-3 text-danger font-16",
-                              },
-                              [_vm._v(_vm._s(_vm.festival.quantity) + " اثر")]
-                            )
-                          : _vm.festival !== null &&
-                            _vm.festival.quantity === null
-                          ? _c(
-                              "span",
-                              {
-                                staticClass: "text-bold-3 text-danger font-16",
-                              },
-                              [_vm._v(" نامحدود ")]
-                            )
-                          : _vm._e(),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col" }, [
-                        _c("span", { staticClass: "text-bold-3" }, [
-                          _vm._v("مصرفی : "),
-                        ]),
-                        _vm.festival !== null
-                          ? _c(
-                              "span",
-                              {
-                                staticClass: "text-bold-3 text-danger font-16",
-                              },
-                              [
-                                _vm._v(
-                                  _vm._s(_vm.festival.files_count) + " اثر"
-                                ),
-                              ]
-                            )
-                          : _vm._e(),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col" }, [
-                        _c("span", { staticClass: "text-bold-3" }, [
-                          _vm._v("مانده : "),
-                        ]),
-                        _vm.festival !== null && _vm.festival.quantity !== null
-                          ? _c(
-                              "span",
-                              {
-                                staticClass: "text-bold-3 text-danger font-16",
-                              },
-                              [
-                                _vm._v(
-                                  _vm._s(
-                                    _vm.festival.quantity -
-                                      _vm.festival.files_count
-                                  ) + " اثر"
-                                ),
-                              ]
-                            )
-                          : _vm.festival !== null &&
-                            _vm.festival.quantity === null
-                          ? _c(
-                              "span",
-                              {
-                                staticClass: "text-bold-3 text-danger font-16",
-                              },
-                              [_vm._v(" نامحدود ")]
-                            )
-                          : _vm._e(),
-                      ]),
-                    ]),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-12" }, [
-                  _c("div", { staticClass: "stat-widget shadow" }, [
-                    _vm._m(3),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "mt-3 row text-center" }, [
-                      _c("div", { staticClass: "col" }, [
-                        _c("span", { staticClass: "text-bold-3" }, [
-                          _vm._v("کل : "),
-                        ]),
-                        _vm.festival !== null
-                          ? _c(
-                              "span",
-                              {
-                                staticClass: "text-bold-3 text-danger font-16",
-                              },
-                              [_vm._v(_vm._s(_vm.festival.period) + " روز")]
-                            )
-                          : _vm._e(),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col" }, [
-                        _c("span", { staticClass: "text-bold-3" }, [
-                          _vm._v("مصرفی : "),
-                        ]),
-                        _vm.festival !== null
-                          ? _c(
-                              "span",
-                              {
-                                staticClass: "text-bold-3 text-danger font-16",
-                              },
-                              [
-                                _vm._v(
-                                  _vm._s(
-                                    _vm._f("filter_size")(
-                                      _vm.festival.disk_usage,
-                                      "g"
-                                    )
-                                  ) + " GB"
-                                ),
-                              ]
-                            )
-                          : _vm._e(),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col" }, [
-                        _c("span", { staticClass: "text-bold-3" }, [
-                          _vm._v("مانده : "),
-                        ]),
-                        _vm.festival !== null
-                          ? _c(
-                              "span",
-                              {
-                                staticClass: "text-bold-3 text-danger font-16",
-                              },
-                              [
-                                _vm._v(
-                                  _vm._s(
-                                    _vm._f("filter_size")(
-                                      _vm.festival.disk * 1024 * 1024 * 1024 -
-                                        _vm.festival.disk_usage,
-                                      "g"
-                                    )
-                                  ) + " GB"
-                                ),
-                              ]
-                            )
-                          : _vm._e(),
-                      ]),
-                    ]),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _vm._m(4),
-            ]),
-          ]),
-        ]),
-      ]),
-    ]),
-  ])
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "alert alert-danger" }, [
-      _c("i", {
-        staticClass:
-          "fas fa-exclamation-triangle text-danger font-24 fa-beat ml-2",
-        staticStyle: { "--fa-beat-scale": "1.8" },
-      }),
-      _vm._v(" "),
-      _c("span", { staticClass: "font-16 " }, [
-        _vm._v(
-          "کاربر گرامی،این جشنواره بنابه دلایلی از سمت مدیریت فستیکا مسدود شده است . لطفا برای کسب اطلاعات بیشتر به مدیریت پیام دهید"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex align-items-center" }, [
-      _c("div", { staticClass: "widget-icon me-3 bg-blue3" }, [
-        _c("span", [_c("i", { staticClass: "fas fa-server font-22" })]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "widget-content" }, [
-        _c("h6", { staticClass: "mr-2" }, [_vm._v("فضای ذخیره سازی")]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex align-items-center" }, [
-      _c("div", { staticClass: "widget-icon me-3 bg-green3" }, [
-        _c("span", [_c("i", { staticClass: "fas fa-users font-22" })]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "widget-content" }, [
-        _c("h6", { staticClass: "mr-2" }, [_vm._v("تعداد آثار دریافتی")]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex align-items-center" }, [
-      _c("div", { staticClass: "widget-icon me-3 bg-pink3" }, [
-        _c("span", [_c("i", { staticClass: "fas fa-calendar font-22" })]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "widget-content" }, [
-        _c("h6", { staticClass: "mr-2" }, [_vm._v("دوره برگذاری")]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mt-1" }, [
-      _c("button", { staticClass: "btn bg-blue3 w-100" }, [
-        _vm._v("ارتقاع منابع جشنواره"),
-      ]),
-    ])
-  },
-]
-render._withStripped = true
-
 
 
 /***/ }),
@@ -50357,6 +49687,15 @@ var render = function () {
               ],
               1
             ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                staticClass: "menu-title text-danger",
+                attrs: { "data-key": "t-menu" },
+              },
+              [_vm._v("جشنواره های شرکت کرده")]
+            ),
           ]
         ),
       ]),
@@ -50404,6 +49743,31 @@ var render = function () {
       ),
     ]),
   ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/dashboard/Panel_Dashboard.vue?vue&type=template&id=638eadd0&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/dashboard/Panel_Dashboard.vue?vue&type=template&id=638eadd0&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div")
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -50579,7 +49943,11 @@ var render = function () {
                             "is-invalid":
                               _vm.search && _vm.DoSearchItems.length < 1,
                           },
-                          attrs: { type: "text", placeholder: "جستجو ... " },
+                          attrs: {
+                            type: "text",
+                            placeholder:
+                              "جستجو با: نام شرکت کننده ، کد فایل ... ",
+                          },
                           domProps: { value: _vm.search },
                           on: {
                             input: function ($event) {
@@ -50755,13 +50123,713 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", { staticClass: "text-center" }, [
+    return _c("td", [
       _c(
         "button",
         { staticClass: "btn btn-danger bg-red3 btn-sm manage-btn font-13" },
         [
           _c("i", { staticClass: "fas fa-trash" }),
           _vm._v(" حذف\n                            "),
+        ]
+      ),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=template&id=29bf5f52&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Manage.vue?vue&type=template&id=29bf5f52&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("manage_title", { attrs: { title: "مدیریت جشنواره" } }),
+      _vm._v(" "),
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-header bg-teal" }, [
+          _c(
+            "div",
+            { staticClass: "font-16 text-bold-3 text-light" },
+            [
+              _vm._v("\n                مدیریت جشنواره : "),
+              _vm.festival !== null
+                ? _c("span", { staticClass: "text-dark" }, [
+                    _vm._v(_vm._s(_vm.festival.title)),
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _c(
+                "router-link",
+                {
+                  staticClass: "float-end btn btn-danger",
+                  attrs: { to: { name: "panel_festivals" } },
+                },
+                [
+                  _vm._v("\n                    بازگشت "),
+                  _c("i", { staticClass: "fas fa-backward" }),
+                ]
+              ),
+            ],
+            1
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _vm.festival !== null && _vm.festival.force_close === 1
+            ? _c("div", { staticClass: " mt-2 mb-2 app-fade-in" }, [_vm._m(0)])
+            : _vm._e(),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("div", { staticClass: "card app-fade-in shadow" }, [
+                _c("div", { staticClass: "card-body" }, [
+                  _c("div", { staticClass: "row " }, [
+                    _c("div", { staticClass: "col-md-6" }, [
+                      _vm.festival !== null && _vm.festival.banner !== null
+                        ? _c("img", {
+                            staticClass: "img-fluid rounded",
+                            attrs: {
+                              width: "100%",
+                              src: _vm.festival.banner,
+                              alt: "",
+                            },
+                          })
+                        : _c("img", {
+                            staticClass: "img-fluid rounded",
+                            attrs: {
+                              width: "100%",
+                              src: "/template/images/svg/festika-banner.jpg",
+                              alt: "",
+                            },
+                          }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-6" }, [
+                      _c("div", [
+                        _vm.festival !== null && _vm.festival.logo !== null
+                          ? _c("img", {
+                              staticClass: "img-logo",
+                              attrs: { src: _vm.festival.logo, alt: "" },
+                            })
+                          : _c("img", {
+                              staticClass: "img-logo",
+                              attrs: {
+                                src: "/template/images/svg/default-logo.png",
+                                alt: "",
+                              },
+                            }),
+                        _vm._v(" "),
+                        _vm.festival !== null
+                          ? _c(
+                              "span",
+                              {
+                                staticClass: "font-17 text-primary text-bold-2",
+                              },
+                              [_vm._v(_vm._s(_vm.festival.title))]
+                            )
+                          : _vm._e(),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-4" }, [
+                        _c("span", { staticClass: "font-14" }, [
+                          _vm._v("دسته بندی : "),
+                        ]),
+                        _vm.festival !== null
+                          ? _c(
+                              "span",
+                              {
+                                staticClass: "font-14 text-bold-3 text-danger",
+                              },
+                              [_vm._v(_vm._s(_vm.festival.category.name))]
+                            )
+                          : _vm._e(),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-4" }, [
+                        _c("span", { staticClass: "font-14" }, [
+                          _vm._v("تاریخ شروع : "),
+                        ]),
+                        _vm.festival !== null
+                          ? _c(
+                              "span",
+                              {
+                                staticClass: "font-15 text-bold-2 badge bg-red",
+                              },
+                              [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm._f("filter_date")(_vm.festival.start_at)
+                                  )
+                                ),
+                              ]
+                            )
+                          : _vm._e(),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-4" }, [
+                        _c("span", { staticClass: "font-14" }, [
+                          _vm._v("تاریخ اتمام : "),
+                        ]),
+                        _vm.festival !== null
+                          ? _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "font-15 text-bold-2 badge bg-green3",
+                              },
+                              [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm._f("filter_date")(
+                                      _vm.festival.expire_at
+                                    )
+                                  ) + " "
+                                ),
+                              ]
+                            )
+                          : _vm._e(),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-4" }, [
+                        _c("span", { staticClass: "font-14" }, [
+                          _vm._v("دوره برگزاری : "),
+                        ]),
+                        _vm.festival !== null
+                          ? _c("span", { staticClass: "font-15 text-bold-3" }, [
+                              _vm._v(_vm._s(_vm.festival.period) + " روزه "),
+                            ])
+                          : _vm._e(),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-4" }, [
+                        _c("span", { staticClass: "font-14 text-bold-3" }, [
+                          _vm._v("توضیح مختصر : "),
+                        ]),
+                        _vm.festival !== null
+                          ? _c("span", { staticClass: "font-15 text-bold-2" }, [
+                              _vm._v(_vm._s(_vm.festival.subtitle) + " "),
+                            ])
+                          : _vm._e(),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-3" }, [
+                        _c("span", { staticClass: "font-14 text-bold-3" }, [
+                          _vm._v("وضعیت : "),
+                        ]),
+                        _vm._v(" "),
+                        _vm.festival !== null && _vm.festival.force_close === 1
+                          ? _c(
+                              "span",
+                              { staticClass: "badge bg-red3 font-13 p-2" },
+                              [
+                                _c("i", {
+                                  staticClass: "fas fa-exclamation-triangle",
+                                }),
+                                _vm._v(" مسدود توسط مدیریت"),
+                              ]
+                            )
+                          : _vm.festival !== null && _vm.festival.accepted === 0
+                          ? _c(
+                              "span",
+                              { staticClass: "badge bg-yellow3 font-13 p-2" },
+                              [
+                                _c("i", {
+                                  staticClass: "fas fa-spinner fa-spin",
+                                }),
+                                _vm._v(" در انتظار تایید"),
+                              ]
+                            )
+                          : _vm.festival !== null &&
+                            _vm.festival.is_expired === 1
+                          ? _c(
+                              "span",
+                              { staticClass: "badge bg-secondary font-13 p-2" },
+                              [
+                                _c("i", { staticClass: "fas fa-gifts" }),
+                                _vm._v(" پایان یافته"),
+                              ]
+                            )
+                          : _vm.festival !== null &&
+                            _vm.festival.is_active === 1
+                          ? _c(
+                              "span",
+                              { staticClass: "badge bg-green3 font-13 p-2" },
+                              [
+                                _c("i", { staticClass: "fas fa-check" }),
+                                _vm._v(" درحال برگزاری"),
+                              ]
+                            )
+                          : _vm.festival !== null &&
+                            _vm.festival.is_active === 0
+                          ? _c(
+                              "span",
+                              { staticClass: "badge bg-red3 font-13 p-2" },
+                              [
+                                _c("i", { staticClass: "fas fa-times" }),
+                                _vm._v(" غیرفعال شده"),
+                              ]
+                            )
+                          : _vm._e(),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-12 mt-4 row" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col p-1" },
+                        [
+                          _vm.festival !== null
+                            ? _c(
+                                "router-link",
+                                {
+                                  staticClass: "btn btn-primary font-14 w-100",
+                                  attrs: { to: "" },
+                                },
+                                [
+                                  _c("i", { staticClass: "fas fa-edit" }),
+                                  _vm._v(
+                                    " ویرایش جشنواره\n                                        "
+                                  ),
+                                ]
+                              )
+                            : _vm._e(),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "col p-1" },
+                        [
+                          _vm.festival !== null
+                            ? _c(
+                                "router-link",
+                                {
+                                  staticClass:
+                                    "btn bg-teal3 font-14 text-light w-100",
+                                  attrs: {
+                                    to: {
+                                      name: "panel_festivals_files",
+                                      params: { slug: _vm.festival.slug },
+                                    },
+                                  },
+                                },
+                                [
+                                  _c("i", { staticClass: "fas fa-users" }),
+                                  _vm._v(
+                                    " آثار ارسالی\n                                        "
+                                  ),
+                                ]
+                              )
+                            : _vm._e(),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col p-1" }, [
+                        _vm.festival !== null && _vm.festival.is_active === 1
+                          ? _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger font-14 w-100",
+                                attrs: {
+                                  disabled: _vm.festival.force_close === 1,
+                                },
+                                on: {
+                                  click: function ($event) {
+                                    return _vm.SetInactive(_vm.festival.id)
+                                  },
+                                },
+                              },
+                              [
+                                _c("i", { staticClass: "fas fa-times" }),
+                                _vm._v(
+                                  " غیرفعال سازی\n                                        "
+                                ),
+                              ]
+                            )
+                          : _vm.festival !== null &&
+                            _vm.festival.is_active === 0
+                          ? _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-success font-13 w-100",
+                                attrs: {
+                                  disabled: _vm.festival.force_close === 1,
+                                },
+                                on: {
+                                  click: function ($event) {
+                                    return _vm.SetActive(_vm.festival.id)
+                                  },
+                                },
+                              },
+                              [
+                                _c("i", { staticClass: "fas fa-check" }),
+                                _vm._v(
+                                  " فعال سازی\n                                        "
+                                ),
+                              ]
+                            )
+                          : _vm._e(),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("div", { staticClass: "card app-fade-in shadow" }, [
+                _vm._m(1),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("div", { staticClass: "mt-1" }, [
+                    _c("div", [
+                      _vm._m(2),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-3 row" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _c("span", { staticClass: "text-bold-3" }, [
+                            _vm._v("کل : "),
+                          ]),
+                          _vm.festival !== null
+                            ? _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-bold-3 text-danger font-16",
+                                  attrs: { dir: "ltr" },
+                                },
+                                [_vm._v(_vm._s(_vm.festival.disk) + " GB")]
+                              )
+                            : _vm._e(),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _c("span", { staticClass: "text-bold-3" }, [
+                            _vm._v("مصرفی : "),
+                          ]),
+                          _vm.festival !== null
+                            ? _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-bold-3 text-danger font-16",
+                                  attrs: { dir: "ltr" },
+                                },
+                                [
+                                  _vm._v(
+                                    _vm._s(
+                                      _vm._f("filter_size")(
+                                        _vm.festival.disk_usage,
+                                        "g"
+                                      )
+                                    ) + " GB"
+                                  ),
+                                ]
+                              )
+                            : _vm._e(),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _c("span", { staticClass: "text-bold-3" }, [
+                            _vm._v("مانده : "),
+                          ]),
+                          _vm.festival !== null
+                            ? _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-bold-3 text-danger font-16",
+                                  attrs: { dir: "ltr" },
+                                },
+                                [
+                                  _vm._v(
+                                    _vm._s(
+                                      _vm._f("filter_size")(
+                                        _vm.festival.disk * 1024 * 1024 * 1024 -
+                                          _vm.festival.disk_usage,
+                                        "g"
+                                      )
+                                    ) + " GB"
+                                  ),
+                                ]
+                              )
+                            : _vm._e(),
+                        ]),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("hr"),
+                    _vm._v(" "),
+                    _c("div", [
+                      _vm._m(3),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-3 row" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _c("span", { staticClass: "text-bold-3" }, [
+                            _vm._v("کل : "),
+                          ]),
+                          _vm.festival !== null &&
+                          _vm.festival.quantity !== null
+                            ? _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-bold-3 text-danger font-16",
+                                },
+                                [_vm._v(_vm._s(_vm.festival.quantity) + " اثر")]
+                              )
+                            : _vm.festival !== null &&
+                              _vm.festival.quantity === null
+                            ? _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-bold-3 text-danger font-16",
+                                },
+                                [_vm._v(" نامحدود ")]
+                              )
+                            : _vm._e(),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _c("span", { staticClass: "text-bold-3" }, [
+                            _vm._v("مصرفی : "),
+                          ]),
+                          _vm.festival !== null
+                            ? _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-bold-3 text-danger font-16",
+                                },
+                                [
+                                  _vm._v(
+                                    _vm._s(_vm.festival.files_count) + " اثر"
+                                  ),
+                                ]
+                              )
+                            : _vm._e(),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _c("span", { staticClass: "text-bold-3" }, [
+                            _vm._v("مانده : "),
+                          ]),
+                          _vm.festival !== null &&
+                          _vm.festival.quantity !== null
+                            ? _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-bold-3 text-danger font-16",
+                                },
+                                [
+                                  _vm._v(
+                                    _vm._s(
+                                      _vm.festival.quantity -
+                                        _vm.festival.files_count
+                                    ) + " اثر"
+                                  ),
+                                ]
+                              )
+                            : _vm.festival !== null &&
+                              _vm.festival.quantity === null
+                            ? _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-bold-3 text-danger font-16",
+                                },
+                                [_vm._v(" نامحدود ")]
+                              )
+                            : _vm._e(),
+                        ]),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("hr"),
+                    _vm._v(" "),
+                    _c("div", [
+                      _vm._m(4),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-3 row" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _c("span", { staticClass: "text-bold-3" }, [
+                            _vm._v("شروع : "),
+                          ]),
+                          _vm.festival !== null
+                            ? _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-bold-3 text-success font-16",
+                                },
+                                [
+                                  _vm._v(
+                                    _vm._s(
+                                      _vm._f("filter_date")(
+                                        _vm.festival.start_at
+                                      )
+                                    )
+                                  ),
+                                ]
+                              )
+                            : _vm._e(),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _c("span", { staticClass: "text-bold-3" }, [
+                            _vm._v("پایان : "),
+                          ]),
+                          _vm.festival !== null
+                            ? _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-bold-3 text-danger font-16",
+                                },
+                                [
+                                  _vm._v(
+                                    _vm._s(
+                                      _vm._f("filter_date")(
+                                        _vm.festival.expire_at
+                                      )
+                                    )
+                                  ),
+                                ]
+                              )
+                            : _vm._e(),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _c("span", { staticClass: "text-bold-3" }, [
+                            _vm._v("باقی مانده : "),
+                          ]),
+                          _vm.festival !== null
+                            ? _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-bold-3 text-danger font-16",
+                                },
+                                [
+                                  _vm._v(
+                                    _vm._s(
+                                      _vm.GetDiffDays(
+                                        _vm.festival.start_at,
+                                        _vm.festival.expire_at
+                                      )
+                                    ) + " روز"
+                                  ),
+                                ]
+                              )
+                            : _vm._e(),
+                        ]),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(5),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "alert alert-danger" }, [
+      _c("i", {
+        staticClass:
+          "fas fa-exclamation-triangle text-danger font-24 fa-beat ml-2",
+        staticStyle: { "--fa-beat-scale": "1.8" },
+      }),
+      _vm._v(" "),
+      _c("span", { staticClass: "font-15 " }, [
+        _vm._v(
+          "کاربر گرامی،این جشنواره بنابه دلایلی از سمت مدیریت فستیکا مسدود شده است . لطفا برای کسب اطلاعات بیشتر به مدیریت پیام دهید"
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-body" }, [
+      _c("div", { staticClass: "font-18" }, [_vm._v("منابع جشنواره")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("span", { staticClass: "badge p-2 bg-success font-15" }, [
+        _c("i", { staticClass: "fas fa-server" }),
+        _vm._v(" فضای ذخیره سازی"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("span", { staticClass: "badge p-2 bg-orange font-15" }, [
+        _c("i", { staticClass: "fas fa-users" }),
+        _vm._v(" تعداد آثار دریافتی"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("span", { staticClass: "badge p-2 bg-purple-deep font-15" }, [
+        _c("i", { staticClass: "fas fa-calendar" }),
+        _vm._v(" دوره برگذاری"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mt-5 mb-1" }, [
+      _c(
+        "button",
+        { staticClass: "btn bg-blue3 w-100 text-light font-15 text-bold-3" },
+        [
+          _c("i", { staticClass: "fas fa-rocket font-20" }),
+          _vm._v(" ارتقاع منابع جشنواره"),
         ]
       ),
     ])
@@ -52402,7 +52470,12 @@ var render = function () {
                   {
                     staticClass:
                       "btn btn-primary font-13 text-bold-3 w-100 text-light",
-                    attrs: { to: "" },
+                    attrs: {
+                      to: {
+                        name: "panel_festivals_manage",
+                        params: { slug: _vm.festival.slug },
+                      },
+                    },
                   },
                   [
                     _c("i", { staticClass: "fas fa-cog font-18 fa-spin" }),
@@ -52438,6 +52511,18 @@ var render = function () {
                     [
                       _vm._v("وضعیت : در انتظار تایید "),
                       _c("i", { staticClass: "fas fa-spinner fa-spin" }),
+                    ]
+                  )
+                : _vm.festival.is_expired === 1
+                ? _c(
+                    "button",
+                    {
+                      staticClass:
+                        "btn bg-secondary font-13 text-bold-3 w-100 text-light",
+                    },
+                    [
+                      _vm._v("وضعیت : پایان یافته "),
+                      _c("i", { staticClass: "fas fa-gift fa-beat" }),
                     ]
                   )
                 : _vm.festival.is_active === 1

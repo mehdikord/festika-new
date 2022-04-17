@@ -53,7 +53,7 @@ class FestivalController extends Controller
             })
             ->with('category')
             ->with('sponsors')
-            ->select(['id','title','subtitle','user_id','festival_category_id','slug','logo','banner','description','terms'])
+            ->select(['id','title','subtitle','user_id','festival_category_id','slug','logo','banner','description','terms','is_expired'])
             ->firstorfail());
 
     }

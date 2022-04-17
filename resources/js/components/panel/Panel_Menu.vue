@@ -26,6 +26,7 @@
                             <span data-key="t-dashboard">جشنواره های شما</span>
                         </router-link>
                     </li>
+                    <li class="menu-title text-danger" data-key="t-menu">جشنواره های شرکت کرده</li>
 
 
                 </ul>

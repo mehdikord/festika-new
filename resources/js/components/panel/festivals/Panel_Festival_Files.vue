@@ -14,7 +14,7 @@
                         <div class="col-md-4">
                             <div class="input-group">
                                 <div class="input-group-text"><i class="fas fa-search font-18 text-primary"></i></div>
-                                <input :class="{'is-invalid' : search && DoSearchItems.length < 1}" v-model="search" type="text" class="form-control"  placeholder="جستجو ... ">
+                                <input :class="{'is-invalid' : search && DoSearchItems.length < 1}" v-model="search" type="text" class="form-control"  placeholder="جستجو با: نام شرکت کننده ، کد فایل ... ">
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                                     <i class="fas fa-download"></i> دریافت
                                 </button>
                             </td>
-                            <td class="text-center">
+                            <td>
                                 <button  class="btn btn-danger bg-red3 btn-sm manage-btn font-13">
                                     <i class="fas fa-trash"></i> حذف
                                 </button>
@@ -108,12 +108,11 @@ export default {
                 let FILE = window.URL.createObjectURL(new Blob([res.data]));
                 let docUrl = document.createElement('a');
                 docUrl.href = FILE;
-                docUrl.setAttribute('download', file.code);
+                docUrl.setAttribute('download', file.code+'.'+file.extension);
                 document.body.appendChild(docUrl);
                 docUrl.click();
             });
         }
-
 
     },
     computed :{

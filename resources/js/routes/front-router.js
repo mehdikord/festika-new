@@ -6,6 +6,7 @@ import Front_Contact from "../components/front/Front_Contact";
 import Front_Festivals from "../components/front/festivalss/Front_Festivals";
 import Front_Festival_Show from "../components/front/festivalss/Front_Festival_Show";
 import Front_Terms from "../components/front/Front_Terms";
+import Front_Shop_Index from "../components/front/shop/Front_Shop_Index";
 
 const routes = [
 
@@ -43,6 +44,11 @@ const routes = [
         path : '/festivals/show/:slug',
         name : 'front_festivals_show',
         component : Front_Festival_Show,
+    },
+    {
+        path : '/shop',
+        name : 'front_shop',
+        component : Front_Shop_Index,
     },
 
 

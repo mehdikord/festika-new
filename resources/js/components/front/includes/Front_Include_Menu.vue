@@ -37,9 +37,9 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">
+                        <router-link :to="{name : 'front_shop'}" href="" class="nav-link">
                             فروشگاه هدایا
-                        </a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
                         <router-link :to="{name:'front_contact'}" class="nav-link" :class="{'active' : this.$route.name === 'front_contact'}">

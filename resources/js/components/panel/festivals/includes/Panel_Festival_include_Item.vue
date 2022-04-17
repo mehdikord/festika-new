@@ -25,11 +25,12 @@
                     <span class="font-13">تاریخ پایان : <span v-if="festival.category !== null" class="badge p-1 bg-red font-13 text-bold-3">{{ festival.expire_at | filter_date }}</span></span>
                 </div>
                 <div class="col-12 mt-4">
-                    <router-link to="" class="btn btn-primary font-13 text-bold-3 w-100 text-light"><i class="fas fa-cog font-18 fa-spin"></i> مدیریت جشنواره</router-link>
+                    <router-link :to="{name : 'panel_festivals_manage',params: {slug :festival.slug}}" class="btn btn-primary font-13 text-bold-3 w-100 text-light"><i class="fas fa-cog font-18 fa-spin"></i> مدیریت جشنواره</router-link>
                 </div>
                 <div class="col-md-12 mt-2">
                     <button v-if="festival.force_close === 1 " class="btn bg-red3 font-13 text-bold-3 w-100 text-light"> وضعیت : مسدود توسط مدیریت <i class="fas fa-exclamation-triangle fa-beat"></i></button>
                     <button v-else-if="festival.accepted === 0 " class="btn bg-yellow3 font-13 text-bold-3 w-100 text-dark">وضعیت : در انتظار تایید <i class="fas fa-spinner fa-spin"></i></button>
+                    <button v-else-if="festival.is_expired === 1 " class="btn bg-secondary font-13 text-bold-3 w-100 text-light">وضعیت : پایان یافته <i class="fas fa-gift fa-beat"></i></button>
                     <button v-else-if="festival.is_active === 1 " class="btn bg-green3 font-13 text-bold-3 w-100 text-light">وضعیت : درحال برگزاری <i class="fas fa-check fa-beat"></i></button>
                     <button v-else-if="festival.is_active === 0 " class="btn bg-red3 font-13 text-bold-3 w-100 text-light">وضعیت : غیرفعال شده <i class="fas fa-times fa-beat"></i></button>
                 </div>

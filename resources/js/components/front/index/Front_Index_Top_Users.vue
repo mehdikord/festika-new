@@ -6,7 +6,7 @@
                 <div class="col-lg-8 col-md-6">
                     <div class="section-title">
                         <h1 class="mt-4 text-aviny font-40">
-                            برترین برگذار کنندگان
+                            برترین برگزارکنندگان
                         </h1>
                     </div>
                 </div>

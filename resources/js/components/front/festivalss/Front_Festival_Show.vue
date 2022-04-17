@@ -107,56 +107,69 @@
 
                             </div>
                             <hr>
-                            <h6 class="text-secondary mb-4">ارسال اثر به جشنواره :</h6>
-                            <div v-if="!UserAuthCheck()">
-                                <div class="alert alert-primary font-15">
-                                    کاربر گرامی برای ارسال اثر به جشنواره، ابتدا باید وارد حساب کاربری خود شوید
-                                    <br>
-                                    <br>
-                                    برای ورود به حساب کافیست شماره موبایل خود را وارد کنید
-                                    <br>
-                                    <div class="form-group mt-4 text-center row">
-                                        <div class="col-md-8 mt-2 ">
-                                            <input v-model="form.phone" class="form-control" type="number">
-                                        </div>
-                                        <div class="col-md-4 text-right mt-2">
-                                            <button @click="FormSubmit()" class="btn btn-primary">ورود به حساب</button>
-                                        </div>
-                                    </div>
-                                    <div class="mt-3">
-                                        حساب ندارید ؟
-                                        <router-link :to="{name : 'front_register'}" class="text-bold-3 font-16">
-                                             ثبت نام کنید
-                                        </router-link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div v-if="forms.length > 0 && UserAuthCheck()" class="mt-3 mb-3">
-                                <div class="alert alert-primary text-center font-14 mb-3">
-                                    برای شرکت در جشنواره اطلاعات خواسته شده را کامل کنید
-                                </div>
-                                <div class="card shadow">
-                                    <div class="card-body">
-                                        <div v-for="(form,index) in forms" :key="index" class="form-group mt-4 ">
-                                            <label  class="form-label">{{form.form}}</label>
-                                            <input v-model="form_answers[form.form]" type="text" class="form-control" >
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div v-if="UserAuthCheck()" class="item-details-in-content ">
+                            <div v-if="festival !== null && festival.is_expired === 1">
+                                <div class="img-fluid text-center">
+                                    <img src="/template/images/svg/expired.svg" width="40%" alt="">
+                                    <h6 class="mt-2">
+                                        جشنواره مورد نظر به پایان رسیده است، منتظر اعلام نتایج باشید
+                                    </h6>
 
-                                <h6 class="text-success text-center font-15 mb-4">انتخاب فایل جهت ارسال</h6>
-                                <div class="form-group">
-                                    <input @change="HandleUploadFile" ref="file" type="file" class="form-control">
-                                </div>
-                                <div v-if="selected_file !== null" class=" text-center mt-4">
-                                    فایل انتخاب شده : <span class="text-danger text-bold-3">{{selected_file.name}}</span>
                                 </div>
                             </div>
-                            <div v-if="UserAuthCheck()" class="item-details-btn">
-                                <button @click="SendFileSubmit" :disabled="selected_file === null" class="default-btn border-radius-50"> ارسال اثر به جشنواره</button>
+                            <div v-else>
+                                <h6 class="text-secondary mb-4">ارسال اثر به جشنواره :</h6>
+                                <div v-if="!UserAuthCheck()">
+                                    <div class="alert alert-primary font-15">
+                                        کاربر گرامی برای ارسال اثر به جشنواره، ابتدا باید وارد حساب کاربری خود شوید
+                                        <br>
+                                        <br>
+                                        برای ورود به حساب کافیست شماره موبایل خود را وارد کنید
+                                        <br>
+                                        <div class="form-group mt-4 text-center row">
+                                            <div class="col-md-8 mt-2 ">
+                                                <input v-model="form.phone" class="form-control" type="number">
+                                            </div>
+                                            <div class="col-md-4 text-right mt-2">
+                                                <button @click="FormSubmit()" class="btn btn-primary">ورود به حساب</button>
+                                            </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            حساب ندارید ؟
+                                            <router-link :to="{name : 'front_register'}" class="text-bold-3 font-16">
+                                                ثبت نام کنید
+                                            </router-link>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div v-if="forms.length > 0 && UserAuthCheck()" class="mt-3 mb-3">
+                                    <div class="alert alert-primary text-center font-14 mb-3">
+                                        برای شرکت در جشنواره اطلاعات خواسته شده را کامل کنید
+                                    </div>
+                                    <div class="card shadow">
+                                        <div class="card-body">
+                                            <div v-for="(form,index) in forms" :key="index" class="form-group mt-4 ">
+                                                <label  class="form-label">{{form.form}}</label>
+                                                <input v-model="form_answers[form.form]" type="text" class="form-control" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div v-if="UserAuthCheck()" class="item-details-in-content ">
+
+                                    <h6 class="text-success text-center font-15 mb-4">انتخاب فایل جهت ارسال</h6>
+                                    <div class="form-group">
+                                        <input @change="HandleUploadFile" ref="file" type="file" class="form-control">
+                                    </div>
+                                    <div v-if="selected_file !== null" class=" text-center mt-4">
+                                        فایل انتخاب شده : <span class="text-danger text-bold-3">{{selected_file.name}}</span>
+                                    </div>
+                                </div>
+                                <div v-if="UserAuthCheck()" class="item-details-btn">
+                                    <button @click="SendFileSubmit" :disabled="selected_file === null" class="default-btn border-radius-50"> ارسال اثر به جشنواره</button>
+                                </div>
                             </div>
+
+
                         </div>
                     </div>
                     <div class="col-12">

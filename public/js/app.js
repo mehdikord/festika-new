@@ -3116,6 +3116,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -4104,6 +4117,203 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Front_Shop_Index"
+});
+
+/***/ }),
+
 /***/ "./resources/js/bootstrap.js":
 /*!***********************************!*\
   !*** ./resources/js/bootstrap.js ***!
@@ -4423,7 +4633,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_front_Front_Index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/front/Front_Index */ "./resources/js/components/front/Front_Index.vue");
 /* harmony import */ var _components_front_Front_Register__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/front/Front_Register */ "./resources/js/components/front/Front_Register.vue");
 /* harmony import */ var _components_front_Front_Login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/front/Front_Login */ "./resources/js/components/front/Front_Login.vue");
@@ -4431,6 +4641,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_front_festivalss_Front_Festivals__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/front/festivalss/Front_Festivals */ "./resources/js/components/front/festivalss/Front_Festivals.vue");
 /* harmony import */ var _components_front_festivalss_Front_Festival_Show__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/front/festivalss/Front_Festival_Show */ "./resources/js/components/front/festivalss/Front_Festival_Show.vue");
 /* harmony import */ var _components_front_Front_Terms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/front/Front_Terms */ "./resources/js/components/front/Front_Terms.vue");
+/* harmony import */ var _components_front_shop_Front_Shop_Index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/front/shop/Front_Shop_Index */ "./resources/js/components/front/shop/Front_Shop_Index.vue");
+
 
 
 
@@ -4467,8 +4679,12 @@ var routes = [{
   path: '/festivals/show/:slug',
   name: 'front_festivals_show',
   component: _components_front_festivalss_Front_Festival_Show__WEBPACK_IMPORTED_MODULE_5__["default"]
+}, {
+  path: '/shop',
+  name: 'front_shop',
+  component: _components_front_shop_Front_Shop_Index__WEBPACK_IMPORTED_MODULE_7__["default"]
 }];
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_7__["default"]({
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_8__["default"]({
   routes: routes,
   mode: 'history'
 });
@@ -4542,6 +4758,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\n.mr-2[data-v-4dbbd7bd]{\n    margin-right:10px!important;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=style&index=0&id=0e10e8d7&scoped=true&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=style&index=0&id=0e10e8d7&scoped=true&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.mr-2[data-v-0e10e8d7]{\n    margin-right:5px!important;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -44816,6 +45056,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=style&index=0&id=0e10e8d7&scoped=true&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=style&index=0&id=0e10e8d7&scoped=true&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Shop_Index_vue_vue_type_style_index_0_id_0e10e8d7_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Front_Shop_Index.vue?vue&type=style&index=0&id=0e10e8d7&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=style&index=0&id=0e10e8d7&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Shop_Index_vue_vue_type_style_index_0_id_0e10e8d7_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Shop_Index_vue_vue_type_style_index_0_id_0e10e8d7_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
 /*!****************************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
@@ -49265,6 +49535,47 @@ component.options.__file = "resources/js/components/front/index/Front_Index_What
 
 /***/ }),
 
+/***/ "./resources/js/components/front/shop/Front_Shop_Index.vue":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/front/shop/Front_Shop_Index.vue ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Front_Shop_Index_vue_vue_type_template_id_0e10e8d7_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Front_Shop_Index.vue?vue&type=template&id=0e10e8d7&scoped=true& */ "./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=template&id=0e10e8d7&scoped=true&");
+/* harmony import */ var _Front_Shop_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Front_Shop_Index.vue?vue&type=script&lang=js& */ "./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Front_Shop_Index_vue_vue_type_style_index_0_id_0e10e8d7_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Front_Shop_Index.vue?vue&type=style&index=0&id=0e10e8d7&scoped=true&lang=css& */ "./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=style&index=0&id=0e10e8d7&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Front_Shop_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Front_Shop_Index_vue_vue_type_template_id_0e10e8d7_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Front_Shop_Index_vue_vue_type_template_id_0e10e8d7_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "0e10e8d7",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/front/shop/Front_Shop_Index.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/front/Front_Contact.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************!*\
   !*** ./resources/js/components/front/Front_Contact.vue?vue&type=script&lang=js& ***!
@@ -49569,6 +49880,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Shop_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Front_Shop_Index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Shop_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/front/festivalss/Front_Festival_Item_Main.vue?vue&type=style&index=0&id=fd62b2ac&scoped=true&lang=css&":
 /*!****************************************************************************************************************************************!*\
   !*** ./resources/js/components/front/festivalss/Front_Festival_Item_Main.vue?vue&type=style&index=0&id=fd62b2ac&scoped=true&lang=css& ***!
@@ -49604,6 +49931,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Index_Top_Users_vue_vue_type_style_index_0_id_4dbbd7bd_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Front_Index_Top_Users.vue?vue&type=style&index=0&id=4dbbd7bd&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/index/Front_Index_Top_Users.vue?vue&type=style&index=0&id=4dbbd7bd&scoped=true&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=style&index=0&id=0e10e8d7&scoped=true&lang=css&":
+/*!**************************************************************************************************************************!*\
+  !*** ./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=style&index=0&id=0e10e8d7&scoped=true&lang=css& ***!
+  \**************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Shop_Index_vue_vue_type_style_index_0_id_0e10e8d7_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Front_Shop_Index.vue?vue&type=style&index=0&id=0e10e8d7&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=style&index=0&id=0e10e8d7&scoped=true&lang=css&");
 
 
 /***/ }),
@@ -49927,6 +50267,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Index_Whatis_vue_vue_type_template_id_a7821382_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Index_Whatis_vue_vue_type_template_id_a7821382_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Front_Index_Whatis.vue?vue&type=template&id=a7821382&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/index/Front_Index_Whatis.vue?vue&type=template&id=a7821382&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=template&id=0e10e8d7&scoped=true&":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=template&id=0e10e8d7&scoped=true& ***!
+  \************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Shop_Index_vue_vue_type_template_id_0e10e8d7_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Shop_Index_vue_vue_type_template_id_0e10e8d7_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Front_Shop_Index_vue_vue_type_template_id_0e10e8d7_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Front_Shop_Index.vue?vue&type=template&id=0e10e8d7&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=template&id=0e10e8d7&scoped=true&");
 
 
 /***/ }),
@@ -51914,217 +52271,234 @@ var render = function () {
               _vm._v(" "),
               _c("hr"),
               _vm._v(" "),
-              _c("h6", { staticClass: "text-secondary mb-4" }, [
-                _vm._v("ارسال اثر به جشنواره :"),
-              ]),
-              _vm._v(" "),
-              !_vm.UserAuthCheck()
-                ? _c("div", [
-                    _c("div", { staticClass: "alert alert-primary font-15" }, [
-                      _vm._v(
-                        "\n                                کاربر گرامی برای ارسال اثر به جشنواره، ابتدا باید وارد حساب کاربری خود شوید\n                                "
-                      ),
-                      _c("br"),
-                      _vm._v(" "),
-                      _c("br"),
-                      _vm._v(
-                        "\n                                برای ورود به حساب کافیست شماره موبایل خود را وارد کنید\n                                "
-                      ),
-                      _c("br"),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "form-group mt-4 text-center row" },
-                        [
-                          _c("div", { staticClass: "col-md-8 mt-2 " }, [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.form.phone,
-                                  expression: "form.phone",
-                                },
-                              ],
-                              staticClass: "form-control",
-                              attrs: { type: "number" },
-                              domProps: { value: _vm.form.phone },
-                              on: {
-                                input: function ($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.$set(
-                                    _vm.form,
-                                    "phone",
-                                    $event.target.value
-                                  )
-                                },
-                              },
-                            }),
-                          ]),
-                          _vm._v(" "),
+              _vm.festival !== null && _vm.festival.is_expired === 1
+                ? _c("div", [_vm._m(1)])
+                : _c("div", [
+                    _c("h6", { staticClass: "text-secondary mb-4" }, [
+                      _vm._v("ارسال اثر به جشنواره :"),
+                    ]),
+                    _vm._v(" "),
+                    !_vm.UserAuthCheck()
+                      ? _c("div", [
                           _c(
                             "div",
-                            { staticClass: "col-md-4 text-right mt-2" },
-                            [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-primary",
-                                  on: {
-                                    click: function ($event) {
-                                      return _vm.FormSubmit()
-                                    },
-                                  },
-                                },
-                                [_vm._v("ورود به حساب")]
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "mt-3" },
-                        [
-                          _vm._v(
-                            "\n                                    حساب ندارید ؟\n                                    "
-                          ),
-                          _c(
-                            "router-link",
-                            {
-                              staticClass: "text-bold-3 font-16",
-                              attrs: { to: { name: "front_register" } },
-                            },
+                            { staticClass: "alert alert-primary font-15" },
                             [
                               _vm._v(
-                                "\n                                         ثبت نام کنید\n                                    "
+                                "\n                                    کاربر گرامی برای ارسال اثر به جشنواره، ابتدا باید وارد حساب کاربری خود شوید\n                                    "
+                              ),
+                              _c("br"),
+                              _vm._v(" "),
+                              _c("br"),
+                              _vm._v(
+                                "\n                                    برای ورود به حساب کافیست شماره موبایل خود را وارد کنید\n                                    "
+                              ),
+                              _c("br"),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "form-group mt-4 text-center row",
+                                },
+                                [
+                                  _c("div", { staticClass: "col-md-8 mt-2 " }, [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.form.phone,
+                                          expression: "form.phone",
+                                        },
+                                      ],
+                                      staticClass: "form-control",
+                                      attrs: { type: "number" },
+                                      domProps: { value: _vm.form.phone },
+                                      on: {
+                                        input: function ($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.form,
+                                            "phone",
+                                            $event.target.value
+                                          )
+                                        },
+                                      },
+                                    }),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "col-md-4 text-right mt-2" },
+                                    [
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass: "btn btn-primary",
+                                          on: {
+                                            click: function ($event) {
+                                              return _vm.FormSubmit()
+                                            },
+                                          },
+                                        },
+                                        [_vm._v("ورود به حساب")]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "mt-3" },
+                                [
+                                  _vm._v(
+                                    "\n                                        حساب ندارید ؟\n                                        "
+                                  ),
+                                  _c(
+                                    "router-link",
+                                    {
+                                      staticClass: "text-bold-3 font-16",
+                                      attrs: { to: { name: "front_register" } },
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                            ثبت نام کنید\n                                        "
+                                      ),
+                                    ]
+                                  ),
+                                ],
+                                1
                               ),
                             ]
-                          ),
-                        ],
-                        1
-                      ),
-                    ]),
-                  ])
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.forms.length > 0 && _vm.UserAuthCheck()
-                ? _c("div", { staticClass: "mt-3 mb-3" }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "alert alert-primary text-center font-14 mb-3",
-                      },
-                      [
-                        _vm._v(
-                          "\n                                برای شرکت در جشنواره اطلاعات خواسته شده را کامل کنید\n                            "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "card shadow" }, [
-                      _c(
-                        "div",
-                        { staticClass: "card-body" },
-                        _vm._l(_vm.forms, function (form, index) {
-                          return _c(
-                            "div",
-                            { key: index, staticClass: "form-group mt-4 " },
-                            [
-                              _c("label", { staticClass: "form-label" }, [
-                                _vm._v(_vm._s(form.form)),
-                              ]),
-                              _vm._v(" "),
-                              _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.form_answers[form.form],
-                                    expression: "form_answers[form.form]",
-                                  },
-                                ],
-                                staticClass: "form-control",
-                                attrs: { type: "text" },
-                                domProps: {
-                                  value: _vm.form_answers[form.form],
-                                },
-                                on: {
-                                  input: function ($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
-                                      _vm.form_answers,
-                                      form.form,
-                                      $event.target.value
-                                    )
-                                  },
-                                },
-                              }),
-                            ]
-                          )
-                        }),
-                        0
-                      ),
-                    ]),
-                  ])
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.UserAuthCheck()
-                ? _c("div", { staticClass: "item-details-in-content " }, [
-                    _c(
-                      "h6",
-                      { staticClass: "text-success text-center font-15 mb-4" },
-                      [_vm._v("انتخاب فایل جهت ارسال")]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("input", {
-                        ref: "file",
-                        staticClass: "form-control",
-                        attrs: { type: "file" },
-                        on: { change: _vm.HandleUploadFile },
-                      }),
-                    ]),
-                    _vm._v(" "),
-                    _vm.selected_file !== null
-                      ? _c("div", { staticClass: " text-center mt-4" }, [
-                          _vm._v(
-                            "\n                                فایل انتخاب شده : "
-                          ),
-                          _c(
-                            "span",
-                            { staticClass: "text-danger text-bold-3" },
-                            [_vm._v(_vm._s(_vm.selected_file.name))]
                           ),
                         ])
                       : _vm._e(),
-                  ])
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.UserAuthCheck()
-                ? _c("div", { staticClass: "item-details-btn" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "default-btn border-radius-50",
-                        attrs: { disabled: _vm.selected_file === null },
-                        on: { click: _vm.SendFileSubmit },
-                      },
-                      [_vm._v(" ارسال اثر به جشنواره")]
-                    ),
-                  ])
-                : _vm._e(),
+                    _vm._v(" "),
+                    _vm.forms.length > 0 && _vm.UserAuthCheck()
+                      ? _c("div", { staticClass: "mt-3 mb-3" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "alert alert-primary text-center font-14 mb-3",
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    برای شرکت در جشنواره اطلاعات خواسته شده را کامل کنید\n                                "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "card shadow" }, [
+                            _c(
+                              "div",
+                              { staticClass: "card-body" },
+                              _vm._l(_vm.forms, function (form, index) {
+                                return _c(
+                                  "div",
+                                  {
+                                    key: index,
+                                    staticClass: "form-group mt-4 ",
+                                  },
+                                  [
+                                    _c("label", { staticClass: "form-label" }, [
+                                      _vm._v(_vm._s(form.form)),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.form_answers[form.form],
+                                          expression: "form_answers[form.form]",
+                                        },
+                                      ],
+                                      staticClass: "form-control",
+                                      attrs: { type: "text" },
+                                      domProps: {
+                                        value: _vm.form_answers[form.form],
+                                      },
+                                      on: {
+                                        input: function ($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.form_answers,
+                                            form.form,
+                                            $event.target.value
+                                          )
+                                        },
+                                      },
+                                    }),
+                                  ]
+                                )
+                              }),
+                              0
+                            ),
+                          ]),
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.UserAuthCheck()
+                      ? _c("div", { staticClass: "item-details-in-content " }, [
+                          _c(
+                            "h6",
+                            {
+                              staticClass:
+                                "text-success text-center font-15 mb-4",
+                            },
+                            [_vm._v("انتخاب فایل جهت ارسال")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "form-group" }, [
+                            _c("input", {
+                              ref: "file",
+                              staticClass: "form-control",
+                              attrs: { type: "file" },
+                              on: { change: _vm.HandleUploadFile },
+                            }),
+                          ]),
+                          _vm._v(" "),
+                          _vm.selected_file !== null
+                            ? _c("div", { staticClass: " text-center mt-4" }, [
+                                _vm._v(
+                                  "\n                                    فایل انتخاب شده : "
+                                ),
+                                _c(
+                                  "span",
+                                  { staticClass: "text-danger text-bold-3" },
+                                  [_vm._v(_vm._s(_vm.selected_file.name))]
+                                ),
+                              ])
+                            : _vm._e(),
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.UserAuthCheck()
+                      ? _c("div", { staticClass: "item-details-btn" }, [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "default-btn border-radius-50",
+                              attrs: { disabled: _vm.selected_file === null },
+                              on: { click: _vm.SendFileSubmit },
+                            },
+                            [_vm._v(" ارسال اثر به جشنواره")]
+                          ),
+                        ])
+                      : _vm._e(),
+                  ]),
             ]),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-12" }, [
-            _vm._m(1),
+            _vm._m(2),
             _vm._v(" "),
             _c(
               "div",
@@ -52198,6 +52572,26 @@ var staticRenderFns = [
     return _c("div", { staticClass: "item-details-title" }, [
       _c("h6", { staticClass: "text-secondary" }, [
         _vm._v("آثار قابل ارسال : "),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "img-fluid text-center" }, [
+      _c("img", {
+        attrs: {
+          src: "/template/images/svg/expired.svg",
+          width: "40%",
+          alt: "",
+        },
+      }),
+      _vm._v(" "),
+      _c("h6", { staticClass: "mt-2" }, [
+        _vm._v(
+          "\n                                    جشنواره مورد نظر به پایان رسیده است، منتظر اعلام نتایج باشید\n                                "
+        ),
       ]),
     ])
   },
@@ -52808,7 +53202,25 @@ var render = function () {
                 ),
               ]),
               _vm._v(" "),
-              _vm._m(1),
+              _c(
+                "li",
+                { staticClass: "nav-item" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { to: { name: "front_shop" }, href: "" },
+                    },
+                    [
+                      _vm._v(
+                        "\n                        فروشگاه هدایا\n                    "
+                      ),
+                    ]
+                  ),
+                ],
+                1
+              ),
               _vm._v(" "),
               _c(
                 "li",
@@ -52980,7 +53392,7 @@ var render = function () {
                       ],
                       1
                     )
-                  : _c("li", [_vm._m(2)]),
+                  : _c("li", [_vm._m(1)]),
                 _vm._v(" "),
                 !this.UserAuthCheck()
                   ? _c(
@@ -53003,7 +53415,7 @@ var render = function () {
                       1
                     )
                   : this.UserAuthGet().role && this.UserAuthGet().role < 4
-                  ? _c("li", [_vm._m(3)])
+                  ? _c("li", [_vm._m(2)])
                   : _c(
                       "li",
                       [
@@ -53043,16 +53455,6 @@ var staticRenderFns = [
         _c("button", { attrs: { type: "submit" } }, [
           _c("i", { staticClass: "fas fa-search" }),
         ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item" }, [
-      _c("a", { staticClass: "nav-link", attrs: { href: "" } }, [
-        _vm._v("\n                        فروشگاه هدایا\n                    "),
       ]),
     ])
   },
@@ -53623,7 +54025,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "section-title" }, [
         _c("h1", { staticClass: "mt-4 text-aviny font-40" }, [
           _vm._v(
-            "\n                        برترین برگذار کنندگان\n                    "
+            "\n                        برترین برگزارکنندگان\n                    "
           ),
         ]),
       ]),
@@ -53794,6 +54196,482 @@ var staticRenderFns = [
               }),
             ]),
           ]),
+        ]),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=template&id=0e10e8d7&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/front/shop/Front_Shop_Index.vue?vue&type=template&id=0e10e8d7&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "inner-banner inner-bg3" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "inner-title" }, [
+          _c("h1", { staticClass: "text-aviny text-light font-50" }, [
+            _vm._v("فروشگاه هدایا فستیکا"),
+          ]),
+          _vm._v(" "),
+          _c("ul", [
+            _c(
+              "li",
+              [
+                _c("router-link", { attrs: { to: { name: "front_index" } } }, [
+                  _c("a", [_vm._v("صفحه اصلی")]),
+                ]),
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("li", [_vm._v("فروشگاه")]),
+          ]),
+          _vm._v(" "),
+          _vm._m(0),
+        ]),
+      ]),
+    ]),
+    _vm._v(" "),
+    _vm._m(1),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "inner-shape" }, [
+      _c("img", {
+        attrs: {
+          src: "template/images/inner-banner/inner-shape1.png",
+          alt: "Images",
+        },
+      }),
+      _vm._v(" "),
+      _c("img", {
+        attrs: {
+          src: "template/images/inner-banner/inner-shape2.png",
+          alt: "Images",
+        },
+      }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "featured-area pt-100 pb-70" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "tab featured-tab-area" }, [
+          _c("div", { staticClass: "row align-items-center" }, [
+            _c("div", { staticClass: "col-lg-6 col-md-4" }, [
+              _c("div", { staticClass: "section-title" }, [
+                _c("h4", [_vm._v("لیست محصولات فروشگاه")]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "tab_content current active pt-45" }, [
+            _c("div", { staticClass: "tabs_item current" }, [
+              _c("div", { staticClass: "row justify-content-center" }, [
+                _c("div", { staticClass: "col-lg-3 col-md-6" }, [
+                  _c("div", { staticClass: "featured-item" }, [
+                    _c("div", { staticClass: "featured-item-img" }, [
+                      _c("a", { attrs: { href: "" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "template/images/shop/1.jpg",
+                            alt: "Images",
+                          },
+                        }),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "default-btn border-radius-5",
+                          attrs: { type: "button" },
+                        },
+                        [_vm._v("افزودن به سبد خرید")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "content" }, [
+                      _c("h6", [
+                        _c(
+                          "a",
+                          { staticClass: "text-dark", attrs: { href: "" } },
+                          [_vm._v("ست دکوری گلدان و آجیل خوری")]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "text-center mt-4" }, [
+                        _c(
+                          "span",
+                          { staticClass: "font-20 text-bold-3 text-success" },
+                          [_vm._v("1,500,000")]
+                        ),
+                        _c(
+                          "span",
+                          { staticClass: "text-secondary mr-2 font-14" },
+                          [_vm._v("تومان")]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-3 col-md-6" }, [
+                  _c("div", { staticClass: "featured-item" }, [
+                    _c("div", { staticClass: "featured-item-img" }, [
+                      _c("a", { attrs: { href: "" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "template/images/shop/2.jpg",
+                            alt: "Images",
+                          },
+                        }),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "default-btn border-radius-5",
+                          attrs: { type: "button" },
+                        },
+                        [_vm._v("افزودن به سبد خرید")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "content" }, [
+                      _c("h6", [
+                        _c(
+                          "a",
+                          { staticClass: "text-dark", attrs: { href: "" } },
+                          [_vm._v("آجیل خوری منبت کاری شده")]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "text-center mt-4" }, [
+                        _c(
+                          "span",
+                          { staticClass: "font-20 text-bold-3 text-success" },
+                          [_vm._v("900,000")]
+                        ),
+                        _c(
+                          "span",
+                          { staticClass: "text-secondary mr-2 font-14" },
+                          [_vm._v("تومان")]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-3 col-md-6" }, [
+                  _c("div", { staticClass: "featured-item" }, [
+                    _c("div", { staticClass: "featured-item-img" }, [
+                      _c("a", { attrs: { href: "" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "template/images/shop/3.jpg",
+                            alt: "Images",
+                          },
+                        }),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "default-btn border-radius-5",
+                          attrs: { type: "button" },
+                        },
+                        [_vm._v("افزودن به سبد خرید")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "content" }, [
+                      _c("h6", [
+                        _c(
+                          "a",
+                          { staticClass: "text-dark", attrs: { href: "" } },
+                          [_vm._v("گلدان رومیزی سفالی به همراه ترمه")]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "text-center mt-4" }, [
+                        _c(
+                          "span",
+                          { staticClass: "font-20 text-bold-3 text-success" },
+                          [_vm._v("860,000")]
+                        ),
+                        _c(
+                          "span",
+                          { staticClass: "text-secondary mr-2 font-14" },
+                          [_vm._v("تومان")]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-3 col-md-6" }, [
+                  _c("div", { staticClass: "featured-item" }, [
+                    _c("div", { staticClass: "featured-item-img" }, [
+                      _c("a", { attrs: { href: "" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "template/images/shop/4.jpg",
+                            alt: "Images",
+                          },
+                        }),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "default-btn border-radius-5",
+                          attrs: { type: "button" },
+                        },
+                        [_vm._v("افزودن به سبد خرید")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "content" }, [
+                      _c("h6", [
+                        _c(
+                          "a",
+                          { staticClass: "text-dark", attrs: { href: "" } },
+                          [_vm._v("دوعدد گلدان منبت کاری شده")]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "text-center mt-4" }, [
+                        _c(
+                          "span",
+                          { staticClass: "font-20 text-bold-3 text-success" },
+                          [_vm._v("1,000,000")]
+                        ),
+                        _c(
+                          "span",
+                          { staticClass: "text-secondary mr-2 font-14" },
+                          [_vm._v("تومان")]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-3 col-md-6" }, [
+                  _c("div", { staticClass: "featured-item" }, [
+                    _c("div", { staticClass: "featured-item-img" }, [
+                      _c("a", { attrs: { href: "" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "template/images/shop/5.jpg",
+                            alt: "Images",
+                          },
+                        }),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "default-btn border-radius-5",
+                          attrs: { type: "button" },
+                        },
+                        [_vm._v("افزودن به سبد خرید")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "content" }, [
+                      _c("h6", [
+                        _c(
+                          "a",
+                          { staticClass: "text-dark", attrs: { href: "" } },
+                          [_vm._v("جانماز ترمه طرح افشاری")]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "text-center mt-4" }, [
+                        _c(
+                          "span",
+                          { staticClass: "font-20 text-bold-3 text-success" },
+                          [_vm._v("365,000")]
+                        ),
+                        _c(
+                          "span",
+                          { staticClass: "text-secondary mr-2 font-14" },
+                          [_vm._v("تومان")]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-3 col-md-6" }, [
+                  _c("div", { staticClass: "featured-item" }, [
+                    _c("div", { staticClass: "featured-item-img" }, [
+                      _c("a", { attrs: { href: "" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "template/images/shop/6.jpg",
+                            alt: "Images",
+                          },
+                        }),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "default-btn border-radius-5",
+                          attrs: { type: "button" },
+                        },
+                        [_vm._v("افزودن به سبد خرید")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "content" }, [
+                      _c("h6", [
+                        _c(
+                          "a",
+                          { staticClass: "text-dark", attrs: { href: "" } },
+                          [_vm._v("تابلو طلا آیت الکرسی")]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "text-center mt-4" }, [
+                        _c(
+                          "span",
+                          { staticClass: "font-20 text-bold-3 text-success" },
+                          [_vm._v("1,700,000")]
+                        ),
+                        _c(
+                          "span",
+                          { staticClass: "text-secondary mr-2 font-14" },
+                          [_vm._v("تومان")]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-3 col-md-6" }, [
+                  _c("div", { staticClass: "featured-item" }, [
+                    _c("div", { staticClass: "featured-item-img" }, [
+                      _c("a", { attrs: { href: "" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "template/images/shop/7.jpg",
+                            alt: "Images",
+                          },
+                        }),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "default-btn border-radius-5",
+                          attrs: { type: "button" },
+                        },
+                        [_vm._v("افزودن به سبد خرید")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "content" }, [
+                      _c("h6", [
+                        _c(
+                          "a",
+                          { staticClass: "text-dark", attrs: { href: "" } },
+                          [_vm._v("تابلو طراحی شده با سنگ مرمر")]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "text-center mt-4" }, [
+                        _c(
+                          "span",
+                          { staticClass: "font-20 text-bold-3 text-success" },
+                          [_vm._v("780,000")]
+                        ),
+                        _c(
+                          "span",
+                          { staticClass: "text-secondary mr-2 font-14" },
+                          [_vm._v("تومان")]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-3 col-md-6" }, [
+                  _c("div", { staticClass: "featured-item" }, [
+                    _c("div", { staticClass: "featured-item-img" }, [
+                      _c("a", { attrs: { href: "" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "template/images/shop/8.jpg",
+                            alt: "Images",
+                          },
+                        }),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "default-btn border-radius-5",
+                          attrs: { type: "button" },
+                        },
+                        [_vm._v("افزودن به سبد خرید")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "content" }, [
+                      _c("h6", [
+                        _c(
+                          "a",
+                          { staticClass: "text-dark", attrs: { href: "" } },
+                          [_vm._v("گلدان فلزی دکوری رومیزی")]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "text-center mt-4" }, [
+                        _c(
+                          "span",
+                          { staticClass: "font-20 text-bold-3 text-success" },
+                          [_vm._v("400,000")]
+                        ),
+                        _c(
+                          "span",
+                          { staticClass: "text-secondary mr-2 font-14" },
+                          [_vm._v("تومان")]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-12 col-md-12 text-center" }),
         ]),
       ]),
     ])

@@ -161,7 +161,7 @@ class FestivalController extends Controller
 
     public function submit_form(Request $request,$slug)
     {
-        $festival = Festival::where('slug',$slug)->where('is_active',true)->where('force_close',false)->where('accepted',true)->firstorfail();
+        $festival = Festival::where('slug',$slug)->where('is_expired',false)->where('is_active',true)->where('force_close',false)->where('accepted',true)->firstorfail();
         $mimes='';
         if (!empty($festival->mimes)){
             $mimes = unserialize($festival->mimes);
@@ -181,10 +181,12 @@ class FestivalController extends Controller
             }
         }
         $file=null;
+        $format=null;
         $size=0;
         $type=null;
         if ($request->file('selected_file')){
             $size=$request->file('selected_file')->getSize();
+            $format=$request->file('selected_file')->extension();
             $type = get_festival_file_format($request->file('selected_file')->extension());
             $file = Storage::put('private/festivals/posted/'.$festival->id,$request->file('selected_file'),'private');
         }
@@ -193,6 +195,7 @@ class FestivalController extends Controller
             'file'=>$file,
             'size'=>$size,
             'type'=>$type,
+            'extension'=>$format,
             'forms'=>$forms,
         ]);
         $created->update(['code'=>random_code($created->id,14)]);

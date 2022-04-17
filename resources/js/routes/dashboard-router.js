@@ -1,11 +1,10 @@
 import VueRouter from "vue-router";
-import Panel_Dashboard from "../components/dashboard/Panel_Dashboard";
-
-import Panel_Festivals_Manage from "../components/dashboard/festivals/Panel_Festivals_Manage";
 import Panel_Festival_New from "../components/panel/festivals/Panel_Festival_New";
 import Panel_Festival_All from "../components/panel/festivals/Panel_Festival_All";
 import Panel_Profile from "../components/panel/profile/Panel_Profile";
 import Panel_Festival_Files from "../components/panel/festivals/Panel_Festival_Files";
+import Panel_Festivals_Manage from "../components/panel/festivals/Panel_Festival_Manage";
+import Panel_Dashboard from "../components/panel/dashboard/Panel_Dashboard";
 
 const routes = [
     //dashboard
