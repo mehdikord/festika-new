@@ -1,44 +1,46 @@
 <template>
     <div>
-        <manage_title title="آثار ارسالی"></manage_title>
-        <div class="card app-fade-in">
-            <div class="card-header bg-purple-deep3">
+        <manage_title title="جشنواره های شرکت شده"></manage_title>
+        <div class="card">
+            <div class="card-header bg-cyan3">
                 <div class="font-16 text-bold-2 text-light">
-                    همه آثار ارسال شده در جشنواره : <span v-if=" festival !== null" class="text-bold-3 font-15">{{festival.title}}</span>
+                    لیست آثار ارسالی شما در جشنواره ها
                 </div>
             </div>
             <div class="card-body">
                 <div v-if="loading === false" class="pb-4 mt-3">
-                    <h6 class="font-14 text-secondary">جستجو و فیلتر آثار</h6>
+                    <h6 class="font-14 text-secondary">جستجو و آثار</h6>
                     <div class="row mt-4">
                         <div class="col-md-4">
                             <div class="input-group">
                                 <div class="input-group-text"><i class="fas fa-search font-18 text-primary"></i></div>
-                                <input :class="{'is-invalid' : search && DoSearchItems.length < 1}" v-model="search" type="text" class="form-control"  placeholder="جستجو با: نام شرکت کننده ، کد فایل ... ">
+                                <input :class="{'is-invalid' : search && DoSearchItems.length < 1}" v-model="search" type="text" class="form-control"  placeholder="">
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div v-if="loading === false" class="table-responsive">
 
                     <table v-if="DoSearchItems.length > 0" class="table table-bordered table-hover">
                         <thead class="table-dark">
                         <tr>
-                            <th>کاربر</th>
+                            <th>جشنواره</th>
                             <th>کد اثر</th>
                             <th>نوع</th>
                             <th>حجم</th>
                             <th>دریافت</th>
+                            <th>وضعیت</th>
                             <th>تاریخ</th>
-                            <th>ابزار</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr v-for="(file,index) in DoSearchItems" :key="index" class="app-fade-in">
                             <td>
-                                <img v-if="file.user.profile === null" class="user-profile" src="/dashboard/images/user-default.png" alt="user">
-                                <img v-else class="user-profile" :src="file.user.profile" alt="user">
-                                {{file.user.name}}
+                                <img v-if="file.festival.logo === null" class="user-profile" src="/management/images/festival-logo.png" alt="user">
+                                <img v-else class="user-profile" :src="file.festival.logo" alt="user">
+<!--                                <router-link :to="{name: 'front_festivals_show',params : {slug : file.festival.slug}}">{{file.festival.title}}</router-link>-->
+                                <a :href="'/festivals/show/'+file.festival.slug">{{file.festival.title}}</a>
                             </td>
                             <td><span class="badge bg-cyan3 font-13 p-2">{{file.code}}</span></td>
                             <td><span class="badge bg-pink font-13 p-2">{{file.type}}</span></td>
@@ -49,13 +51,10 @@
                                 </button>
                             </td>
                             <td>
-                                <span class="badge bg-dark p-2 font-13">{{file.created_at | filter_date}}</span>
-
+                                <span class="btn bg-yellow3 font-13 text-dark">درحال برگزاری <i class="fas fa-spinner fa-spin"></i></span>
                             </td>
                             <td>
-                                <button  class="btn btn-danger bg-red3 btn-sm manage-btn font-13">
-                                    <i class="fas fa-trash"></i> حذف
-                                </button>
+                               <span class="badge bg-dark p-2 font-13">{{file.created_at | filter_date}}</span>
                             </td>
                         </tr>
                         </tbody>
@@ -70,36 +69,33 @@
 
 <script>
 import Manage_Title from "../../manage/Manage_Title";
-import SweetAlert from "../../../helpers/SweetAlert";
 import Manage_Nodata from "../../manage/Manage_Nodata";
 import Manage_Loading from "../../manage/Manage_Loading";
+import SweetAlert from "../../../helpers/SweetAlert";
 
 export default {
-    name: "Panel_Festival_Files",
+    name: "Panel_Participate",
     components : {
         'manage_title' : Manage_Title,
         'manage_nodata' : Manage_Nodata,
         'manage_loading' : Manage_Loading
     },
     created() {
-        this.GetFestival();
+        this.GetAllItems();
     },
-
     data(){
         return {
+            items:null,
             loading : true,
-            festival: null,
             search : '',
+
         }
     },
-
-    methods : {
-
-        GetFestival(){
-            axios.get('/api/panel/festivals/files/'+this.$route.params.slug).then(response=>{
-                this.festival = response.data;
+    methods :{
+        GetAllItems(){
+            axios.get('/api/panel/participate/all').then(response=>{
+                this.items = response.data;
                 this.loading = false;
-
             }).catch(e => {
                 SweetAlert.SweetServerErrorMessage();
             })
@@ -122,20 +118,22 @@ export default {
     },
     computed :{
         DoSearchItems(){
-            return  this.festival.files.filter(file =>{
+            return  this.items.filter(item =>{
 
-                return file.user.name !== null && file.user.name.match(this.search)
-                    || file.code !== null && file.code.match(this.search);
+                return item.festival.title !== null && item.festival.title.match(this.search)
+                    || item.code !== null && item.code.match(this.search);
             })
 
         }
     }
+
+
 }
 </script>
 
 <style scoped>
 .user-profile{
     width: 40px;
-    margin-left: 10px!important;
+    margin-left: 5px!important;
 }
 </style>

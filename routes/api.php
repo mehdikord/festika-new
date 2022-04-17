@@ -65,6 +65,9 @@ Route::group(['prefix'=>'panel','middleware'=>['check_auth']],static function ()
         Route::get('downloader/files/single/{file}',[\App\Http\Controllers\Api\Panel\FestivalController::class,'download_single']);
         Route::get('activation/{festival}',[\App\Http\Controllers\Api\Panel\FestivalController::class,'activation']);
     });
+    Route::prefix('participate')->group(function (){
+        Route::get('all',[\App\Http\Controllers\Api\Panel\ParticipateController::class,'get_all']);
+    });
 
 
 

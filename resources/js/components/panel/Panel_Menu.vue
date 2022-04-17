@@ -26,8 +26,13 @@
                             <span data-key="t-dashboard">جشنواره های شما</span>
                         </router-link>
                     </li>
-                    <li class="menu-title text-danger" data-key="t-menu">جشنواره های شرکت کرده</li>
-
+                    <li class="menu-title text-danger" data-key="t-menu">جشنواره هایی که شما شرکت کرده اید</li>
+                    <li>
+                        <router-link :to="{name : 'panel_participate'}">
+                            <i class="fas fa-gifts"></i>
+                            <span data-key="t-dashboard">جشنواره های شرکت کرده</span>
+                        </router-link>
+                    </li>
 
                 </ul>
 

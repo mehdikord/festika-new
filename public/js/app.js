@@ -3605,6 +3605,75 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Front_Include_Menu",
   created: function created() {
@@ -53093,180 +53162,274 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container-fluid app-fade-in" }, [
-    _c(
-      "nav",
-      { staticClass: "navbar navbar-expand-md navbar-light" },
-      [
+  return _c("div", { staticClass: "navbar-area" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "desktop-nav desktop-nav-one nav-area" }, [
+      _c("div", { staticClass: "container-fluid" }, [
         _c(
-          "router-link",
-          {
-            staticClass: "navbar-brand",
-            attrs: { to: { name: "front_index" } },
-          },
-          [_c("img", { attrs: { src: "/festika.svg", width: "80" } })]
-        ),
-        _vm._v(" "),
-        _vm._m(0),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "collapse navbar-collapse mean-menu",
-            attrs: { id: "navbarSupportedContent" },
-          },
+          "nav",
+          { staticClass: "navbar navbar-expand-md navbar-light" },
           [
-            _c("ul", { staticClass: "navbar-nav m-auto" }, [
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
+            _c(
+              "router-link",
+              {
+                staticClass: "navbar-brand",
+                attrs: { to: { name: "front_index" } },
+              },
+              [_c("img", { attrs: { src: "/festika.svg", width: "80" } })]
+            ),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "collapse navbar-collapse mean-menu",
+                attrs: { id: "navbarSupportedContent" },
+              },
+              [
+                _c("ul", { staticClass: "navbar-nav m-auto" }, [
                   _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      class: { active: this.$route.name === "front_index" },
-                      attrs: { to: { name: "front_index" } },
-                    },
+                    "li",
+                    { staticClass: "nav-item" },
                     [
-                      _vm._v(
-                        "\n                        صفحه اصلی\n                    "
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "nav-link",
+                          class: { active: this.$route.name === "front_index" },
+                          attrs: { to: { name: "front_index" } },
+                        },
+                        [
+                          _vm._v(
+                            "\n                                صفحه اصلی\n                            "
+                          ),
+                        ]
                       ),
-                    ]
+                    ],
+                    1
                   ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "nav-link ",
-                    class: { active: this.$route.name === "front_festivals" },
-                    attrs: { href: "#" },
-                  },
-                  [
-                    _vm._v(
-                      "\n                        جشنواره ها\n                    "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "ul",
-                  { staticClass: "dropdown-menu" },
-                  [
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-item" }, [
                     _c(
-                      "li",
-                      { staticClass: "nav-item" },
+                      "a",
+                      {
+                        staticClass: "nav-link ",
+                        class: {
+                          active: this.$route.name === "front_festivals",
+                        },
+                        attrs: { href: "#" },
+                      },
                       [
-                        _c(
-                          "router-link",
-                          {
-                            staticClass: "nav-link",
-                            attrs: { to: { name: "front_festivals" } },
-                          },
-                          [
-                            _vm._v(
-                              "\n                                همه جشنواره ها\n                            "
-                            ),
-                          ]
+                        _vm._v(
+                          "\n                                جشنواره ها\n                            "
                         ),
-                      ],
-                      1
+                      ]
                     ),
                     _vm._v(" "),
-                    _vm._l(_vm.festival_categories, function (category, index) {
-                      return _c(
+                    _c(
+                      "ul",
+                      { staticClass: "dropdown-menu" },
+                      [
+                        _c(
+                          "li",
+                          { staticClass: "nav-item" },
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "nav-link",
+                                attrs: { to: { name: "front_festivals" } },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                        همه جشنواره ها\n                                    "
+                                ),
+                              ]
+                            ),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _vm._l(
+                          _vm.festival_categories,
+                          function (category, index) {
+                            return _c(
+                              "li",
+                              { key: index, staticClass: "nav-item" },
+                              [
+                                _c(
+                                  "router-link",
+                                  {
+                                    staticClass: "nav-link",
+                                    attrs: { to: "" },
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                        " +
+                                        _vm._s(category.name) +
+                                        "\n                                    "
+                                    ),
+                                  ]
+                                ),
+                              ],
+                              1
+                            )
+                          }
+                        ),
+                      ],
+                      2
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    { staticClass: "nav-item" },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "nav-link",
+                          attrs: { to: { name: "front_shop" }, href: "" },
+                        },
+                        [
+                          _vm._v(
+                            "\n                                فروشگاه هدایا\n                            "
+                          ),
+                        ]
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    { staticClass: "nav-item" },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "nav-link",
+                          class: {
+                            active: this.$route.name === "front_contact",
+                          },
+                          attrs: { to: { name: "front_contact" } },
+                        },
+                        [
+                          _vm._v(
+                            "\n                                ارتباط با ما\n                            "
+                          ),
+                        ]
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+                      _vm._v(
+                        "\n                                راهنما فستیکا\n\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "dropdown-menu" }, [
+                      _c(
                         "li",
-                        { key: index, staticClass: "nav-item" },
+                        { staticClass: "nav-item" },
                         [
                           _c(
                             "router-link",
                             { staticClass: "nav-link", attrs: { to: "" } },
                             [
                               _vm._v(
-                                "\n                                " +
-                                  _vm._s(category.name) +
-                                  "\n                            "
+                                "\n                                        شرکت در جشنواره\n                                    "
                               ),
                             ]
                           ),
                         ],
                         1
-                      )
-                    }),
-                  ],
-                  2
-                ),
-              ]),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      attrs: { to: { name: "front_shop" }, href: "" },
-                    },
-                    [
-                      _vm._v(
-                        "\n                        فروشگاه هدایا\n                    "
                       ),
-                    ]
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      class: { active: this.$route.name === "front_contact" },
-                      attrs: { to: { name: "front_contact" } },
-                    },
-                    [
-                      _vm._v(
-                        "\n                        ارتباط با ما\n                    "
-                      ),
-                    ]
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v(
-                    "\n                        راهنما فستیکا\n\n                    "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("ul", { staticClass: "dropdown-menu" }, [
-                  _c(
-                    "li",
-                    { staticClass: "nav-item" },
-                    [
+                      _vm._v(" "),
                       _c(
-                        "router-link",
-                        { staticClass: "nav-link", attrs: { to: "" } },
+                        "li",
+                        { staticClass: "nav-item" },
                         [
-                          _vm._v(
-                            "\n                                شرکت در جشنواره\n                            "
+                          _c(
+                            "router-link",
+                            { staticClass: "nav-link", attrs: { to: "" } },
+                            [
+                              _vm._v(
+                                "\n                                        ایجاد جشنواره\n                                    "
+                              ),
+                            ]
                           ),
-                        ]
+                        ],
+                        1
                       ),
-                    ],
-                    1
-                  ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        { staticClass: "nav-item" },
+                        [
+                          _c(
+                            "router-link",
+                            { staticClass: "nav-link", attrs: { to: "" } },
+                            [
+                              _vm._v(
+                                "\n                                        مشاهده آثار جشنواره شما\n                                    "
+                              ),
+                            ]
+                          ),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        { staticClass: "nav-item" },
+                        [
+                          _c(
+                            "router-link",
+                            { staticClass: "nav-link", attrs: { to: "" } },
+                            [
+                              _vm._v(
+                                "\n                                        مشاهده جشنواره های شرکت شده\n                                    "
+                              ),
+                            ]
+                          ),
+                        ],
+                        1
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+                      _vm._v(
+                        "\n                                بلاگ\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "dropdown-menu" }, [
+                      _c(
+                        "li",
+                        { staticClass: "nav-item" },
+                        [
+                          _c(
+                            "router-link",
+                            { staticClass: "nav-link", attrs: { to: "" } },
+                            [
+                              _vm._v(
+                                "\n                                        همه نوشته ها\n                                    "
+                              ),
+                            ]
+                          ),
+                        ],
+                        1
+                      ),
+                    ]),
+                  ]),
                   _vm._v(" "),
                   _c(
                     "li",
@@ -53274,173 +53437,192 @@ var render = function () {
                     [
                       _c(
                         "router-link",
-                        { staticClass: "nav-link", attrs: { to: "" } },
+                        {
+                          staticClass: "nav-link",
+                          class: { active: this.$route.name === "front_terms" },
+                          attrs: { to: { name: "front_terms" } },
+                        },
                         [
                           _vm._v(
-                            "\n                                ایجاد جشنواره\n                            "
+                            "\n                                قوانین و مقررات\n                            "
                           ),
                         ]
                       ),
                     ],
                     1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "li",
-                    { staticClass: "nav-item" },
-                    [
-                      _c(
-                        "router-link",
-                        { staticClass: "nav-link", attrs: { to: "" } },
-                        [
-                          _vm._v(
-                            "\n                                مشاهده آثار جشنواره شما\n                            "
-                          ),
-                        ]
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "li",
-                    { staticClass: "nav-item" },
-                    [
-                      _c(
-                        "router-link",
-                        { staticClass: "nav-link", attrs: { to: "" } },
-                        [
-                          _vm._v(
-                            "\n                                مشاهده جشنواره های شرکت شده\n                            "
-                          ),
-                        ]
-                      ),
-                    ],
-                    1
-                  ),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v(
-                    "\n                        بلاگ\n                    "
                   ),
                 ]),
                 _vm._v(" "),
-                _c("ul", { staticClass: "dropdown-menu" }, [
-                  _c(
-                    "li",
-                    { staticClass: "nav-item" },
-                    [
-                      _c(
-                        "router-link",
-                        { staticClass: "nav-link", attrs: { to: "" } },
-                        [
-                          _vm._v(
-                            "\n                                همه نوشته ها\n                            "
-                          ),
-                        ]
-                      ),
-                    ],
-                    1
-                  ),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      class: { active: this.$route.name === "front_terms" },
-                      attrs: { to: { name: "front_terms" } },
-                    },
-                    [
-                      _vm._v(
-                        "\n                        قوانین و مقررات\n                    "
-                      ),
-                    ]
-                  ),
-                ],
-                1
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "others-options" }, [
-              _c("ul", { staticClass: "optional-item-list" }, [
-                !this.UserAuthCheck()
-                  ? _c(
-                      "li",
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            class: {
-                              active: this.$route.name === "front_login",
-                            },
-                            attrs: { to: { name: "front_login" } },
-                          },
+                _c("div", { staticClass: "others-options" }, [
+                  _c("ul", { staticClass: "optional-item-list" }, [
+                    !this.UserAuthCheck()
+                      ? _c(
+                          "li",
                           [
-                            _c("i", { staticClass: "fas fa-sign-in-alt" }),
-                            _vm._v(" ورود به حساب\n                        "),
-                          ]
-                        ),
-                      ],
-                      1
-                    )
-                  : _c("li", [_vm._m(1)]),
-                _vm._v(" "),
-                !this.UserAuthCheck()
-                  ? _c(
-                      "li",
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            class: {
-                              active: this.$route.name === "front_register",
-                            },
-                            attrs: { to: { name: "front_register" } },
-                          },
-                          [
-                            _c("i", { staticClass: "fas fa-user-plus" }),
-                            _vm._v(" ثبت نام\n                        "),
-                          ]
-                        ),
-                      ],
-                      1
-                    )
-                  : this.UserAuthGet().role && this.UserAuthGet().role < 4
-                  ? _c("li", [_vm._m(2)])
-                  : _c(
-                      "li",
-                      [
-                        _c(
-                          "router-link",
-                          { attrs: { to: { name: "front_register" } } },
-                          [
-                            _vm._v(
-                              "\n                            خروج از حساب\n                        "
+                            _c(
+                              "router-link",
+                              {
+                                class: {
+                                  active: this.$route.name === "front_login",
+                                },
+                                attrs: { to: { name: "front_login" } },
+                              },
+                              [
+                                _c("i", { staticClass: "fas fa-sign-in-alt" }),
+                                _vm._v(
+                                  " ورود به حساب\n                                "
+                                ),
+                              ]
                             ),
-                          ]
+                          ],
+                          1
+                        )
+                      : _c("li", [_vm._m(2)]),
+                    _vm._v(" "),
+                    !this.UserAuthCheck()
+                      ? _c(
+                          "li",
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                class: {
+                                  active: this.$route.name === "front_register",
+                                },
+                                attrs: { to: { name: "front_register" } },
+                              },
+                              [
+                                _c("i", { staticClass: "fas fa-user-plus" }),
+                                _vm._v(
+                                  " ثبت نام\n                                "
+                                ),
+                              ]
+                            ),
+                          ],
+                          1
+                        )
+                      : this.UserAuthGet().role && this.UserAuthGet().role < 4
+                      ? _c("li", [_vm._m(3)])
+                      : _c(
+                          "li",
+                          [
+                            _c(
+                              "router-link",
+                              { attrs: { to: { name: "front_register" } } },
+                              [
+                                _vm._v(
+                                  "\n                                    خروج از حساب\n                                "
+                                ),
+                              ]
+                            ),
+                          ],
+                          1
                         ),
-                      ],
-                      1
-                    ),
-              ]),
-            ]),
-          ]
+                  ]),
+                ]),
+              ]
+            ),
+          ],
+          1
         ),
-      ],
-      1
-    ),
+      ]),
+    ]),
+    _vm._v(" "),
+    _vm._m(4),
+    _vm._v(" "),
+    _c("div", { staticClass: "side-nav-responsive" }, [
+      _c("div", { staticClass: "container-max" }, [
+        _vm._m(5),
+        _vm._v(" "),
+        _c("div", { staticClass: "container container-mt" }, [
+          _c("div", { staticClass: "side-nav-inner" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "side-nav justify-content-center align-items-center",
+              },
+              [
+                _c("div", { staticClass: "side-nav-item" }, [
+                  _c("ul", { staticClass: "optional-item-list" }, [
+                    !this.UserAuthCheck()
+                      ? _c(
+                          "li",
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                class: {
+                                  active: this.$route.name === "front_login",
+                                },
+                                attrs: { to: { name: "front_login" } },
+                              },
+                              [
+                                _c("i", { staticClass: "fas fa-sign-in-alt" }),
+                                _vm._v(
+                                  " ورود به حساب\n                                    "
+                                ),
+                              ]
+                            ),
+                          ],
+                          1
+                        )
+                      : _c("li", [_vm._m(6)]),
+                    _vm._v(" "),
+                    !this.UserAuthCheck()
+                      ? _c(
+                          "li",
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                class: {
+                                  active: this.$route.name === "front_register",
+                                },
+                                attrs: { to: { name: "front_register" } },
+                              },
+                              [
+                                _c("i", { staticClass: "fas fa-user-plus" }),
+                                _vm._v(
+                                  " ثبت نام\n                                    "
+                                ),
+                              ]
+                            ),
+                          ],
+                          1
+                        )
+                      : this.UserAuthGet().role && this.UserAuthGet().role < 4
+                      ? _c("li", [_vm._m(7)])
+                      : _vm._e(),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+        ]),
+      ]),
+    ]),
   ])
 }
 var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mobile-responsive-nav" }, [
+      _c("div", { staticClass: "container-fluid" }, [
+        _c("div", { staticClass: "mobile-responsive-menu" }, [
+          _c("div", { staticClass: "logo" }, [
+            _c("a", { attrs: { href: "/" } }, [
+              _c("img", {
+                attrs: { src: "festika.svg", width: "45", alt: "logo" },
+              }),
+            ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -53464,7 +53646,60 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("a", { attrs: { href: "/panel/dashboard" } }, [
       _c("i", { staticClass: "fas fa-user" }),
-      _vm._v(" پنل کاربری\n                        "),
+      _vm._v(" پنل کاربری\n                                "),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "/manage/dashboard" } }, [
+      _c("i", { staticClass: "fas fa-cog" }),
+      _vm._v(" پنل مدیریت "),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mobile-nav" }, [
+      _c("div", { staticClass: "search-btn" }, [
+        _c(
+          "a",
+          {
+            staticClass: "#",
+            attrs: {
+              href: "#searchmodal",
+              "data-bs-toggle": "modal",
+              "data-bs-target": "#searchmodal",
+            },
+          },
+          [_c("i", { staticClass: "fas fa-search" })]
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "dot-menu dot-menu-mt" }, [
+      _c("div", { staticClass: "circle-inner" }, [
+        _c("div", { staticClass: "circle circle-one" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "circle circle-two" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "circle circle-three" }),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "/panel/dashboard" } }, [
+      _c("i", { staticClass: "fas fa-user" }),
+      _vm._v(" پنل کاربری\n                                    "),
     ])
   },
   function () {
@@ -53880,20 +54115,11 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("h1", { staticClass: "mt-4 text-aviny font-40" }, [
                 _vm._v(
-                  "\n                        اولین پلتفرم ایجاد جشنواره های آنلاین\n                    "
+                  "\n                            اولین پلتفرم ایجاد جشنواره های آنلاین\n                        "
                 ),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "banner-btn mt-4" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "default-btn border-radius-5 btn-lg font-20",
-                    attrs: { href: "" },
-                  },
-                  [_vm._v("الان جشنوارتو آنلاین برگزار کن !")]
-                ),
-              ]),
+              _c("div", { staticClass: "banner-btn mt-4" }),
             ]),
           ]),
           _vm._v(" "),
@@ -54097,7 +54323,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("p", { staticClass: "text-light" }, [
               _vm._v(
-                "\n                    دارای نماد اعتماد الکترونیکی از مرکز تجارت الکترونیکی وزارت صنعت، معدن و تجارت اسلامی میباشد\n                "
+                "\n                    دارای نماد اعتماد الکترونیکی از مرکز تجارت الکترونیکی وزارت صنعت، معدن و تجارت اسلامی و واحد فناور مرکز رشد پارک علم و فناوری گلستان میباشد\n                "
               ),
             ]),
           ]),

@@ -10,7 +10,7 @@
                             اولین پلتفرم ایجاد جشنواره های آنلاین
                         </h1>
                         <div class="banner-btn mt-4">
-                            <button href="" class="default-btn border-radius-5 btn-lg font-20">الان جشنوارتو آنلاین برگزار کن !</button>
+<!--                            <button href="" class="default-btn border-radius-5 btn-lg font-20">الان جشنوارتو آنلاین برگزار کن !</button>-->
                         </div>
                     </div>
                 </div>

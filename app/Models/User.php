@@ -34,6 +34,12 @@ class User extends Authenticatable
         return $this->hasMany(Festival::class,'user_id');
     }
 
+    public function participates()
+    {
+        return $this->hasMany(Festival_File::class,'user_id');
+
+    }
+
 
     /**
      * The attributes that should be hidden for serialization.

@@ -35,61 +35,16 @@
 
 <body>
 
-{{--<div class="preloader">--}}
-{{--    <div class="spinner">--}}
-{{--        <div class="dot1"></div>--}}
-{{--        <div class="dot2"></div>--}}
-{{--    </div>--}}
-{{--</div>--}}
+<div class="preloader">
+    <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+    </div>
+</div>
 
 <div id="app">
-    <div class="navbar-area">
-        <div class="mobile-responsive-nav">
-            <div class="container-fluid">
-                <div class="mobile-responsive-menu">
-                    <div class="logo">
-                        <a href="/">
-                            <img src="festika.svg" width="45" alt="logo">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="desktop-nav desktop-nav-one nav-area">
-            <front-include-menu></front-include-menu>
-        </div>
-        <div class="mobile-nav">
-            <div class="search-btn">
-                <a class="#" href="#searchmodal" data-bs-toggle="modal" data-bs-target="#searchmodal">
-                    <i class="fas fa-search"></i>
-                </a>
-            </div>
-        </div>
-        <div class="side-nav-responsive">
-            <div class="container-max">
-                <div class="dot-menu dot-menu-mt">
-                    <div class="circle-inner">
-                        <div class="circle circle-one"></div>
-                        <div class="circle circle-two"></div>
-                        <div class="circle circle-three"></div>
-                    </div>
-                </div>
-                <div class="container container-mt">
-                    <div class="side-nav-inner">
-                        <div class="side-nav justify-content-center align-items-center">
-                            <div class="side-nav-item">
-                                <ul class="optional-item-list">
-                                    <li><a>ورود به حساب</a></li>
-                                    <li><a class="active">ثبت نام</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <front-include-menu></front-include-menu>
     <div class="modal fade fade-scale searchmodal" id="searchmodal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -161,7 +116,7 @@
                             </li>
                             <li>
                                 <router-link to="">
-                                    راهنما فستیک
+                                    راهنما فستیکا
                                 </router-link>
                             </li>
                             <li>
@@ -185,7 +140,6 @@
                             <li class="mt-3">
                                 <i class="fas fa-comment"></i> <a href="mailto:Festika@chmail.ir">festikahelp@gmail.com</a>
                             </li>
-
 
                         </ul>
                     </div>
@@ -212,8 +166,8 @@
             <div class="col-lg-8">
                 <div class="copy-right-text">
                     <p>
-                        © تمامی منابع برای فستیکا محفوظ است . طراحی و توسعه توسظ
-                        <a href="" target="_blank">هیرکانت - HirkaNet</a>
+                        © تمامی منابع برای فستیکا محفوظ است . طراحی و توسعه توسط :
+                        <a href="" target="_blank">فناوران هوشمند ایده پرداز هیرکان</a>
                     </p>
                     <ul class="copy-right-list">
                         <li>
