@@ -14,11 +14,18 @@
                     </div>
                 </div>
             </div>
-            <div class="row pt-45 justify-content-center">
+            <div v-if="items.length > 0" class="row pt-45 justify-content-center">
+
                 <div v-for="(item,index) in items" :key="index" class="col-md-3">
                     <festival-expire-item :slug="item.slug" :title="item.title" :category="item.category.name" :subtitle="item.subtitle" :logo="item.logo" :banner="item.banner"></festival-expire-item>
                 </div>
 
+            </div>
+            <div v-else class="pt-20 text-center">
+                <div class="img-fluid">
+                    <img src="template/images/svg/no-festivals.svg" width="500" alt="">
+                    <h6 class="mt-3 text-light"> متاسفانه درحال حاظر هیچ جشنواره ای فعال نیست</h6>
+                </div>
             </div>
         </div>
         <div class="author-area-shape">

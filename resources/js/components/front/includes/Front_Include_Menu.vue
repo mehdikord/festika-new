@@ -64,35 +64,9 @@
                                 </router-link>
                             </li>
                             <li class="nav-item">
-
-                                <a href="#" class="nav-link">
-                                    راهنما فستیکا
-
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <router-link to="" class="nav-link">
-                                            شرکت در جشنواره
-                                        </router-link>
-                                    </li>
-                                    <li class="nav-item">
-                                        <router-link to="" class="nav-link">
-                                            ایجاد جشنواره
-                                        </router-link>
-                                    </li>
-                                    <li class="nav-item">
-                                        <router-link to="" class="nav-link">
-                                            مشاهده آثار جشنواره شما
-                                        </router-link>
-                                    </li>
-                                    <li class="nav-item">
-                                        <router-link to="" class="nav-link">
-                                            مشاهده جشنواره های شرکت شده
-                                        </router-link>
-                                    </li>
-
-
-                                </ul>
+                                <router-link :to="{name : 'front_guide'}" href="" class="nav-link">
+                                    راهنما
+                                </router-link>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
