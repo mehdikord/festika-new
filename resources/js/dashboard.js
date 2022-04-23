@@ -56,6 +56,9 @@ Vue.mixin({
         UserAuthGet() {
             return Auth.AuthGetUser();
         },
+        UserAuthLogout() {
+            return Auth.AuthLogout();
+        }
     }
 });
 

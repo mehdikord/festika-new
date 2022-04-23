@@ -39,6 +39,7 @@ class Auth{
     AuthLogout(){
         localStorage.removeItem('auth_user');
         localStorage.removeItem('auth_token');
+        window.open('/','_self');
     }
 
 }

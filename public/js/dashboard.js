@@ -2283,7 +2283,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "Manage_Header"
+  name: "Manage_Header",
+  methods: {
+    AuthLogout: function AuthLogout() {
+      this.UserAuthLogout();
+    }
+  }
 });
 
 /***/ }),
@@ -2522,6 +2527,537 @@ __webpack_require__.r(__webpack_exports__);
             _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_2__["default"].SweetServerErrorMessage();
           });
         }
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Edit.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Edit.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Panel_Title__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Panel_Title */ "./resources/js/components/panel/Panel_Title.vue");
+/* harmony import */ var _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../helpers/SweetAlert */ "./resources/js/helpers/SweetAlert.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Panel_Festival_Edit",
+  components: {
+    'panel_title': _Panel_Title__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  created: function created() {
+    this.GetAllCategories();
+    this.GetFestival();
+  },
+  data: function data() {
+    return {
+      festival: null,
+      title: null,
+      categories: [],
+      format_options: [{
+        name: 'عکس',
+        val: 'image'
+      }, {
+        name: 'ویدئو',
+        val: 'video'
+      }, {
+        name: 'متنی',
+        val: 'text'
+      }, {
+        name: 'صوتی',
+        val: 'voice'
+      }, {
+        name: 'فشرده',
+        val: 'zip'
+      }],
+      form: {
+        festival_category_id: null,
+        title: null,
+        subtitle: null,
+        slug: null,
+        description: null,
+        terms: null,
+        logo: null,
+        banner: null,
+        sends: null,
+        formats: null,
+        commenting: 1,
+        sponsors: [],
+        forms: []
+      },
+      errors: {},
+      formloading: false,
+      form_sponsor: {
+        name: null,
+        link: null,
+        logo: null
+      },
+      form_forms: {
+        form: null,
+        required: 0
+      },
+      add_sponsor: false,
+      add_forms: false
+    };
+  },
+  methods: {
+    GetFestival: function GetFestival() {
+      var _this = this;
+
+      axios.get('/api/panel/festivals/show/' + this.$route.params.slug).then(function (response) {
+        _this.festival = response.data;
+        _this.title = "ویرایش اطلاعات جشنواره : " + _this.festival.title; //fill models
+
+        _this.form.title = _this.festival.title;
+        _this.form.festival_category_id = _this.festival.festival_category_id;
+        _this.form.subtitle = _this.festival.subtitle;
+        _this.form.slug = _this.festival.slug;
+        _this.form.description = _this.festival.description;
+        _this.form.terms = _this.festival.terms;
+        _this.form.logo = _this.festival.banner;
+        _this.form.terms = _this.festival.terms;
+        _this.form.sends = _this.festival.sends;
+        _this.form.formats = _this.festival.formatshow;
+        _this.form.forms = JSON.parse(_this.festival.forms);
+
+        _this.festival.sponsors.forEach(function (sponser) {
+          return _this.form.sponsors.push(sponser);
+        });
+      })["catch"](function (e) {
+        _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetServerErrorMessage();
+      });
+    },
+    FormSubmit: function FormSubmit() {
+      var _this2 = this;
+
+      this.errors = {};
+      this.formloading = true;
+      axios.post('/api/panel/festivals/edit/' + this.$route.params.slug, this.form).then(function (response) {
+        _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetToastMessage('اطلاعات جشنواره مورد نظر باموفقیت بروز شد');
+
+        _this2.$router.push({
+          name: 'panel_festivals_manage',
+          params: {
+            slug: _this2.festival.slug
+          }
+        });
+      })["catch"](function (error) {
+        if (error.response.status === 421) {
+          _this2.errors = error.response.data;
+          _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetToastMessage('خطایی وجود دارد، لطفا اطلاعات را بررسی کنید', 'error');
+        } else {
+          _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetServerErrorMessage();
+        }
+      });
+      this.formloading = false;
+    },
+    GetAllCategories: function GetAllCategories() {
+      var _this3 = this;
+
+      axios.get('/api/helpers/get/festival/categories').then(function (response) {
+        _this3.categories = response.data;
+      })["catch"](function (e) {
+        _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetServerErrorMessage();
+      });
+    },
+    PhotoSave: function PhotoSave(e) {
+      var _this4 = this;
+
+      var file = e.target.files[0];
+
+      if (file.type !== 'image/jpeg' && file.type !== 'image/png') {
+        _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetToastMessage('فایل انتخابی باید یک تصویر باشد', 'error');
+      } else if (file.size > 1048576) {
+        _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetToastMessage('حجم فایل انتخابی باید کمتر از ۱ مگابایت باشد', 'error');
+      } else {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          _this4.form.logo = e.target.result;
+        };
+
+        reader.readAsDataURL(file);
+      }
+    },
+    SponsorPhotoSave: function SponsorPhotoSave(e) {
+      var _this5 = this;
+
+      var file = e.target.files[0];
+
+      if (file.type !== 'image/jpeg' && file.type !== 'image/png') {
+        _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetToastMessage('فایل انتخابی باید یک تصویر باشد', 'error');
+      } else if (file.size > 1048576) {
+        _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetToastMessage('حجم فایل انتخابی باید کمتر از ۱ مگابایت باشد', 'error');
+      } else {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          _this5.form_sponsor.logo = e.target.result;
+        };
+
+        reader.readAsDataURL(file);
+      }
+    },
+    RemoveSelectPhoto: function RemoveSelectPhoto() {
+      this.form.logo = null;
+    },
+    PhotoSaveBanner: function PhotoSaveBanner(e) {
+      var _this6 = this;
+
+      var file = e.target.files[0];
+
+      if (file.type !== 'image/jpeg' && file.type !== 'image/png') {
+        _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetToastMessage('فایل انتخابی باید یک تصویر باشد', 'error');
+      } else if (file.size > 1048576) {
+        _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetToastMessage('حجم فایل انتخابی باید کمتر از ۱ مگابایت باشد', 'error');
+      } else {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          _this6.form.banner = e.target.result;
+        };
+
+        reader.readAsDataURL(file);
+      }
+    },
+    RemoveSelectPhotoBanner: function RemoveSelectPhotoBanner() {
+      this.form.banner = null;
+    },
+    AddSponsor: function AddSponsor() {
+      this.add_sponsor = this.add_sponsor !== true;
+    },
+    AddForms: function AddForms() {
+      this.add_forms = this.add_forms !== true;
+    },
+    AddSponsorSubmit: function AddSponsorSubmit() {
+      if (this.form_sponsor.name === null || this.form_sponsor.name === '') {
+        _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetToastMessage('وارد کردن نام حامی الزامی است', 'error');
+      } else {
+        this.form.sponsors.push({
+          name: this.form_sponsor.name,
+          link: this.form_sponsor.link,
+          logo: this.form_sponsor.logo
+        });
+        this.form_sponsor.name = null;
+        this.form_sponsor.logo = null;
+        this.form_sponsor.link = null;
+        this.add_sponsor = false;
+      }
+    },
+    AddFormsSubmit: function AddFormsSubmit() {
+      if (this.form_forms.form === null || this.form_forms.form === '') {
+        _helpers_SweetAlert__WEBPACK_IMPORTED_MODULE_1__["default"].SweetToastMessage('وارد کردن پرسش الزامی است', 'error');
+      } else {
+        this.form.forms.push({
+          form: this.form_forms.form,
+          required: this.form_forms.required
+        });
+        this.form_forms.form = null;
+        this.add_forms = false;
+      }
+    },
+    RemoveSponsor: function RemoveSponsor(name) {
+      this.form.sponsors = this.form.sponsors.filter(function (sponsor) {
+        return sponsor.name !== name;
+      });
+    },
+    RemoveForm: function RemoveForm(form) {
+      this.form.forms = this.form.forms.filter(function (item) {
+        return item.form !== form;
       });
     }
   }
@@ -4063,6 +4599,7 @@ var Auth = /*#__PURE__*/function () {
     value: function AuthLogout() {
       localStorage.removeItem('auth_user');
       localStorage.removeItem('auth_token');
+      window.open('/', '_self');
     }
   }]);
 
@@ -4197,7 +4734,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_panel_festivals_Panel_Festival_New__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/panel/festivals/Panel_Festival_New */ "./resources/js/components/panel/festivals/Panel_Festival_New.vue");
 /* harmony import */ var _components_panel_festivals_Panel_Festival_All__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/panel/festivals/Panel_Festival_All */ "./resources/js/components/panel/festivals/Panel_Festival_All.vue");
 /* harmony import */ var _components_panel_profile_Panel_Profile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/panel/profile/Panel_Profile */ "./resources/js/components/panel/profile/Panel_Profile.vue");
@@ -4205,6 +4742,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_panel_festivals_Panel_Festival_Manage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/panel/festivals/Panel_Festival_Manage */ "./resources/js/components/panel/festivals/Panel_Festival_Manage.vue");
 /* harmony import */ var _components_panel_dashboard_Panel_Dashboard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/panel/dashboard/Panel_Dashboard */ "./resources/js/components/panel/dashboard/Panel_Dashboard.vue");
 /* harmony import */ var _components_panel_participate_Panel_Participate__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/panel/participate/Panel_Participate */ "./resources/js/components/panel/participate/Panel_Participate.vue");
+/* harmony import */ var _components_panel_festivals_Panel_Festival_Edit__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/panel/festivals/Panel_Festival_Edit */ "./resources/js/components/panel/festivals/Panel_Festival_Edit.vue");
+
 
 
 
@@ -4239,11 +4778,15 @@ var routes = [//dashboard
   component: _components_panel_festivals_Panel_Festival_New__WEBPACK_IMPORTED_MODULE_0__["default"],
   name: 'panel_festivals_new'
 }, {
+  path: '/panel/festivals/edit/:slug',
+  component: _components_panel_festivals_Panel_Festival_Edit__WEBPACK_IMPORTED_MODULE_7__["default"],
+  name: 'panel_festivals_edit'
+}, {
   path: '/panel/participate',
   component: _components_panel_participate_Panel_Participate__WEBPACK_IMPORTED_MODULE_6__["default"],
   name: 'panel_participate'
 }];
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_7__["default"]({
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_8__["default"]({
   routes: routes,
   mode: 'history'
 });
@@ -48659,6 +49202,45 @@ component.options.__file = "resources/js/components/panel/festivals/Panel_Festiv
 
 /***/ }),
 
+/***/ "./resources/js/components/panel/festivals/Panel_Festival_Edit.vue":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/panel/festivals/Panel_Festival_Edit.vue ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Panel_Festival_Edit_vue_vue_type_template_id_341734fc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Panel_Festival_Edit.vue?vue&type=template&id=341734fc&scoped=true& */ "./resources/js/components/panel/festivals/Panel_Festival_Edit.vue?vue&type=template&id=341734fc&scoped=true&");
+/* harmony import */ var _Panel_Festival_Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Panel_Festival_Edit.vue?vue&type=script&lang=js& */ "./resources/js/components/panel/festivals/Panel_Festival_Edit.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Panel_Festival_Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Panel_Festival_Edit_vue_vue_type_template_id_341734fc_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Panel_Festival_Edit_vue_vue_type_template_id_341734fc_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "341734fc",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/panel/festivals/Panel_Festival_Edit.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/panel/festivals/Panel_Festival_Files.vue":
 /*!**************************************************************************!*\
   !*** ./resources/js/components/panel/festivals/Panel_Festival_Files.vue ***!
@@ -49029,6 +49611,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/panel/festivals/Panel_Festival_Edit.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/components/panel/festivals/Panel_Festival_Edit.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Festival_Edit.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Edit.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/panel/festivals/Panel_Festival_Files.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************!*\
   !*** ./resources/js/components/panel/festivals/Panel_Festival_Files.vue?vue&type=script&lang=js& ***!
@@ -49309,6 +49907,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_All_vue_vue_type_template_id_548db71f_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_All_vue_vue_type_template_id_548db71f_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Festival_All.vue?vue&type=template&id=548db71f&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_All.vue?vue&type=template&id=548db71f&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/panel/festivals/Panel_Festival_Edit.vue?vue&type=template&id=341734fc&scoped=true&":
+/*!********************************************************************************************************************!*\
+  !*** ./resources/js/components/panel/festivals/Panel_Festival_Edit.vue?vue&type=template&id=341734fc&scoped=true& ***!
+  \********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Edit_vue_vue_type_template_id_341734fc_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Edit_vue_vue_type_template_id_341734fc_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Panel_Festival_Edit_vue_vue_type_template_id_341734fc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Panel_Festival_Edit.vue?vue&type=template&id=341734fc&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Edit.vue?vue&type=template&id=341734fc&scoped=true&");
 
 
 /***/ }),
@@ -49671,7 +50286,20 @@ var render = function () {
             _vm._v(" "),
             _c("div", { staticClass: "dropdown-divider" }),
             _vm._v(" "),
-            _vm._m(3),
+            _c(
+              "a",
+              {
+                staticClass: "dropdown-item",
+                attrs: { href: "#" },
+                on: { click: _vm.AuthLogout },
+              },
+              [
+                _c("i", {
+                  staticClass: "mdi mdi-logout font-size-16 align-middle me-1",
+                }),
+                _vm._v(" خروج از حساب\n                    "),
+              ]
+            ),
           ],
           1
         ),
@@ -49685,61 +50313,53 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "navbar-brand-box" }, [
-      _c(
-        "a",
-        { staticClass: "logo logo-dark", attrs: { href: "index.html" } },
-        [
-          _c("span", { staticClass: "logo-sm" }, [
-            _c("img", {
-              attrs: {
-                src: "management/images/logo-sm.svg",
-                alt: "",
-                height: "24",
-              },
-            }),
-          ]),
+      _c("a", { staticClass: "logo logo-dark", attrs: { href: "/" } }, [
+        _c("span", { staticClass: "logo-sm" }, [
+          _c("img", {
+            attrs: {
+              src: "management/images/logo-sm.svg",
+              alt: "",
+              height: "24",
+            },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "logo-lg" }, [
+          _c("img", {
+            attrs: {
+              src: "management/images/logo-sm.svg",
+              alt: "",
+              height: "24",
+            },
+          }),
           _vm._v(" "),
-          _c("span", { staticClass: "logo-lg" }, [
-            _c("img", {
-              attrs: {
-                src: "management/images/logo-sm.svg",
-                alt: "",
-                height: "24",
-              },
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "logo-txt" }, [_vm._v("فستیکا")]),
-          ]),
-        ]
-      ),
+          _c("span", { staticClass: "logo-txt" }, [_vm._v("فستیکا")]),
+        ]),
+      ]),
       _vm._v(" "),
-      _c(
-        "a",
-        { staticClass: "logo logo-light", attrs: { href: "index.html" } },
-        [
-          _c("span", { staticClass: "logo-sm" }, [
-            _c("img", {
-              attrs: {
-                src: "management/images/logo-sm.svg",
-                alt: "",
-                height: "24",
-              },
-            }),
-          ]),
+      _c("a", { staticClass: "logo logo-light", attrs: { href: "/" } }, [
+        _c("span", { staticClass: "logo-sm" }, [
+          _c("img", {
+            attrs: {
+              src: "management/images/logo-sm.svg",
+              alt: "",
+              height: "24",
+            },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "logo-lg" }, [
+          _c("img", {
+            attrs: {
+              src: "management/images/logo-sm.svg",
+              alt: "",
+              height: "24",
+            },
+          }),
           _vm._v(" "),
-          _c("span", { staticClass: "logo-lg" }, [
-            _c("img", {
-              attrs: {
-                src: "management/images/logo-sm.svg",
-                alt: "",
-                height: "24",
-              },
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "logo-txt" }, [_vm._v("فستیکا")]),
-          ]),
-        ]
-      ),
+          _c("span", { staticClass: "logo-txt" }, [_vm._v("فستیکا")]),
+        ]),
+      ]),
     ])
   },
   function () {
@@ -49769,15 +50389,6 @@ var staticRenderFns = [
     return _c("a", { staticClass: "dropdown-item", attrs: { href: "" } }, [
       _c("i", { staticClass: "mdi mdi-lock font-size-16 align-middle me-1" }),
       _vm._v(" پشتیبانی"),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "dropdown-item", attrs: { href: "" } }, [
-      _c("i", { staticClass: "mdi mdi-logout font-size-16 align-middle me-1" }),
-      _vm._v(" خروج از حساب\n                    "),
     ])
   },
 ]
@@ -50074,6 +50685,1225 @@ var staticRenderFns = [
           _vm._v(" وارد صفحه مدیریت کامل جشنواره بشوید\n\n                "),
         ]
       ),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Edit.vue?vue&type=template&id=341734fc&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/panel/festivals/Panel_Festival_Edit.vue?vue&type=template&id=341734fc&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _vm.festival !== null
+        ? _c("panel_title", { attrs: { title: _vm.title } })
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", { staticClass: "card app-fade-in" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-6 mt-5" }, [
+              _c(
+                "div",
+                { staticClass: "form-group" },
+                [
+                  _c("label", [_vm._v("انتخاب دسته بندی")]),
+                  _vm._v(" "),
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _c("v-select", {
+                    attrs: {
+                      dir: "rtl",
+                      placeholder: "یک دسته بندی را انتخاب کنید",
+                      options: _vm.categories,
+                      reduce: function (item) {
+                        return item.id
+                      },
+                      label: "name",
+                    },
+                    model: {
+                      value: _vm.form.festival_category_id,
+                      callback: function ($$v) {
+                        _vm.$set(_vm.form, "festival_category_id", $$v)
+                      },
+                      expression: "form.festival_category_id",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _vm._l(
+                    this.ValidationErrors(_vm.errors, "festival_category_id"),
+                    function (error, index) {
+                      return _c(
+                        "div",
+                        { key: index, staticClass: "text-danger mt-2" },
+                        [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(error) +
+                              "\n                        "
+                          ),
+                        ]
+                      )
+                    }
+                  ),
+                ],
+                2
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6 mt-5" }, [
+              _c(
+                "div",
+                { staticClass: "form-group" },
+                [
+                  _c("label", [_vm._v("نام جشنواره")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.title,
+                        expression: "form.title",
+                      },
+                    ],
+                    staticClass: "form-control",
+                    class: {
+                      "is-invalid": this.ValidationErrors(_vm.errors, "title")
+                        .length,
+                    },
+                    attrs: { type: "text" },
+                    domProps: { value: _vm.form.title },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.form, "title", $event.target.value)
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _vm._l(
+                    this.ValidationErrors(_vm.errors, "title"),
+                    function (error, index) {
+                      return _c(
+                        "div",
+                        { key: index, staticClass: "text-danger mt-2" },
+                        [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(error) +
+                              "\n                        "
+                          ),
+                        ]
+                      )
+                    }
+                  ),
+                ],
+                2
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6 mt-5" }, [
+              _c(
+                "div",
+                { staticClass: "form-group" },
+                [
+                  _c("label", [_vm._v("لینک جشنواره")]),
+                  _vm._v(" "),
+                  _vm._m(3),
+                  _vm._v(" "),
+                  _vm._m(4),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.slug,
+                        expression: "form.slug",
+                      },
+                    ],
+                    staticClass: "form-control",
+                    class: {
+                      "is-invalid": this.ValidationErrors(_vm.errors, "slug")
+                        .length,
+                    },
+                    attrs: { type: "text" },
+                    domProps: { value: _vm.form.slug },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.form, "slug", $event.target.value)
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "mt-2  font-14", attrs: { dir: "ltr" } },
+                    [
+                      _vm._v(
+                        "\n                            https://festika.ir/festivals/show/"
+                      ),
+                      _c("span", { staticClass: "text-info" }, [
+                        _vm._v(_vm._s(_vm.form.slug)),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm._l(
+                    this.ValidationErrors(_vm.errors, "slug"),
+                    function (error, index) {
+                      return _c(
+                        "div",
+                        { key: index, staticClass: "text-danger mt-2" },
+                        [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(error) +
+                              "\n                        "
+                          ),
+                        ]
+                      )
+                    }
+                  ),
+                ],
+                2
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6 mt-5" }, [
+              _c(
+                "div",
+                { staticClass: "form-group" },
+                [
+                  _c("label", [_vm._v("توضیح مختصر در مورد جشنواره")]),
+                  _vm._v(" "),
+                  _vm._m(5),
+                  _vm._v(" "),
+                  _vm._m(6),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.subtitle,
+                        expression: "form.subtitle",
+                      },
+                    ],
+                    staticClass: "form-control",
+                    class: {
+                      "is-invalid": this.ValidationErrors(
+                        _vm.errors,
+                        "subtitle"
+                      ).length,
+                    },
+                    attrs: { type: "text" },
+                    domProps: { value: _vm.form.subtitle },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.form, "subtitle", $event.target.value)
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _vm._l(
+                    this.ValidationErrors(_vm.errors, "subtitle"),
+                    function (error, index) {
+                      return _c(
+                        "div",
+                        { key: index, staticClass: "text-danger mt-2" },
+                        [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(error) +
+                              "\n                        "
+                          ),
+                        ]
+                      )
+                    }
+                  ),
+                ],
+                2
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6 mt-5" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", [_vm._v("تصویر لوگو")]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "file" },
+                  on: { change: _vm.PhotoSave },
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "mt-2 text-danger" }, [
+                  _vm._v(
+                    "فقط درصورت ویرایش لوگو فعلی، تصویر جدید را انتخاب کنید"
+                  ),
+                ]),
+                _vm._v(" "),
+                _vm.form.logo
+                  ? _c("div", { staticClass: "mt-3" }, [
+                      _c("img", {
+                        attrs: {
+                          src: _vm.form.logo,
+                          width: "70",
+                          height: "70",
+                          alt: "",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger btn-sm",
+                          on: { click: _vm.RemoveSelectPhoto },
+                        },
+                        [_c("i", { staticClass: "fas fa-trash " })]
+                      ),
+                    ])
+                  : _vm._e(),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6 mt-5" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", [_vm._v("تصویر پوستر (بنر)")]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "file" },
+                  on: { change: _vm.PhotoSaveBanner },
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "mt-2 text-danger" }, [
+                  _vm._v(
+                    "فقط درصورت ویرایش پوستر فعلی، تصویر جدید را انتخاب کنید"
+                  ),
+                ]),
+                _vm._v(" "),
+                _vm.form.banner
+                  ? _c("div", { staticClass: "mt-3" }, [
+                      _c("img", {
+                        attrs: {
+                          src: _vm.form.banner,
+                          width: "70",
+                          height: "70",
+                          alt: "",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger btn-sm",
+                          on: { click: _vm.RemoveSelectPhotoBanner },
+                        },
+                        [_c("i", { staticClass: "fas fa-trash " })]
+                      ),
+                    ])
+                  : _vm._e(),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6 mt-5" }, [
+              _c(
+                "div",
+                { staticClass: "form-group" },
+                [
+                  _c("label", [_vm._v("فایل های قابل ارسال در جشنواره")]),
+                  _vm._v(" "),
+                  _vm._m(7),
+                  _vm._v(" "),
+                  _vm._m(8),
+                  _vm._v(" "),
+                  _c("v-select", {
+                    attrs: {
+                      dir: "rtl",
+                      placeholder: "نوع فایل های قابل ارسال را انتخاب کنید",
+                      label: "name",
+                      reduce: function (item) {
+                        return item.val
+                      },
+                      multiple: "",
+                      options: _vm.format_options,
+                    },
+                    model: {
+                      value: _vm.form.formats,
+                      callback: function ($$v) {
+                        _vm.$set(_vm.form, "formats", $$v)
+                      },
+                      expression: "form.formats",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _vm._l(
+                    this.ValidationErrors(_vm.errors, "formats"),
+                    function (error, index) {
+                      return _c(
+                        "div",
+                        { key: index, staticClass: "text-danger mt-2" },
+                        [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(error) +
+                              "\n                        "
+                          ),
+                        ]
+                      )
+                    }
+                  ),
+                ],
+                2
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6 mt-5" }, [
+              _c(
+                "div",
+                { staticClass: "form-group" },
+                [
+                  _c("label", [_vm._v("محدودیت ارسال آثار برای هر کاربر")]),
+                  _vm._v(" "),
+                  _vm._m(9),
+                  _vm._v(" "),
+                  _vm._m(10),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.sends,
+                        expression: "form.sends",
+                      },
+                    ],
+                    staticClass: "form-control",
+                    class: {
+                      "is-invalid": this.ValidationErrors(_vm.errors, "sends")
+                        .length,
+                    },
+                    attrs: { type: "number" },
+                    domProps: { value: _vm.form.sends },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.form, "sends", $event.target.value)
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "text-secondary" }, [
+                    _vm._v(
+                      "\n                            برای نامحدود کردن تعداد ارسال، این قسمت را خالی بگذارید\n                        "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(
+                    this.ValidationErrors(_vm.errors, "sends"),
+                    function (error, index) {
+                      return _c(
+                        "div",
+                        { key: index, staticClass: "text-danger mt-2" },
+                        [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(error) +
+                              "\n                        "
+                          ),
+                        ]
+                      )
+                    }
+                  ),
+                ],
+                2
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-12 mt-5" }, [
+              _c("div", { staticClass: "card shadow" }, [
+                _vm._m(11),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _vm._m(12),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mt-3 text-center" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-info",
+                        on: { click: _vm.AddForms },
+                      },
+                      [
+                        _c("i", { staticClass: "fas fa-plus-circle" }),
+                        _vm._v(" افزودن فرم جدید"),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm.add_forms === true
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "mt-3 app-fade-in row justify-content-center",
+                          },
+                          [
+                            _c("div", { staticClass: "col-md-5 text-right" }, [
+                              _c("div", { staticClass: "form-group" }, [
+                                _c("label", { staticClass: "form-label" }, [
+                                  _vm._v("پرسش"),
+                                ]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.form_forms.form,
+                                      expression: "form_forms.form",
+                                    },
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: { type: "text" },
+                                  domProps: { value: _vm.form_forms.form },
+                                  on: {
+                                    input: function ($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.form_forms,
+                                        "form",
+                                        $event.target.value
+                                      )
+                                    },
+                                  },
+                                }),
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "form-group mt-4" }, [
+                                _c("label", { staticClass: "form-label" }, [
+                                  _vm._v("پاسخ الزامی است ؟"),
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "select",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.form_forms.required,
+                                        expression: "form_forms.required",
+                                      },
+                                    ],
+                                    staticClass: "form-control",
+                                    on: {
+                                      change: function ($event) {
+                                        var $$selectedVal =
+                                          Array.prototype.filter
+                                            .call(
+                                              $event.target.options,
+                                              function (o) {
+                                                return o.selected
+                                              }
+                                            )
+                                            .map(function (o) {
+                                              var val =
+                                                "_value" in o
+                                                  ? o._value
+                                                  : o.value
+                                              return val
+                                            })
+                                        _vm.$set(
+                                          _vm.form_forms,
+                                          "required",
+                                          $event.target.multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        )
+                                      },
+                                    },
+                                  },
+                                  [
+                                    _c("option", { attrs: { value: "0" } }, [
+                                      _vm._v("خیر"),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("option", { attrs: { value: "1" } }, [
+                                      _vm._v("بله"),
+                                    ]),
+                                  ]
+                                ),
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "form-group mt-4" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-success",
+                                    on: { click: _vm.AddFormsSubmit },
+                                  },
+                                  [_vm._v("افزودن فرم")]
+                                ),
+                              ]),
+                            ]),
+                          ]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _c("hr"),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-4" }, [
+                      _c(
+                        "div",
+                        { staticClass: "row" },
+                        _vm._l(_vm.form.forms, function (form, index) {
+                          return _c(
+                            "div",
+                            { key: index, staticClass: "col-md-3" },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "card p-3 shadow text-right text-dark",
+                                },
+                                [
+                                  _c("div", [
+                                    _c(
+                                      "span",
+                                      {
+                                        staticClass: "text-primary text-bold-3",
+                                      },
+                                      [_vm._v("پرسش : ")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("span", { staticClass: "text-bold-2" }, [
+                                      _vm._v(_vm._s(form.form)),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "mt-3" }, [
+                                    _c(
+                                      "span",
+                                      {
+                                        staticClass: "text-primary text-bold-3",
+                                      },
+                                      [_vm._v("اجباری است ؟ ")]
+                                    ),
+                                    _vm._v(" "),
+                                    form.required === "1"
+                                      ? _c("span", [
+                                          _c("i", {
+                                            staticClass:
+                                              "fas fa-check text-success font-20",
+                                          }),
+                                          _vm._v(
+                                            " بله\n                                                        "
+                                          ),
+                                        ])
+                                      : _c("span", [
+                                          _c("i", {
+                                            staticClass:
+                                              "fas fa-times text-danger font-20",
+                                          }),
+                                          _vm._v(
+                                            " خیر\n                                                        "
+                                          ),
+                                        ]),
+                                    _vm._v(" "),
+                                    _c("span", { staticClass: "float-left" }, [
+                                      _c("i", {
+                                        staticClass:
+                                          "fas fa-trash font-18 text-danger",
+                                        on: {
+                                          click: function ($event) {
+                                            return _vm.RemoveForm(form.form)
+                                          },
+                                        },
+                                      }),
+                                    ]),
+                                  ]),
+                                ]
+                              ),
+                            ]
+                          )
+                        }),
+                        0
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-12 mt-3" }, [
+              _c("div", { staticClass: "card shadow" }, [
+                _vm._m(13),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _vm._m(14),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mt-3 text-center" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn bg-teal2 text-light",
+                        on: { click: _vm.AddSponsor },
+                      },
+                      [
+                        _c("i", { staticClass: "fas fa-plus-circle" }),
+                        _vm._v(" افزودن حامی جدید"),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm.add_sponsor === true
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "mt-3 app-fade-in row justify-content-center",
+                          },
+                          [
+                            _c("div", { staticClass: "col-md-5 text-right" }, [
+                              _c("div", { staticClass: "form-group" }, [
+                                _c("label", { staticClass: "form-label" }, [
+                                  _vm._v("نام حامی"),
+                                ]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.form_sponsor.name,
+                                      expression: "form_sponsor.name",
+                                    },
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: { type: "text" },
+                                  domProps: { value: _vm.form_sponsor.name },
+                                  on: {
+                                    input: function ($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.form_sponsor,
+                                        "name",
+                                        $event.target.value
+                                      )
+                                    },
+                                  },
+                                }),
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "form-group mt-4" }, [
+                                _c("label", { staticClass: "form-label" }, [
+                                  _vm._v("لینک حامی"),
+                                ]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.form_sponsor.link,
+                                      expression: "form_sponsor.link",
+                                    },
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: { type: "text" },
+                                  domProps: { value: _vm.form_sponsor.link },
+                                  on: {
+                                    input: function ($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.form_sponsor,
+                                        "link",
+                                        $event.target.value
+                                      )
+                                    },
+                                  },
+                                }),
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "form-group mt-4" }, [
+                                _c("label", { staticClass: "form-label" }, [
+                                  _vm._v("تصویر لوگو"),
+                                ]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  staticClass: "form-control",
+                                  attrs: { type: "file" },
+                                  on: { change: _vm.SponsorPhotoSave },
+                                }),
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "form-group mt-4" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-secondary",
+                                    on: { click: _vm.AddSponsorSubmit },
+                                  },
+                                  [_vm._v("افزودن حامی")]
+                                ),
+                              ]),
+                            ]),
+                          ]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _c("hr"),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-4" }, [
+                      _c(
+                        "div",
+                        { staticClass: "row" },
+                        _vm._l(_vm.form.sponsors, function (sponsor, index) {
+                          return _c(
+                            "div",
+                            { key: index, staticClass: "col-md-3" },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "card p-3 shadow text-right text-dark",
+                                },
+                                [
+                                  _c("div", [
+                                    sponsor.logo === null
+                                      ? _c("img", {
+                                          attrs: {
+                                            src: "/template/images/svg/sponsor-default.png",
+                                            width: "50",
+                                            alt: "",
+                                          },
+                                        })
+                                      : _c("img", {
+                                          attrs: {
+                                            src: sponsor.logo,
+                                            width: "50",
+                                            alt: "",
+                                          },
+                                        }),
+                                    _vm._v(" "),
+                                    _c("span", { staticClass: "text-bold-3" }, [
+                                      _vm._v(_vm._s(sponsor.name)),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "mt-3" }, [
+                                    _c("i", {
+                                      staticClass:
+                                        "fas fa-link font-24 text-info",
+                                    }),
+                                    _vm._v(
+                                      " :\n                                                    "
+                                    ),
+                                    _c("span", { staticClass: "text-bold-3" }, [
+                                      _vm._v(_vm._s(sponsor.link)),
+                                    ]),
+                                    _c("span", { staticClass: "float-left" }, [
+                                      _c("i", {
+                                        staticClass:
+                                          "fas fa-trash font-18 text-danger",
+                                        on: {
+                                          click: function ($event) {
+                                            return _vm.RemoveSponsor(
+                                              sponsor.name
+                                            )
+                                          },
+                                        },
+                                      }),
+                                    ]),
+                                  ]),
+                                ]
+                              ),
+                            ]
+                          )
+                        }),
+                        0
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-12 mt-5" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", [_vm._v("توضیحات کامل در مورد جشنواره ")]),
+                _vm._v(" "),
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.description,
+                      expression: "form.description",
+                    },
+                  ],
+                  staticClass: "form-control",
+                  attrs: { rows: "10" },
+                  domProps: { value: _vm.form.description },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "description", $event.target.value)
+                    },
+                  },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-12 mt-5" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", [_vm._v("قوانین و مقررات جشنواره ")]),
+                _vm._v(" "),
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.terms,
+                      expression: "form.terms",
+                    },
+                  ],
+                  staticClass: "form-control",
+                  attrs: { rows: "10" },
+                  domProps: { value: _vm.form.terms },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "terms", $event.target.value)
+                    },
+                  },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 mt-5" }, [
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "btn btn-primary waves-effect  waves-light font-14",
+                  attrs: { type: "button" },
+                  on: { click: _vm.FormSubmit },
+                },
+                [
+                  _vm.formloading == false
+                    ? _c("i", { staticClass: "fas fa-pen " })
+                    : _c("i", { staticClass: "fas fa-spinner fa-spin" }),
+                  _vm._v(" ویرایش اطلاعات جشنواره"),
+                ]
+              ),
+            ]),
+          ]),
+        ]),
+      ]),
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("div", { staticClass: "font-16 text-bold-2 text-danger" }, [
+        _c(
+          "div",
+          {
+            staticClass: "alert alert-danger fade show mb-0",
+            attrs: { role: "alert" },
+          },
+          [
+            _c("img", {
+              staticClass: "fa-beat",
+              attrs: {
+                src: "/management/images/help.png",
+                width: "50",
+                alt: "",
+              },
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "font-15" }, [
+              _vm._v(
+                "کاربر گرامی در این قسمت شما فقط میتوانید اطلاعات جشنواره را ویرایش نمایید لطفا برای ارتقاء منابع (مدت برگزاری ، افزایش فضای ذخیره سازی و ...) به قسمت ارتقاء منابع در صفحه مدیریت جشنواره مراجعه کنید"
+              ),
+            ]),
+          ]
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "btn btn-primary btn-sm waves-effect waves-light",
+        attrs: {
+          type: "button",
+          "data-bs-toggle": "collapse",
+          "data-bs-target": "#collapse_category",
+        },
+      },
+      [_c("i", { staticClass: "fas fa-question align-middle" })]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "collapse", attrs: { id: "collapse_category" } },
+      [
+        _c("div", { staticClass: "card card-body bg-success text-light" }, [
+          _vm._v(
+            "\n                                دسته بندی جشنواره نشان دهنده نوع جشنواره برای گروه یا سبک خاص است و همچنین در جستجو و یافتن جشنواره کمک میکند.\n                            "
+          ),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "btn btn-primary btn-sm waves-effect waves-light",
+        attrs: {
+          type: "button",
+          "data-bs-toggle": "collapse",
+          "data-bs-target": "#collapse_slug",
+        },
+      },
+      [_c("i", { staticClass: "fas fa-question align-middle" })]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "collapse", attrs: { id: "collapse_slug" } },
+      [
+        _c("div", { staticClass: "card card-body bg-success text-light" }, [
+          _vm._v(
+            "\n                                لینک جنشواره،آدرس نمایش جشنواره شما در پلتفرم فستیکا میباشد که برای دیگران ارسال میکنید.(بهتر است لینک جشنواره را به صورت انگلیسی وارد کنید. مثال : emam-khomeini )\n                            "
+          ),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "btn btn-primary btn-sm waves-effect waves-light",
+        attrs: {
+          type: "button",
+          "data-bs-toggle": "collapse",
+          "data-bs-target": "#collapse_subtitle",
+        },
+      },
+      [_c("i", { staticClass: "fas fa-question align-middle" })]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "collapse", attrs: { id: "collapse_subtitle" } },
+      [
+        _c(
+          "div",
+          { staticClass: "card card-body bg-success text-light text-bold-2" },
+          [
+            _vm._v(
+              "\n                                توضیح بصورت مختصر و کوتاه. مثال : جشنواره خورشید هشتم بمناسبت تولد امام رضا(ع)\n                            "
+            ),
+          ]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "btn btn-primary btn-sm waves-effect waves-light",
+        attrs: {
+          type: "button",
+          "data-bs-toggle": "collapse",
+          "data-bs-target": "#collapse_files",
+        },
+      },
+      [_c("i", { staticClass: "fas fa-question align-middle" })]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "collapse", attrs: { id: "collapse_files" } },
+      [
+        _c(
+          "div",
+          { staticClass: "card card-body bg-success text-light text-bold-2" },
+          [
+            _vm._v(
+              "\n                                نوع فایل آثار ارسالی به جشنواره است و کاربر نمیتواند بجز فایل های انتخابی فایل دیگری ارسال کند\n                                برای مثال برای جنشواره نقاشی بهتر است فقط فایل های تصویری را انتخاب کنید\n                            "
+            ),
+          ]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "btn btn-primary btn-sm waves-effect waves-light",
+        attrs: {
+          type: "button",
+          "data-bs-toggle": "collapse",
+          "data-bs-target": "#collapse_sends",
+        },
+      },
+      [_c("i", { staticClass: "fas fa-question align-middle" })]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "collapse", attrs: { id: "collapse_sends" } },
+      [
+        _c(
+          "div",
+          { staticClass: "card card-body bg-success text-light text-bold-2" },
+          [
+            _vm._v(
+              "\n                                تعداد دفعاتی که یک کاربر میتواند در جشنواره شرکت کند و آثار ارسال کند\n                            "
+            ),
+          ]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header pl-3 pr-3 bg-purple-deep" }, [
+      _c("h6", { staticClass: "font-15 text-light" }, [
+        _c("i", { staticClass: "fas fa-list font-24" }),
+        _vm._v(" فرم اختصاصی جشنواره"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "alert alert-primary" }, [
+      _c("p", [
+        _vm._v(
+          "\n                                    در این قسمت شما میتوانید با ثبت فرم دلخواه خود، علاوه بر اطلاعات اصلی (نام کامل ، شماره تماس ، جنسیت و ...)، اطلاعات مورد نظر خود را از شرکت کننده گان دریافت کنید.\n                                "
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header pl-3 pr-3 bg-teal2" }, [
+      _c("h6", { staticClass: "font-15 text-light" }, [
+        _c("i", { staticClass: "fas fa-handshake-alt font-22 " }),
+        _vm._v(" حامیان این جشنواره"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "alert alert-success" }, [
+      _c("p", [
+        _vm._v(
+          "شما میتوانید در این قسمت حامیان (اسپانسرها) جشنواره خود را اضافه کنید، اطلاعات حامیان در صفحه جشنواره نمایش داده خواهد شد"
+        ),
+      ]),
     ])
   },
 ]
@@ -50623,7 +52453,12 @@ var render = function () {
                                 "router-link",
                                 {
                                   staticClass: "btn btn-primary font-14 w-100",
-                                  attrs: { to: "" },
+                                  attrs: {
+                                    to: {
+                                      name: "panel_festivals_edit",
+                                      params: { slug: _vm.festival.slug },
+                                    },
+                                  },
                                 },
                                 [
                                   _c("i", { staticClass: "fas fa-edit" }),
@@ -51052,7 +52887,7 @@ var staticRenderFns = [
         { staticClass: "btn bg-blue3 w-100 text-light font-15 text-bold-3" },
         [
           _c("i", { staticClass: "fas fa-rocket font-20" }),
-          _vm._v(" ارتقاع منابع جشنواره"),
+          _vm._v(" ارتقاء منابع جشنواره"),
         ]
       ),
     ])
@@ -73926,6 +75761,9 @@ Vue.mixin({
     },
     UserAuthGet: function UserAuthGet() {
       return _helpers_Auth__WEBPACK_IMPORTED_MODULE_2__["default"].AuthGetUser();
+    },
+    UserAuthLogout: function UserAuthLogout() {
+      return _helpers_Auth__WEBPACK_IMPORTED_MODULE_2__["default"].AuthLogout();
     }
   }
 });

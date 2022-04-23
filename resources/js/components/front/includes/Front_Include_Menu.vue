@@ -6,9 +6,9 @@
             <div class="container-fluid">
                 <div class="mobile-responsive-menu">
                     <div class="logo">
-                        <a href="/">
+                        <router-link :to="{name : 'front_index'}"  >
                             <img src="festika.svg" width="45" alt="logo">
-                        </a>
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -68,19 +68,7 @@
                                     راهنما
                                 </router-link>
                             </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    بلاگ
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <router-link to="" class="nav-link">
-                                            همه نوشته ها
-                                        </router-link>
-                                    </li>
 
-                                </ul>
-                            </li>
                             <li class="nav-item">
                                 <router-link :to="{name:'front_terms'}" class="nav-link" :class="{'active' : this.$route.name === 'front_terms'}">
                                     قوانین و مقررات
@@ -108,9 +96,9 @@
                                     <a  href="/manage/dashboard"><i class="fas fa-cog"></i> پنل مدیریت </a>
                                 </li>
                                 <li v-else>
-                                    <router-link :to="{name : 'front_register'}" >
+                                    <a href="#" class="text-light" @click="AuthLogout">
                                         خروج از حساب
-                                    </router-link>
+                                    </a>
                                 </li>
 
                             </ul>
@@ -190,7 +178,9 @@ export default {
             }).catch(e=>{
                 SweetAlert.SweetServerErrorMessage();
             })
-
+        },
+        AuthLogout(){
+            this.UserAuthLogout()
         }
     }
 }

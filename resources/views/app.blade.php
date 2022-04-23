@@ -115,12 +115,12 @@
                                 </router-link>
                             </li>
                             <li>
-                                <router-link to="">
+                                <router-link :to="{name:'front_guide'}">
                                     راهنما فستیکا
                                 </router-link>
                             </li>
                             <li>
-                                <router-link to="">
+                                <router-link :to="{name:'front_terms'}">
                                    قوانین و مقررات
                                 </router-link>
                             </li>
@@ -171,12 +171,12 @@
                     </p>
                     <ul class="copy-right-list">
                         <li>
-                            <a href="terms-condition.html" target="_blank">
+                            <a href="/terms">
                                قوانین و مقررات
                             </a>
                         </li>
                         <li>
-                            <a href="privacy-policy.html" target="_blank">
+                            <a href="#" target="_blank">
                                 حفظ حریم خصوصی
                             </a>
                         </li>

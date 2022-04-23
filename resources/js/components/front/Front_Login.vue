@@ -31,7 +31,7 @@
                                 <div class="col-lg-12 ">
                                     <div class="form-group">
                                         <label>شماره موبایل </label>
-                                        <input v-model="form.phone" type="number" class="form-control" :class="{'is-invalid' : this.ValidationErrors(errors, 'phone').length}">
+                                        <input @keyup.enter="FormSubmit" v-model="form.phone" type="number" class="form-control" :class="{'is-invalid' : this.ValidationErrors(errors, 'phone').length}">
                                         <div v-for="(error,index) in this.ValidationErrors(errors,'phone')" :key="index" class="font-12 text-danger">
                                             {{ error }}
                                         </div>
@@ -72,7 +72,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>کد تایید :</label>
-                                        <input v-model="code" type="number" class="form-control" :class="{'is-invalid' : this.ValidationErrors(errors, 'code').length}" required >
+                                        <input @keyup.enter="CodeFromSubmit" v-model="code" type="number" class="form-control" :class="{'is-invalid' : this.ValidationErrors(errors, 'code').length}" required >
                                         <div v-for="(error,index) in this.ValidationErrors(errors,'code')" :key="index" class="font-12 text-danger">
                                             {{ error }}
                                         </div>

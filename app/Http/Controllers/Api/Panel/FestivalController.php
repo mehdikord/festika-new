@@ -131,6 +131,68 @@ class FestivalController extends Controller
 
     }
 
+    public function edit(Request $request,$festival)
+    {
+        $festival = get_user()->festivals()->where("slug",$festival)->with('files')->with('files.user')->firstorfail();
+        $request->merge(['slug'=>str_replace(' ','-',$request->slug)]);
+        $validation = Validator::make($request->all(),[
+            'festival_category_id'=>'required|exists:festival_categories,id',
+            'slug'=>"required|unique:festivals,slug,$festival->id",
+            'title'=>'required|max:225',
+            'subtitle'=>'nullable|max:225',
+            'sends'=>'nullable|min:1',
+            'formats'=>'required|array',
+            'sponsors'=>'nullable|array',
+            'forms'=>'nullable|array',
+        ]);
+        if ($validation->fails()){
+            return response()->json($validation->errors(),421);
+        }
+        $logo_url = $festival->logo;
+        if ($request->filled('logo')){
+
+            $photo_name = 'public/images/festivals/logo/'.Str::random(12).'.'.'jpg';
+            $photo = base64_to_jpeg($request->logo,$photo_name);
+            $logo_url = asset(Storage::url($photo_name));
+        }
+        $banner_url = $festival->banner;
+        if ($request->filled('banner')){
+
+            $photo_name = 'public/images/festivals/banner/'.Str::random(12).'.'.'jpg';
+            $photo = base64_to_jpeg($request->banner,$photo_name);
+            $banner_url = asset(Storage::url($photo_name));
+        }
+        $formats = null;
+        $mimes = null;
+        if ($request->filled('formats')){
+            $mimes = mimes_generator($request->formats);
+            $mimes = serialize($mimes);
+            $formats = serialize($request->formats);
+        }
+        //Forms
+        $forms=null;
+        if ($request->filled('forms') && count($request->forms)){
+            try {
+                $forms = json_encode($request->forms, JSON_THROW_ON_ERROR);
+            } catch (\JsonException $e) {
+
+            }
+        }
+        $festival->update([
+            'festival_category_id'=>$request->festival_category_id,
+            'title'=>$request->title,
+            'subtitle'=>$request->subtitle,
+            'slug'=>$request->slug,
+            'description'=>$request->description,
+            'terms'=>$request->terms,
+            'forms'=>$forms,
+            'logo'=>$logo_url,
+            'banner'=>$banner_url,
+            'formats'=>$formats,
+        ]);
+        return response()->json('success');
+    }
+
     public function activation(Festival $festival)
     {
         if ($festival->user_id != get_user()->id){

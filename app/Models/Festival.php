@@ -10,8 +10,16 @@ class Festival extends Model
     use HasFactory;
     protected $table='festivals';
     protected $guarded=[];
+    protected $appends = array('formatshow');
 
 
+    public function getFormatshowAttribute()
+    {
+        if (!empty($this->formats)){
+            return unserialize($this->formats);
+        }
+        return [];
+    }
     public function category()
     {
         return $this->belongsTo(Festival_Category::class,'festival_category_id');

@@ -3688,18 +3688,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Front_Include_Menu",
   created: function created() {
@@ -3719,6 +3707,9 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (e) {
         SweetAlert.SweetServerErrorMessage();
       });
+    },
+    AuthLogout: function AuthLogout() {
+      this.UserAuthLogout();
     }
   }
 });
@@ -4647,6 +4638,7 @@ var Auth = /*#__PURE__*/function () {
     value: function AuthLogout() {
       localStorage.removeItem('auth_user');
       localStorage.removeItem('auth_token');
+      window.open('/', '_self');
     }
   }]);
 
@@ -51303,6 +51295,21 @@ var render = function () {
                               attrs: { type: "number" },
                               domProps: { value: _vm.form.phone },
                               on: {
+                                keyup: function ($event) {
+                                  if (
+                                    !$event.type.indexOf("key") &&
+                                    _vm._k(
+                                      $event.keyCode,
+                                      "enter",
+                                      13,
+                                      $event.key,
+                                      "Enter"
+                                    )
+                                  ) {
+                                    return null
+                                  }
+                                  return _vm.FormSubmit.apply(null, arguments)
+                                },
                                 input: function ($event) {
                                   if ($event.target.composing) {
                                     return
@@ -51424,6 +51431,24 @@ var render = function () {
                               attrs: { type: "number", required: "" },
                               domProps: { value: _vm.code },
                               on: {
+                                keyup: function ($event) {
+                                  if (
+                                    !$event.type.indexOf("key") &&
+                                    _vm._k(
+                                      $event.keyCode,
+                                      "enter",
+                                      13,
+                                      $event.key,
+                                      "Enter"
+                                    )
+                                  ) {
+                                    return null
+                                  }
+                                  return _vm.CodeFromSubmit.apply(
+                                    null,
+                                    arguments
+                                  )
+                                },
                                 input: function ($event) {
                                   if ($event.target.composing) {
                                     return
@@ -53511,7 +53536,24 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "navbar-area" }, [
-    _vm._m(0),
+    _c("div", { staticClass: "mobile-responsive-nav" }, [
+      _c("div", { staticClass: "container-fluid" }, [
+        _c("div", { staticClass: "mobile-responsive-menu" }, [
+          _c(
+            "div",
+            { staticClass: "logo" },
+            [
+              _c("router-link", { attrs: { to: { name: "front_index" } } }, [
+                _c("img", {
+                  attrs: { src: "festika.svg", width: "45", alt: "logo" },
+                }),
+              ]),
+            ],
+            1
+          ),
+        ]),
+      ]),
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "desktop-nav desktop-nav-one nav-area" }, [
       _c("div", { staticClass: "container-fluid" }, [
@@ -53528,7 +53570,7 @@ var render = function () {
               [_c("img", { attrs: { src: "/festika.svg", width: "80" } })]
             ),
             _vm._v(" "),
-            _vm._m(1),
+            _vm._m(0),
             _vm._v(" "),
             _c(
               "div",
@@ -53694,33 +53736,6 @@ var render = function () {
                     1
                   ),
                   _vm._v(" "),
-                  _c("li", { staticClass: "nav-item" }, [
-                    _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                      _vm._v(
-                        "\n                                بلاگ\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("ul", { staticClass: "dropdown-menu" }, [
-                      _c(
-                        "li",
-                        { staticClass: "nav-item" },
-                        [
-                          _c(
-                            "router-link",
-                            { staticClass: "nav-link", attrs: { to: "" } },
-                            [
-                              _vm._v(
-                                "\n                                        همه نوشته ها\n                                    "
-                              ),
-                            ]
-                          ),
-                        ],
-                        1
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
                   _c(
                     "li",
                     { staticClass: "nav-item" },
@@ -53767,7 +53782,7 @@ var render = function () {
                           ],
                           1
                         )
-                      : _c("li", [_vm._m(2)]),
+                      : _c("li", [_vm._m(1)]),
                     _vm._v(" "),
                     !this.UserAuthCheck()
                       ? _c(
@@ -53792,22 +53807,22 @@ var render = function () {
                           1
                         )
                       : this.UserAuthGet().role && this.UserAuthGet().role < 4
-                      ? _c("li", [_vm._m(3)])
-                      : _c(
-                          "li",
-                          [
-                            _c(
-                              "router-link",
-                              { attrs: { to: { name: "front_register" } } },
-                              [
-                                _vm._v(
-                                  "\n                                    خروج از حساب\n                                "
-                                ),
-                              ]
-                            ),
-                          ],
-                          1
-                        ),
+                      ? _c("li", [_vm._m(2)])
+                      : _c("li", [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "text-light",
+                              attrs: { href: "#" },
+                              on: { click: _vm.AuthLogout },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    خروج از حساب\n                                "
+                              ),
+                            ]
+                          ),
+                        ]),
                   ]),
                 ]),
               ]
@@ -53818,11 +53833,11 @@ var render = function () {
       ]),
     ]),
     _vm._v(" "),
-    _vm._m(4),
+    _vm._m(3),
     _vm._v(" "),
     _c("div", { staticClass: "side-nav-responsive" }, [
       _c("div", { staticClass: "container-max" }, [
-        _vm._m(5),
+        _vm._m(4),
         _vm._v(" "),
         _c("div", { staticClass: "container container-mt" }, [
           _c("div", { staticClass: "side-nav-inner" }, [
@@ -53857,7 +53872,7 @@ var render = function () {
                           ],
                           1
                         )
-                      : _c("li", [_vm._m(6)]),
+                      : _c("li", [_vm._m(5)]),
                     _vm._v(" "),
                     !this.UserAuthCheck()
                       ? _c(
@@ -53882,7 +53897,7 @@ var render = function () {
                           1
                         )
                       : this.UserAuthGet().role && this.UserAuthGet().role < 4
-                      ? _c("li", [_vm._m(7)])
+                      ? _c("li", [_vm._m(6)])
                       : _vm._e(),
                   ]),
                 ]),
@@ -53895,24 +53910,6 @@ var render = function () {
   ])
 }
 var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mobile-responsive-nav" }, [
-      _c("div", { staticClass: "container-fluid" }, [
-        _c("div", { staticClass: "mobile-responsive-menu" }, [
-          _c("div", { staticClass: "logo" }, [
-            _c("a", { attrs: { href: "/" } }, [
-              _c("img", {
-                attrs: { src: "festika.svg", width: "45", alt: "logo" },
-              }),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -70897,6 +70894,9 @@ Vue.mixin({
     },
     UserAuthGet: function UserAuthGet() {
       return _helpers_Auth__WEBPACK_IMPORTED_MODULE_3__["default"].AuthGetUser();
+    },
+    UserAuthLogout: function UserAuthLogout() {
+      return _helpers_Auth__WEBPACK_IMPORTED_MODULE_3__["default"].AuthLogout();
     }
   }
 }); //Filters

@@ -6,6 +6,7 @@ import Panel_Festival_Files from "../components/panel/festivals/Panel_Festival_F
 import Panel_Festivals_Manage from "../components/panel/festivals/Panel_Festival_Manage";
 import Panel_Dashboard from "../components/panel/dashboard/Panel_Dashboard";
 import Panel_Participate from "../components/panel/participate/Panel_Participate";
+import Panel_Festival_Edit from "../components/panel/festivals/Panel_Festival_Edit";
 
 const routes = [
     //dashboard
@@ -38,6 +39,11 @@ const routes = [
         path : '/panel/festivals/new',
         component : Panel_Festival_New,
         name : 'panel_festivals_new',
+    },
+    {
+        path : '/panel/festivals/edit/:slug',
+        component : Panel_Festival_Edit,
+        name : 'panel_festivals_edit',
     },
     {
         path : '/panel/participate',

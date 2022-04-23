@@ -3,7 +3,7 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="index.html" class="logo logo-dark">
+                <a href="/" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="management/images/logo-sm.svg" alt="" height="24">
                     </span>
@@ -11,7 +11,7 @@
                         <img src="management/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">فستیکا</span>
                     </span>
                 </a>
-                <a href="index.html" class="logo logo-light">
+                <a href="/" class="logo logo-light">
                     <span class="logo-sm">
                         <img src="management/images/logo-sm.svg" alt="" height="24">
                     </span>
@@ -118,7 +118,7 @@
                     <a class="dropdown-item" href=""><i
                         class="mdi mdi-lock font-size-16 align-middle me-1"></i> پشتیبانی</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href=""><i
+                    <a class="dropdown-item" href="#" @click="AuthLogout"><i
                         class="mdi mdi-logout font-size-16 align-middle me-1"></i> خروج از حساب
                     </a>
                 </div>
@@ -131,6 +131,11 @@
 <script>
 export default {
     name: "Manage_Header",
+    methods : {
+        AuthLogout(){
+            this.UserAuthLogout()
+        }
+    }
 
 }
 </script>

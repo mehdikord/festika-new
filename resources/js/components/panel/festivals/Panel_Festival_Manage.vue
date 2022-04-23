@@ -60,7 +60,7 @@
                                     </div>
                                     <div class="col-12 mt-4 row">
                                         <div class="col p-1">
-                                            <router-link to="" v-if="festival !== null "   class="btn btn-primary font-14 w-100" >
+                                            <router-link :to="{name : 'panel_festivals_edit',params : {slug : festival.slug}}" v-if="festival !== null "   class="btn btn-primary font-14 w-100" >
                                                 <i class="fas fa-edit"></i> ویرایش جشنواره
                                             </router-link>
                                         </div>
@@ -122,7 +122,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-5 mb-1">
-                                        <button class="btn bg-blue3 w-100 text-light font-15 text-bold-3"><i class="fas fa-rocket font-20"></i> ارتقاع منابع جشنواره</button>
+                                        <button class="btn bg-blue3 w-100 text-light font-15 text-bold-3"><i class="fas fa-rocket font-20"></i> ارتقاء منابع جشنواره</button>
                                     </div>
                                 </div>
                             </div>

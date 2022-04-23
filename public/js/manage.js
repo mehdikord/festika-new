@@ -5936,6 +5936,7 @@ var Auth = /*#__PURE__*/function () {
     value: function AuthLogout() {
       localStorage.removeItem('auth_user');
       localStorage.removeItem('auth_token');
+      window.open('/', '_self');
     }
   }]);
 
@@ -51779,6 +51780,21 @@ var render = function () {
                               attrs: { type: "number" },
                               domProps: { value: _vm.form.phone },
                               on: {
+                                keyup: function ($event) {
+                                  if (
+                                    !$event.type.indexOf("key") &&
+                                    _vm._k(
+                                      $event.keyCode,
+                                      "enter",
+                                      13,
+                                      $event.key,
+                                      "Enter"
+                                    )
+                                  ) {
+                                    return null
+                                  }
+                                  return _vm.FormSubmit.apply(null, arguments)
+                                },
                                 input: function ($event) {
                                   if ($event.target.composing) {
                                     return
@@ -51900,6 +51916,24 @@ var render = function () {
                               attrs: { type: "number", required: "" },
                               domProps: { value: _vm.code },
                               on: {
+                                keyup: function ($event) {
+                                  if (
+                                    !$event.type.indexOf("key") &&
+                                    _vm._k(
+                                      $event.keyCode,
+                                      "enter",
+                                      13,
+                                      $event.key,
+                                      "Enter"
+                                    )
+                                  ) {
+                                    return null
+                                  }
+                                  return _vm.CodeFromSubmit.apply(
+                                    null,
+                                    arguments
+                                  )
+                                },
                                 input: function ($event) {
                                   if ($event.target.composing) {
                                     return
