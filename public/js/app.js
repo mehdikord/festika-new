@@ -3981,6 +3981,58 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Front_Index_Guide"
 });
@@ -54383,86 +54435,170 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "about-widget-area pt-100 pb-70" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "mb-5" }, [
-          _c(
-            "h1",
-            { staticClass: "text-center text-danger text-aviny font-50" },
-            [
-              _vm._v(
-                "\n                چجوری در فستیکا جشنواره بسازیم؟\n            "
-              ),
-            ]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row justify-content-center" }, [
-          _c("div", { staticClass: "col-lg-4 col-6" }, [
-            _c("div", { staticClass: "about-card" }, [
-              _c("div", { staticClass: "number font-22" }, [_vm._v("1")]),
-              _vm._v(" "),
-              _c("h2", { staticClass: "text-aviny" }, [_vm._v("قدم اول")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "\n                        ثبت نام در سامانه و ایجاد حساب کاربری به راحتی آب خوردن !\n                    "
-                ),
+      _c("div", { staticClass: "container-fluid" }, [
+        _c("div", { staticClass: "row mb-5" }, [
+          _c("div", { staticClass: "col-md-6" }, [
+            _c(
+              "h1",
+              {
+                staticClass: "text-center text-danger text-aviny font-50 mb-5",
+              },
+              [
+                _c("i", { staticClass: "fas fa-box text-warning font-40" }),
+                _vm._v(" چجوری در فستیکا جشنواره بسازیم؟\n                "),
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "mt-2" }, [
+              _c("div", { staticClass: "about-card" }, [
+                _c("div", { staticClass: "number font-22" }, [_vm._v("1")]),
+                _vm._v(" "),
+                _c("h2", { staticClass: "text-aviny" }, [_vm._v("قدم اول")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "\n                            ثبت نام در سامانه و ایجاد حساب کاربری به راحتی آب خوردن !\n                        "
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "mt-2" }, [
+              _c("div", { staticClass: "about-card" }, [
+                _c("div", { staticClass: "number font-22" }, [_vm._v("2")]),
+                _vm._v(" "),
+                _c("h2", { staticClass: "text-aviny" }, [_vm._v("قدم دوم")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "\n                            ورود به قسمت ایجاد جشنواره جدید و وارد کردن اطلاعات مربوط به جشنواره\n\n                        "
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "mt-2" }, [
+              _c("div", { staticClass: "about-card" }, [
+                _c("div", { staticClass: "number font-22" }, [_vm._v("3")]),
+                _vm._v(" "),
+                _c("h2", { staticClass: "text-aviny" }, [_vm._v("قدم سوم")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "\n                            تنظیم منابع مورد نیاز شما برای برگزاری این جشنواره\n                        "
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "mt-2" }, [
+              _c("div", { staticClass: "about-card" }, [
+                _c("div", { staticClass: "number font-22" }, [_vm._v("4")]),
+                _vm._v(" "),
+                _c("h2", { staticClass: "text-aviny" }, [_vm._v("قدم چهارم")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "\n                            ایجاد یا انتخاب داور جهت داوری آنلاین آثار ارسال شده\n                        "
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "mt-2" }, [
+              _c("div", { staticClass: "about-card" }, [
+                _c("div", { staticClass: "number font-22" }, [_vm._v("5")]),
+                _vm._v(" "),
+                _c("h2", { staticClass: "text-aviny" }, [_vm._v("قدم آخر")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "\n                            دریافت گزارشات کامل نموداری از شرکت کنندگان و اعلام برندگان جشنواره\n                        "
+                  ),
+                ]),
               ]),
             ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 col-6" }, [
-            _c("div", { staticClass: "about-card" }, [
-              _c("div", { staticClass: "number font-22" }, [_vm._v("2")]),
-              _vm._v(" "),
-              _c("h2", { staticClass: "text-aviny" }, [_vm._v("قدم دوم")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "\n                        ورود به قسمت ایجاد جشنواره جدید و وارد کردن اطلاعات مربوط به جشنواره\n\n                    "
-                ),
+          _c("div", { staticClass: "col-md-6" }, [
+            _c(
+              "h1",
+              {
+                staticClass: "text-center text-success text-aviny font-50 mb-5",
+              },
+              [
+                _c("i", { staticClass: "fas fa-gifts text-warning font-40" }),
+                _vm._v(" چجوری در جشنواره ها شرکت کنیم ؟\n                "),
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "mt-2" }, [
+              _c("div", { staticClass: "about-card" }, [
+                _c("div", { staticClass: "number font-22" }, [_vm._v("1")]),
+                _vm._v(" "),
+                _c("h2", { staticClass: "text-aviny" }, [_vm._v("قدم اول")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "\n                            ثبت نام در سامانه و ایجاد حساب کاربری به راحتی آب خوردن !\n                        "
+                  ),
+                ]),
               ]),
             ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 col-6" }, [
-            _c("div", { staticClass: "about-card" }, [
-              _c("div", { staticClass: "number font-22" }, [_vm._v("3")]),
-              _vm._v(" "),
-              _c("h2", { staticClass: "text-aviny" }, [_vm._v("قدم سوم")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "\n                        تنظیم منابع مورد نیاز شما برای برگزاری این جشنواره\n                    "
-                ),
+            _vm._v(" "),
+            _c("div", { staticClass: "mt-2" }, [
+              _c("div", { staticClass: "about-card" }, [
+                _c("div", { staticClass: "number font-22" }, [_vm._v("2")]),
+                _vm._v(" "),
+                _c("h2", { staticClass: "text-aviny" }, [_vm._v("قدم دوم")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "\n                            یافتن جشنواره مورد نظر از طریق جستجو یا مشاهده صفحات وبسایت\n                        "
+                  ),
+                ]),
               ]),
             ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 col-6" }, [
-            _c("div", { staticClass: "about-card" }, [
-              _c("div", { staticClass: "number font-22" }, [_vm._v("4")]),
-              _vm._v(" "),
-              _c("h2", { staticClass: "text-aviny" }, [_vm._v("قدم چهارم")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "\n                        ایجاد یا انتخاب داور جهت داوری آنلاین آثار ارسال شده\n                    "
-                ),
+            _vm._v(" "),
+            _c("div", { staticClass: "mt-2" }, [
+              _c("div", { staticClass: "about-card" }, [
+                _c("div", { staticClass: "number font-22" }, [_vm._v("3")]),
+                _vm._v(" "),
+                _c("h2", { staticClass: "text-aviny" }, [_vm._v("قدم سوم")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "\n                            آماده کردن اثر مورد نظر طبق شرایط جشنواره (نوع فایل و حجم و ...)\n                        "
+                  ),
+                ]),
               ]),
             ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 col-6" }, [
-            _c("div", { staticClass: "about-card" }, [
-              _c("div", { staticClass: "number font-22" }, [_vm._v("5")]),
-              _vm._v(" "),
-              _c("h2", { staticClass: "text-aviny" }, [_vm._v("قدم آخر")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "\n                        دریافت گزارشات کامل نموداری از شرکت کنندگان و اعلام برندگان جشنواره\n                    "
-                ),
+            _vm._v(" "),
+            _c("div", { staticClass: "mt-2" }, [
+              _c("div", { staticClass: "about-card" }, [
+                _c("div", { staticClass: "number font-22" }, [_vm._v("4")]),
+                _vm._v(" "),
+                _c("h2", { staticClass: "text-aviny" }, [_vm._v("قدم چهارم")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "\n                            ارسال اثر به جشنواره از طریق فرم مورد نظر\n                        "
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "mt-2" }, [
+              _c("div", { staticClass: "about-card" }, [
+                _c("div", { staticClass: "number font-22" }, [_vm._v("5")]),
+                _vm._v(" "),
+                _c("h2", { staticClass: "text-aviny" }, [_vm._v("قدم آخر")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "\n                            مشاهده وپیگری آثار ارسال شده شما در پنل کاربری و اعلام نتایج\n                        "
+                  ),
+                ]),
               ]),
             ]),
           ]),

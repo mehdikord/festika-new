@@ -277,4 +277,25 @@ class FestivalController extends Controller
 
     }
 
+    public function download_all($festival)
+    {
+        $festival = Festival::where('slug',$festival)->where('is_expired',false)->where('is_active',true)->where('force_close',false)->where('accepted',true)->firstorfail();
+        if (!$festival->files()->count()){
+            return response()->json('آثاری برای دانلود وجود ندارد',409);
+        }
+        $zip = new \ZipArchive();
+        if ($zip->open(public_path($festival->slug.'.'.'zip'), \ZipArchive::CREATE | \ZipArchive::OVERWRITE) === TRUE){
+
+            foreach ($festival->files as $file){
+                $zip->addFile(Storage::path($file->file),$file->code.'_'.$file->user->phone.".".$file->mime);
+            }
+            $zip->close();
+        }
+        else{
+            return 1;
+        }
+        return response()->download(public_path($festival->slug.'.'.'zip'));
+
+    }
+
 }

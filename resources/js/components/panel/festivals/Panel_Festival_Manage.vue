@@ -66,7 +66,7 @@
                                         </div>
                                         <div class="col p-1">
                                             <router-link :to="{name : 'panel_festivals_files',params:{slug : festival.slug}}" v-if="festival !== null "   class="btn bg-teal3 font-14 text-light w-100" >
-                                                <i class="fas fa-users"></i> آثار ارسالی
+                                                <i class="fas fa-users"></i>  مدیریت آثار ارسالی
                                             </router-link>
                                         </div>
                                         <div class="col p-1">

@@ -3150,6 +3150,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -3168,7 +3171,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       loading: true,
       festival: null,
-      search: ''
+      search: '',
+      downloadallloading: false
     };
   },
   methods: {
@@ -3196,14 +3200,35 @@ __webpack_require__.r(__webpack_exports__);
         document.body.appendChild(docUrl);
         docUrl.click();
       });
+    },
+    DownloadAll: function DownloadAll() {
+      var _this2 = this;
+
+      this.downloadallloading = true;
+      axios({
+        url: '/api/panel/festivals/downloader/files/all/' + this.festival.slug,
+        // File URL Goes Here
+        method: 'GET',
+        responseType: 'blob'
+      }).then(function (res) {
+        _this2.downloadallloading = false;
+        var FILE = window.URL.createObjectURL(new Blob([res.data]));
+        var docUrl = document.createElement('a');
+        docUrl.href = FILE;
+        docUrl.setAttribute('download', file.code + '.' + file.extension);
+        document.body.appendChild(docUrl);
+        docUrl.click();
+      })["catch"](function (e) {
+        _this2.downloadallloading = false;
+      });
     }
   },
   computed: {
     DoSearchItems: function DoSearchItems() {
-      var _this2 = this;
+      var _this3 = this;
 
       return this.festival.files.filter(function (file) {
-        return file.user.name !== null && file.user.name.match(_this2.search) || file.code !== null && file.code.match(_this2.search);
+        return file.user.name !== null && file.user.name.match(_this3.search) || file.code !== null && file.code.match(_this3.search);
       });
     }
   }
@@ -51950,6 +51975,31 @@ var render = function () {
           "div",
           { staticClass: "card-body" },
           [
+            _vm.festival !== null && _vm.downloadallloading === false
+              ? _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-success float-end mt-5",
+                    attrs: { disabled: _vm.festival.files_count < 1 },
+                    on: { click: _vm.DownloadAll },
+                  },
+                  [
+                    _c("i", { staticClass: "fas fa-download font-18" }),
+                    _vm._v(" درخواست دانلود کلی آثار"),
+                  ]
+                )
+              : _c(
+                  "span",
+                  {
+                    staticClass:
+                      "float-end mt-5 badge bg-purple-deep p-2 font-14",
+                  },
+                  [
+                    _vm._v("درحال آماده سازی همه فایل ها برای دانلود "),
+                    _c("i", { staticClass: "fas fa-spin fa-spinner font-22" }),
+                  ]
+                ),
+            _vm._v(" "),
             _vm.loading === false
               ? _c("div", { staticClass: "pb-4 mt-3" }, [
                   _c("h6", { staticClass: "font-14 text-secondary" }, [
@@ -51957,7 +52007,7 @@ var render = function () {
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "row mt-4" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
+                    _c("div", { staticClass: "col-md-6" }, [
                       _c("div", { staticClass: "input-group" }, [
                         _vm._m(0),
                         _vm._v(" "),
@@ -52492,7 +52542,7 @@ var render = function () {
                                 [
                                   _c("i", { staticClass: "fas fa-users" }),
                                   _vm._v(
-                                    " آثار ارسالی\n                                        "
+                                    "  مدیریت آثار ارسالی\n                                        "
                                   ),
                                 ]
                               )

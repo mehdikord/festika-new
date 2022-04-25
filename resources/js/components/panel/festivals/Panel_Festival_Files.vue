@@ -8,10 +8,12 @@
                 </div>
             </div>
             <div class="card-body">
+                <button @click="DownloadAll" v-if="festival !== null && downloadallloading === false" :disabled="festival.files_count < 1" class="btn btn-success float-end mt-5"><i class="fas fa-download font-18"></i> درخواست دانلود کلی آثار</button>
+                <span v-else class="float-end mt-5 badge bg-purple-deep p-2 font-14">درحال آماده سازی همه فایل ها برای دانلود <i class="fas fa-spin fa-spinner font-22"></i></span>
                 <div v-if="loading === false" class="pb-4 mt-3">
                     <h6 class="font-14 text-secondary">جستجو و فیلتر آثار</h6>
                     <div class="row mt-4">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-text"><i class="fas fa-search font-18 text-primary"></i></div>
                                 <input :class="{'is-invalid' : search && DoSearchItems.length < 1}" v-model="search" type="text" class="form-control"  placeholder="جستجو با: نام شرکت کننده ، کد فایل ... ">
@@ -19,6 +21,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div v-if="loading === false" class="table-responsive">
 
                     <table v-if="DoSearchItems.length > 0" class="table table-bordered table-hover">
@@ -90,6 +93,7 @@ export default {
             loading : true,
             festival: null,
             search : '',
+            downloadallloading :false,
         }
     },
 
@@ -116,6 +120,25 @@ export default {
                 docUrl.setAttribute('download', file.code+'.'+file.extension);
                 document.body.appendChild(docUrl);
                 docUrl.click();
+            });
+        },
+        DownloadAll(){
+            this.downloadallloading = true;
+            axios({
+                url: '/api/panel/festivals/downloader/files/all/'+this.festival.slug, // File URL Goes Here
+                method: 'GET',
+                responseType: 'blob',
+            }).then((res) => {
+                this.downloadallloading = false;
+                let FILE = window.URL.createObjectURL(new Blob([res.data]));
+                let docUrl = document.createElement('a');
+                docUrl.href = FILE;
+                docUrl.setAttribute('download', file.code+'.'+file.extension);
+                document.body.appendChild(docUrl);
+                docUrl.click();
+            }).catch(e=>{
+                this.downloadallloading = false;
+
             });
         }
 
