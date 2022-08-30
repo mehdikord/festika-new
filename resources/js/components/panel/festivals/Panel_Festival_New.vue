@@ -130,7 +130,7 @@
                                    تعداد دفعاتی که یک کاربر میتواند در جشنواره شرکت کند و آثار ارسال کند
                                 </div>
                             </div>
-                            <input v-model="form.sends" type="number" class="form-control" :class="{'is-invalid' : this.ValidationErrors(errors,'sends').length}">
+                            <input v-model="form.sends" type="text" class="form-control" :class="{'is-invalid' : this.ValidationErrors(errors,'sends').length}">
                             <div class="text-secondary">
                                 برای نامحدود کردن تعداد ارسال، این قسمت را خالی بگذارید
                             </div>
@@ -157,7 +157,7 @@
                     <div class="col-md-6 mt-5">
                         <div class="form-group">
                             <label>دوره برگزاری جشنواره ( روز )</label>
-                            <input v-model="form.period" type="number" class="form-control" :class="{'is-invalid' : this.ValidationErrors(errors,'period').length}" min="10">
+                            <input v-model="form.period" type="text" class="form-control" :class="{'is-invalid' : this.ValidationErrors(errors,'period').length}" min="10">
                             <div class="text-danger mt-2" v-for="(error,index) in this.ValidationErrors(errors,'period')" :key="index">
                                 {{ error }}
                             </div>
@@ -174,7 +174,7 @@
                                     کل آثاری که در جشنواره قابل ارسال است . که میتواند نامحدود باشد
                                 </div>
                             </div>
-                            <input v-model="form.quantity" type="number" class="form-control" :class="{'is-invalid' : this.ValidationErrors(errors,'quantity').length}">
+                            <input v-model="form.quantity" type="text" class="form-control" :class="{'is-invalid' : this.ValidationErrors(errors,'quantity').length}">
                             <div class="text-secondary">
                                 برای نامحدود کردن تعداد کل آثار، این قسمت را خالی بگذارید
                             </div>
@@ -325,7 +325,7 @@
 
 
                     <div class="col-12 mt-5">
-                        <button @click="FormSubmit" type="button" class="btn btn-success waves-effect  waves-light font-14"><i v-if="formloading == false" class="fas fa-rocket "></i> <i v-else class="fas fa-spinner fa-spin"></i> برگزاری جشنواره جدید</button>
+                        <button @click="FormSubmit" :disabled="formloading === true" type="button" class="btn btn-success waves-effect  waves-light font-14"><i v-if="formloading == false" class="fas fa-rocket "></i> <i v-else class="fas fa-spinner fa-spin"></i> برگزاری جشنواره جدید</button>
                     </div>
                 </div>
             </div>
@@ -396,6 +396,15 @@ export default {
         FormSubmit(){
             this.errors = {};
             this.formloading = true;
+            if (this.form.sends !== null){
+                this.form.sends = this.NumberToEn(this.form.sends)
+            }
+            if (this.form.period !== null){
+                this.form.period = this.NumberToEn(this.form.period)
+            }
+            if (this.form.quantity !== null){
+                this.form.quantity = this.NumberToEn(this.form.quantity)
+            }
             axios.post('/api/panel/festivals/new/store',this.form).then(response=>{
                 // this.$router.push({name : 'manage_festivals'});
                 SweetAlert.SweetAlertMessage('کاربر گرامی جشنواره شما با موفقیت ثبت گردید و بعد از بررسی و تایید توسط تیم فستیکا در روند برگزاری قرار خواهد گرفت .','','success')

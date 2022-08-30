@@ -128,6 +128,10 @@
                             </div>
                         </div>
                     </div>
+                    <div class="md-12">
+                        <manage_festivals_report_main v-if="festival !== null" :festival="festival"></manage_festivals_report_main>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -138,11 +142,13 @@
 import Manage_Title from "../../manage/Manage_Title";
 import SweetAlert from "../../../helpers/SweetAlert";
 import moment from "moment-jalaali";
+import Panel_Festival_Include_Reports_Main from "./includes/Panel_Festival_Include_Reports_Main";
 
 export default {
     name: "Panel_Festival_Manage",
     components : {
         'manage_title' : Manage_Title,
+        'manage_festivals_report_main' : Panel_Festival_Include_Reports_Main,
     },
     created() {
         this.GetFestival();

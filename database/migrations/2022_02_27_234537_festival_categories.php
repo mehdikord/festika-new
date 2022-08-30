@@ -16,7 +16,7 @@ class FestivalCategories extends Migration
         Schema::create('festival_categories', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->longText('description');
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }

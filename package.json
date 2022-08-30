@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "@amcharts/amcharts5": "^5.2.10",
         "@tinymce/tinymce-vue": "^3.2.8",
         "moment-jalaali": "^0.9.4",
         "sweetalert2": "^11.4.4",

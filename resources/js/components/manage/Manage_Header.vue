@@ -1,4 +1,5 @@
 <template>
+
     <div class="navbar-header">
         <div class="d-flex">
             <!-- LOGO -->
@@ -125,6 +126,7 @@
 
         </div>
     </div>
+
 </template>
 
 <script>
